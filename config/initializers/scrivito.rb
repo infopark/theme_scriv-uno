@@ -13,6 +13,7 @@ Scrivito.configure do |config|
   # can be modified in the database.
   config.editing_auth do |env|
     EditModeDetection.editing_allowed?(env)
+    Scrivito::User.define('test_user')
   end
 end
 

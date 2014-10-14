@@ -1,0 +1,1 @@
+//= require scrivito_editors

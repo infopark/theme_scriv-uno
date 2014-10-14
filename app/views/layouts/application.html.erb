@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>ScrivUno</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <%= scrivito_header_tags %>
 </head>
 <body>
 
 <%= yield %>
 
+<% if inplace_editing_allowed? %>
+  <%= javascript_include_tag 'editing' %>
+  <%= stylesheet_link_tag 'editing' %>
+<% end %>
+<%= scrivito_after_content_tags %>
 </body>
 </html>
