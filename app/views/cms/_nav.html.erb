@@ -1,0 +1,5 @@
+<ul class="nav nav-pills">
+  <% @obj.homepage.toclist.each do |item| %>
+    <li><%= link_to display_field(item, :title), cms_path(item) %></li>
+  <% end %>
+</ul>
