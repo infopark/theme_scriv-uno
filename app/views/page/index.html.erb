@@ -1,2 +1,5 @@
-<%= cms_tag :h1, @obj, :title %>
+<div class="page-header">
+  <%= cms_tag :h1, @obj, :title %>
+</div>
+<%= render partial: 'cms/breadcrumbs' %>
 <%= cms_tag :div, @obj, :main_content %>
