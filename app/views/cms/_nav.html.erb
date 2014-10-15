@@ -1,5 +1,7 @@
-<ul class="nav nav-pills">
-  <% @obj.homepage.toclist.each do |item| %>
-    <li><%= link_to display_field(item, :title), cms_path(item) %></li>
+<%= cms_tag_list(:ul, @obj.homepage, :toclist, class: "nav navbar-nav", id: "main_nav") do |list, item| %>
+  <% list.tag(:li, id: "main_nav_page_#{item.id}", data: { path: item.path }) do %>
+    <%= link_to(cms_path(item)) do %>
+      <%= display_field(item, :title) %>
+    <% end %>
   <% end %>
-</ul>
+<% end %>
