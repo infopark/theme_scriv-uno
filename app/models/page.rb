@@ -1,0 +1,3 @@
+class Page < Obj
+
+end
