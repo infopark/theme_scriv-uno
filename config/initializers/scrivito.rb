@@ -13,10 +13,8 @@ Scrivito.configure do |config|
   # can be modified in the database.
   config.editing_auth do |env|
     EditModeDetection.editing_allowed?(env)
-    Scrivito::User.define('test_user')
+    Scrivito::User.define('test_user') do |user|
+      Scrivito::User::VERBS.each { |action| user.can_always action, :workspace }
+    end
   end
 end
-
-# The application uses separate manifest files for all editing related styles and JavaScript, which
-# are only loaded if required. They need to be integrated into Ruby on Rails asset pipeline.
-Rails.application.config.assets.precompile += %w(editing.css editing.js)
