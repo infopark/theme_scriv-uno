@@ -1,0 +1,19 @@
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <% (0..widget.panels.size-1).each do |index| %>
+      <li data-target="#myCarousel" data-slide-to="<%= index %>" <% if index == 0 %>class="active"<% end %>></li>
+    <% end %>
+  </ol>
+  <% if params[:_scrivito_display_mode] == "editing" %>
+    <%= cms_tag(:div, widget, :panels, class: 'carousel-inner') %>
+  <% else %>
+    <div class="carousel-inner">
+      <% widget.panels.each do |panel| %>
+        <%= render template: 'elastic_slider_panel_widget/show', locals: {widget: panel} %>
+      <% end %>
+    </div>
+  <% end %>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div><!-- /.carousel -->

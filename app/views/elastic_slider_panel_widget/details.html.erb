@@ -1,0 +1,18 @@
+<div class="details-view">
+
+  <h4>Background Image</h4>
+  <%= cms_image_tag(widget, :image_source, data: { filter: 'images' }) %>
+
+  <h4>Headline</h4>
+  <%= cms_tag(:div, widget, :headline) %>
+
+  <h4>Text</h4>
+  <%= cms_tag(:div, widget, :main_content) %>
+
+  <h4>Button Text</h4>
+  <%= cms_tag(:div, widget, :button_text) %>
+
+  <h4>Button Link</h4>
+  <%= cms_edit_link widget, :button_link %>
+
+</div>
