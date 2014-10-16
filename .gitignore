@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore API configuration that is stored in .env
-/.env
+/.env*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

@@ -5,7 +5,6 @@ class CreatePageClass < ::Scrivito::Migration
       is_binary: false, 
       attributes: [
         {name: 'main_content', type: 'widget'}
-        {name: 'title', type: 'string'}
       ]
     )
     Obj.create(_obj_class: 'Page', _path: '/en/news', title: "News")
