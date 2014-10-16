@@ -42,4 +42,4 @@ gem 'scrivito_editors'
 gem 'dotenv-rails'
 
 # adding widgets:
-gem 'scrivito_widget_two_columns', '0.0.3' #not on RubyGems, find in the app and install locally
+#gem 'scrivito_widget_two_columns', '0.0.4' #not on RubyGems, find in the app and install locally

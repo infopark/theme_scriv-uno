@@ -1,4 +1,4 @@
-class CreateRootObj < ::Scrivito::Migration
+class CreateRootClass < ::Scrivito::Migration
   def up
     Scrivito::ObjClass.create(
       name: 'Root',
