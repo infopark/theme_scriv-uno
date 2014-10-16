@@ -1,5 +1,9 @@
-<div id="header">
-  <div id="logo">
-    <%= link_to "Home", cms_path(@obj.homepage) %>
-  </div>
+<div class="navbar-header">
+  <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <%= link_to "ScrivUno", cms_path(@obj.homepage), class: "navbar-brand" %>
 </div>
