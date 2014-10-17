@@ -42,4 +42,4 @@ gem 'scrivito_editors'
 gem 'dotenv-rails'
 
 # adding widgets:
-#gem 'scrivito_widget_two_columns', '0.0.4' #not on RubyGems, find in the app and install locally
+gem 'scrivito_elastic_slider' #not on RubyGems, install from https://github.com/kt-jet/scrivito_elastic_slider

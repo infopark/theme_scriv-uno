@@ -266,7 +266,7 @@ ul {padding-left:20px;}
 
 /* Editing-View of Carousel */
 .carousel-inner .item.editing-view {height:150px;}
-.carousel-inner .item.editing-view > img {min-width: 100px; max-width: 400px; }
+.carousel-inner .item.editing-view > img {height: 100%; }
 .carousel-inner .item.editing-view .carousel-caption {bottom: 0; padding: 0;}
 
 /* breadcrumb
