@@ -264,10 +264,6 @@ ul {padding-left:20px;}
 .carousel-control {width:7%; opacity:.2; @include transition(all .3s ease-in-out); }
 .carousel-control i {font-size:30px; line-height:400px;}
 
-/* Editing-View of Carousel */
-.carousel-inner .item.editing-view {height:150px;}
-.carousel-inner .item.editing-view > img {height: 100%; }
-.carousel-inner .item.editing-view .carousel-caption {bottom: 0; padding: 0;}
 
 /* breadcrumb
 ================================================== */
