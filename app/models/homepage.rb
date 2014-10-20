@@ -8,5 +8,4 @@ class Homepage < Obj
     self
   end
 
-
 end

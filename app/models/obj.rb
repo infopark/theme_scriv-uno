@@ -14,4 +14,11 @@ class Obj < ::Scrivito::BasicObj
     end
   end
 
+  def valid_widget_classes_for(field_name)
+    if field_name == "full_slider"
+      %w(ElasticSliderWidget ElasticSliderPanelWidget)
+    end
+  end
+
+
 end
