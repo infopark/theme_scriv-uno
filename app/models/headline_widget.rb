@@ -1,0 +1,2 @@
+class HeadlineWidget < Widget
+end
