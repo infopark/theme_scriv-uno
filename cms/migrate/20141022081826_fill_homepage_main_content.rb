@@ -24,9 +24,9 @@ class FillHomepageMainContent < ::Scrivito::Migration
 
     #fill three-column widget with widgets:
     left_one = HeadlineWidget.new(headline: "Latest News")
-    left_two = ListitemWidget.new(headline: "Headline of first item", subline: "Chicago, 22.-30.01", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum ...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
-    left_three = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
-    left_four = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left_two = ListitemWidget.new(headline: "Headline first item", subline: "Chicago, 22.-30.01", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum ...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
+    left_three = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte ...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left_four = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
 
     col1 = Homepage.default.main_content[1].column_1 << left_one << left_two << left_three << left_four
     Homepage.default.main_content[1].update(column_1: col1)
@@ -58,10 +58,10 @@ class FillHomepageMainContent < ::Scrivito::Migration
     #fill two-column widget with stuff:
     left = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
     right = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-    col1 = Homepage.default.main_content[1].column_1 << left
-    Homepage.default.main_content[1].update(column_1: col1)
-    col2 = Homepage.default.main_content[1].column_2 << right
-    Homepage.default.main_content[1].update(column_2: col2)
+    col1 = Homepage.default.main_content[2].column_1 << left
+    Homepage.default.main_content[2].update(column_1: col1)
+    col2 = Homepage.default.main_content[2].column_2 << right
+    Homepage.default.main_content[2].update(column_2: col2)
 
   end
 end
