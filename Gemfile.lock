@@ -93,6 +93,9 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    scrivito_accordion (1.0.1)
+      bundler
+      scrivito_sdk
     scrivito_editors (0.0.15)
       coffee-rails
       jquery-ui-rails (>= 5.0.0)
@@ -116,6 +119,12 @@ GEM
       rails (~> 4.1.1)
       rake (>= 0.9.2.2)
       rest-client (~> 1.6.7)
+    scrivito_teaser_widget (0.0.1)
+      scrivito_sdk
+    scrivito_three_columns (0.0.1)
+      scrivito_sdk
+    scrivito_two_columns (0.0.1)
+      scrivito_sdk
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -150,9 +159,13 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
+  scrivito_accordion
   scrivito_editors
   scrivito_elastic_slider
   scrivito_sdk
+  scrivito_teaser_widget
+  scrivito_three_columns
+  scrivito_two_columns
   sdoc (~> 0.4.0)
   spring
   turbolinks
