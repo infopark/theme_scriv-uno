@@ -1,0 +1,9 @@
+<div class="list_item">
+  <a href="#"></a>
+  <%= cms_image_tag widget, :image, class: "square" %>
+  <div class="list_item_content">
+    <%= cms_tag :div, widget, :headline, class: "h2" %>
+    <%= cms_tag :span, widget, :subline, class: "meta" %>
+    <%= cms_tag(:p, widget, :content) %>
+  </div>
+</div>

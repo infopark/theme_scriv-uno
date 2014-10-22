@@ -1,0 +1,2 @@
+class ListitemWidget < Widget
+end
