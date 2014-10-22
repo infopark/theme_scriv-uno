@@ -14,7 +14,7 @@
   <ul class="nav navbar-nav">
     <% @obj.homepage.toclist.each do |item| %>
       <li class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="<%= cms_path(item) %>"><%= display_value item.title %><span class="caret"></span></a>
+        <a class="dropdown-toggle" href="<%= cms_path(item) %>"><%= display_value item.title %><span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
           <% item.toclist.each do |subitem| %>
             <li>

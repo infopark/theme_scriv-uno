@@ -10,8 +10,8 @@ class FillHomepageMainContent < ::Scrivito::Migration
     Homepage.default.update(main_content: twocol)
 
     #fill two-column widget with listitem widgets:
-    left = ListitemWidget.new(headline: "Headline of left Content", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
-    right = ListitemWidget.new(headline: "Headline of Content on the right", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left = ListitemWidget.new(headline: "Headline of left Content", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
+    right = ListitemWidget.new(headline: "Headline of Content on the right", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
     col1 = Homepage.default.main_content[0].column_1 << left
     Homepage.default.main_content[0].update(column_1: col1)
     col2 = Homepage.default.main_content[0].column_2 << right
