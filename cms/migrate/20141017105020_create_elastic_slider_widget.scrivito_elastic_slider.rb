@@ -14,8 +14,7 @@ class CreateElasticSliderWidget < ::Scrivito::Migration
         {name: 'image', type: :reference},
         {name: 'headline', type: :string },
         {name: 'content', type: :text},
-        {name: 'button_text', type: :string},
-        {name: 'button_link', type: :link},
+        {name: 'button', type: :link},
       ]
     )
   end
