@@ -50,18 +50,20 @@ class FillHomepageMainContent < ::Scrivito::Migration
     col3 = Homepage.default.main_content[1].column_3 << right
     Homepage.default.main_content[1].update(column_3: col3)
 
-    #TEXT ROW
-    #add two-column widget to Homepage main content:
-    twocol = Homepage.default.main_content << TwoColumnWidget.new
-    Homepage.default.update(main_content: twocol)
+    if false
+      #TEXT ROW
+      #add two-column widget to Homepage main content:
+      twocol = Homepage.default.main_content << TwoColumnWidget.new
+      Homepage.default.update(main_content: twocol)
 
-    #fill two-column widget with stuff:
-    left = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-    right = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-    col1 = Homepage.default.main_content[2].column_1 << left
-    Homepage.default.main_content[2].update(column_1: col1)
-    col2 = Homepage.default.main_content[2].column_2 << right
-    Homepage.default.main_content[2].update(column_2: col2)
+      #fill two-column widget with stuff:
+      left = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
+      right = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
+      col1 = Homepage.default.main_content[2].column_1 << left
+      Homepage.default.main_content[2].update(column_1: col1)
+      col2 = Homepage.default.main_content[2].column_2 << right
+      Homepage.default.main_content[2].update(column_2: col2)
+    end
 
   end
 end

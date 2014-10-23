@@ -29,7 +29,7 @@
 
 </head>
 <body>
-  <div class="bg_white">
+  <div>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <header role="banner" id="top" class="navbav">
       <div class="container">
@@ -40,20 +40,12 @@
       </div>
     </header>
 
-<%= render 'cms/full_slider' %>
+    <%= render 'cms/header_image' %>
 
-<% if false %>
-  <%= render 'cms/static/slider' %>
-<% end %>
-
-
-
-    <div class="container margin_top" id="#content">
-
-<%= yield %>
-
-    </div><!-- /#content -->
   </div>
+
+  <%= yield %>
+
   <%= render 'cms/footer' %>
 
 
