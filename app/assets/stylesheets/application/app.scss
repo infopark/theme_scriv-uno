@@ -654,6 +654,39 @@ ul.icon_list,
 .slider.our_business .h4 { text-align:center;}
 
 
+/* blog
+================================================== */
+
+.blog_item { @include clearfix;}
+
+.blog_item .blog_heading { @include clearfix; position:relative; border-left: 3px solid #eee; margin:0 0 0 35px; padding:15px 0 0 35px;}
+.blog_item .blog_heading .blog_item_image { display:block; position:absolute; top:15px; left:-27px;
+  width:52px; height:52px; border-radius:5px; border:3px solid #eee; background:#eee;
+  }
+.blog_item .blog_heading .blog_heading_content {@include clearfix; padding:0 0 10px 0;}
+.blog_item .blog_heading .blog_heading_content .h2{margin:0 0 2px 0;}
+.blog_item .blog_heading .blog_heading_content .date,
+.blog_item .blog_heading .blog_heading_content .author { color:#888; padding:0 5px 0 0;}
+
+.blog_item .blog_body { @include clearfix; border-left: 3px solid #eee; margin:0 0 0 35px; padding:0 0 20px 35px;}
+.blog_item .blog_footer { @include clearfix; border-left: 3px solid #eee; margin:0 0 0 35px; padding:0 0 20px 35px;}
+
+.blog_pager { @include clearfix; list-style-type:none; margin:0 0 25px 0; padding:0;}
+.blog_pager .next { float:right; margin-right:-15px;}
+.blog_pager .previous { float:left;}
+
+.blog_item.short .blog_heading { @include clearfix; position:relative; border-left: 0px; margin:0 0 0 20px; padding:0 0 0 20px;}
+.blog_item.short .blog_heading .blog_item_image { display:block; position:absolute; top:5px; left:-15px;
+  width:28px; height:28px; border-radius:4px; border:2px solid #eee;
+  }
+.blog_item.short .blog_heading .blog_heading_content {@include clearfix; padding:0 0 5px 0;}
+.blog_item.short .blog_heading .blog_heading_content .h3 {margin:0 0 2px 0; font-size:16px; line-height:26px;}
+.blog_item.short .blog_body { @include clearfix; border-left: 0px; margin:0 0 0 20px; padding:0 0 20px 20px; font-size:12px;}
+
+
+
+
+
 /* country_choose
 ================================================== */
 
