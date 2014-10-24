@@ -8,7 +8,7 @@ class CreatePageClass < ::Scrivito::Migration
       ]
     )
     Obj.create(_obj_class: 'Page', _path: '/en/news', title: "News")
-    Obj.create(_obj_class: 'Page', _path: '/en/content1', title: "Content1")
-    Obj.create(_obj_class: 'Page', _path: '/en/content2', title: "Content2")
+    Obj.create(_obj_class: 'Page', _path: '/en/about_us', title: "About us")
+    Obj.create(_obj_class: 'Page', _path: '/en/blog', title: "Blog")
   end
 end

@@ -8,4 +8,8 @@ class Homepage < Obj
     self
   end
 
+  def valid_widget_classes_for(field)
+    %w[ElasticSliderWidget]
+  end
+
 end

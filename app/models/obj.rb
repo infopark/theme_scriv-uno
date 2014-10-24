@@ -6,6 +6,10 @@ class Obj < ::Scrivito::BasicObj
     #objects.select { |object| object.show_in_navigation? }
   end
 
+  def headline
+    self[:headline].presence || self.title || ""
+  end
+
   def homepage
     if self.is_a?(Homepage)
       self
