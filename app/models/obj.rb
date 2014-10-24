@@ -11,6 +11,10 @@ class Obj < ::Scrivito::BasicObj
   end
 
   def homepage
+    #TODO: improve
+    if self[:_path] == "/"
+      return Obj.find_by_path("/en")
+    end
     if self.is_a?(Homepage)
       self
     else
@@ -20,9 +24,10 @@ class Obj < ::Scrivito::BasicObj
 
   def valid_widget_classes_for(field_name)
     if field_name == "full_slider"
-      %w(ElasticSliderWidget ElasticSliderPanelWidget)
+      %w(ElasticSliderWidget)
     end
   end
 
 
 end
+

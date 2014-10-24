@@ -1,10 +1,10 @@
 
 <% if false %>
 <!-- classic simple navi -->
-<%= cms_tag_list(:ul, @obj.homepage, :toclist, class: "nav navbar-nav", id: "main_nav") do |list, item| %>
+<%= scrivito_tag_list(:ul, @obj.homepage, :toclist, class: "nav navbar-nav", id: "main_nav") do |list, item| %>
   <% list.tag(:li, id: "main_nav_page_#{item.id}", data: { path: item.path }) do %>
     <%= link_to(cms_path(item)) do %>
-      <%= display_field(item, :title) %>
+      <%= scrivito_field(item, :title) %>
     <% end %>
   <% end %>
 <% end %>
@@ -14,11 +14,11 @@
   <ul class="nav navbar-nav">
     <% @obj.homepage.toclist.each do |item| %>
       <li class="dropdown">
-        <a class="dropdown-toggle" href="<%= cms_path(item) %>"><%= display_value item.title %><span class="caret"></span></a>
+        <a class="dropdown-toggle" href="<%= scrivito_path(item) %>"><%= scrivito_value item.title %><span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
           <% item.toclist.each do |subitem| %>
             <li>
-              <%= link_to subitem.title, cms_path(subitem) %>
+              <%= link_to subitem.title, scrivito_path(subitem) %>
             </li>
           <% end %>
         </ul>

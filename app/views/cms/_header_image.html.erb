@@ -1,5 +1,5 @@
 <% if @obj.respond_to?('full_slider') && !@obj.full_slider.blank? %>
-  <%= cms_tag :div, @obj, :full_slider %>
+  <%= scrivito_tag :div, @obj, :full_slider %>
 <% else %>
   <div class="teaser small">
     <img src="http://localhost:3000/assets/dummy/teaser_06.jpg" alt="">

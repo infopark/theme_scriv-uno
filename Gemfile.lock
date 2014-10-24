@@ -111,10 +111,11 @@ GEM
       coffee-rails
       railties
       scrivito_sdk
-    scrivito_sdk (0.18.1)
+    scrivito_sdk (0.18.1.311.230921710)
       addressable (~> 2.3.2)
       diff-lcs (~> 1.2.5)
       hyp_diff (~> 0.0.3)
+      jbuilder (~> 2.2.2)
       jquery-rails (~> 3.1.1)
       json (>= 1.7.7)
       nokogiri (~> 1.5.6)
@@ -167,7 +168,7 @@ DEPENDENCIES
   scrivito_accordion
   scrivito_editors
   scrivito_elastic_slider
-  scrivito_sdk
+  scrivito_sdk (= 0.18.1.311.230921710)
   scrivito_tabbed_content
   scrivito_teaser_widget
   scrivito_three_columns

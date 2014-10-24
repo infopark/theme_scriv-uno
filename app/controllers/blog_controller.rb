@@ -1,0 +1,2 @@
+class BlogController < CmsController
+end

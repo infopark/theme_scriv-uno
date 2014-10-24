@@ -1,5 +1,7 @@
 class ImageWidget < Widget
-  def align
-    self[:align].presence || 'left'
-  end
+  #
+  # ImageWidget (not binary)
+  #
+  #   image  :reference
+  #
 end

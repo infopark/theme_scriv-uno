@@ -20,7 +20,7 @@ class CreateAccordionWidget < ::Scrivito::Migration
           type: :string,
         },
         {
-          name: 'main_content',
+          name: 'content',
           type: :widget,
         },
       ]

@@ -37,7 +37,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'scrivito_sdk'
+gem 'scrivito_sdk', '0.18.1.311.230921710'
 gem 'scrivito_editors'
 gem 'dotenv-rails'
 

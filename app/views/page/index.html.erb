@@ -3,8 +3,8 @@
     <div id="#content" class="container">
       <div class="row">
         <div class="col-md-12">
-          <%= cms_tag :h3, @obj, :teaser_headline %>
-          <%= cms_tag :p,  @obj, :teaser_content %>
+          <%= scrivito_tag :h3, @obj, :teaser_headline %>
+          <%= scrivito_tag :p,  @obj, :teaser_content %>
         </div>
       </div>
     </div>
@@ -13,8 +13,8 @@
 
 <div class="container margin_top" id="#content">
   <div class="page-header">
-    <%= cms_tag :h1, @obj, :title %>
+    <%= scrivito_tag :h1, @obj, :title %>
   </div>
   <%= render partial: 'cms/breadcrumbs' %>
-  <%= cms_tag :div, @obj, :main_content %>
+  <%= scrivito_tag :div, @obj, :content %>
 </div><!-- /#content -->

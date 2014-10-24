@@ -1,0 +1,4 @@
+class Blog < ::Obj
+  #
+  #
+end

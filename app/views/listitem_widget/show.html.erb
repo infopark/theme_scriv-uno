@@ -1,10 +1,10 @@
 <div class="list_item">
   <a href="#"></a>
-  <%= cms_image_tag widget, :image, class: "square" %>
+  <%= scrivito_image_tag widget, :image, class: "square" %>
   <div class="list_item_content">
     <% level = widget.headline_level || "h4" %>
-    <%= cms_tag level.to_sym, widget, :headline %>
-    <%= cms_tag :span, widget, :subline, class: "meta" %>
-    <%= cms_tag(:p, widget, :content) %>
+    <%= scrivito_tag level.to_sym, widget, :headline %>
+    <%= scrivito_tag :span, widget, :subline, class: "meta" %>
+    <%= scrivito_tag(:p, widget, :content) %>
   </div>
 </div>

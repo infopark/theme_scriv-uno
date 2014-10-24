@@ -1,4 +1,4 @@
-class FillFullSliderForHomepage < ::Scrivito::Migration
+class FillHomepageFullSlider < ::Scrivito::Migration
   def up
 
     # add widget to full_slider attribute of Homepage:
@@ -6,7 +6,7 @@ class FillFullSliderForHomepage < ::Scrivito::Migration
     Homepage.default.update(full_slider: fs)
 
     # prepare Image folder:
-    Page.create(_path: '/images') 
+    Page.create(_path: '/images')
 
     # create panels:
     (1..3).each do |index|
@@ -19,5 +19,6 @@ class FillFullSliderForHomepage < ::Scrivito::Migration
     # tweak some values:
     Homepage.default.full_slider[0].panels[1].update(headline: "Give it a test run!", content: "Our new product will leave you speechless. Lots of new features to explore and a happy community constantly developing new features.")
     Homepage.default.full_slider[0].panels[2].update(headline: "One more for good measure.", content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.")
+
   end
 end

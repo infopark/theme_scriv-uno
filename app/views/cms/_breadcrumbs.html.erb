@@ -1,9 +1,9 @@
 <ol class="breadcrumb">
   <% @obj.breadcrumbs.each do |bc| %>
     <% if @obj == bc %>
-      <li class="active"><%= display_field @obj, :title %></li>
+      <li class="active"><%= scrivito_field @obj, :title %></li>
     <% else %>
-      <li><%= link_to bc.title, cms_path(bc) %></li>
+      <li><%= link_to bc.title, scrivito_path(bc) %></li>
     <% end %>
   <% end %>
 </ol>
