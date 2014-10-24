@@ -1,1 +1,57 @@
-Blog-index
+<div class="bg_white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <%= render partial: 'cms/breadcrumbs' %>
+
+          <div class="blog_item">
+            <div class="blog_heading">
+              <img alt="Gravatar" class="blog_item_image" src="http://localhost:3000/assets/dummy/square_01.png">
+
+              <div class="blog_heading_content">
+                <h3 class="h2"><a href=""><span>The Lorem Ipsum in the Attic</span></a></h3>
+                <span class="date"><time datetime="2014-07-02">July 02, 2014</time></span>
+                <span class="author"> John Doe</span>
+              </div>
+            </div>
+
+            <div class="blog_body">
+
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+
+              <pre>https://mycompany.com/blog</pre>
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words
+              </p>
+            </div>
+
+            <div class="blog_footer">
+              <a class="btn btn-default btn-sm" href="">0 Comments</a>
+            </div>
+
+          </div>
+
+        <%= scrivito_tag :div, @obj, :content %>
+      </div>
+      <div class="col-md-3">
+
+          <h4 class="h3">Latest Blog Posts</h4>
+
+          <div class="blog_item short">
+            <div class="blog_heading">
+              <img alt="Gravatar" class="blog_item_image" src="http://localhost:3000/assets/dummy/square_01.png">
+              <div class="blog_heading_content">
+                <h4 class="h3"><a href=""><span>The Lorem in the Attic</span></a></h4>
+              </div>
+            </div>
+            <div class="blog_body"> For more than half a year now, the content of this website is
+              maintained in lorem by developers and me. This ensures that all of our exp...
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /#content -->
