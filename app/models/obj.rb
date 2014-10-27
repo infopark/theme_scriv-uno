@@ -22,6 +22,14 @@ class Obj < ::Scrivito::BasicObj
     end
   end
 
+  def show_in_navigation?
+    if self.respond_to?('show_in_navigation') && self.show_in_navigation != "yes"
+      false
+    else
+      true    
+    end
+  end
+
   def valid_widget_classes_for(field_name)
     if field_name == "full_slider"
       %w(ElasticSliderWidget)

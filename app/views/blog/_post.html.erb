@@ -1,0 +1,19 @@
+<div class="blog_item">
+  <div class="blog_heading">
+    <img alt="Gravatar" class="blog_item_image" src="http://localhost:3000/assets/dummy/square_01.png">
+    <div class="blog_heading_content">
+      <a name="<%= post.id %>">
+      <%= scrivito_tag :h3, post, :headline, class: "h2" %>
+      <span class="date"><time datetime="<%= post.date %>"><%= post.date.strftime("%B %d, %Y") %></time></span>
+      <%= scrivito_tag :span, post, :author, class: "author" %>
+    </div>
+  </div>
+
+  <%= scrivito_tag :div, post, :content, class: "blog_body" %>
+
+  <div class="blog_footer">
+    <a class="btn btn-default btn-sm" href="">0 Comments</a>
+  </div>
+
+</div>
+

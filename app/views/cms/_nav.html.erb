@@ -12,11 +12,11 @@
 
 <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
   <ul class="nav navbar-nav">
-    <% @obj.homepage.toclist.each do |item| %>
+    <% @obj.homepage.toclist.select{|i| i.show_in_navigation?}.each do |item| %>
       <li class="dropdown">
         <a class="dropdown-toggle" href="<%= scrivito_path(item) %>"><%= scrivito_value item.title %><span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
-          <% item.toclist.each do |subitem| %>
+          <% item.toclist.select{|i| i.show_in_navigation?}.each do |subitem| %>
             <li>
               <%= link_to subitem.title, scrivito_path(subitem) %>
             </li>
