@@ -71,7 +71,7 @@ class FillHomepageContent < ::Scrivito::Migration
     # fill Tabbed Content:
     # create tabs:
     (1..3).each do |index|
-      image = Image.create(_path: "/images/teaser0#{index + 4}", blob: File.new("app/assets/images/dummy/teaser_0#{index + 4}.jpg"))
+      image = Image.create(_path: "/images/teaser_0#{index + 4}", blob: File.new("app/assets/images/dummy/teaser_0#{index + 4}.jpg"))
       tabsw.tabs << TabbedContentTabWidget.new(headline: "Built For Ruby on Rails")
       tabsw.update(tabs: tabsw.tabs)
       tab = tabsw.tabs.last
