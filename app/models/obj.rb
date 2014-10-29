@@ -6,6 +6,10 @@ class Obj < ::Scrivito::BasicObj
     #objects.select { |object| object.show_in_navigation? }
   end
 
+  def has_other_content?
+    self.respond_to?('other_content') && !self.other_content.blank? ? true : false
+  end
+
   def homepage
     self.is_a?(Homepage) ? self : self.ancestors.select{|o| o.is_a?(Homepage)}.first
   end

@@ -33,20 +33,19 @@
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <header role="banner" id="top" class="navbav">
       <div class="container">
-
-<%= render partial: 'cms/header' %>
-<%= render partial: 'cms/nav' %>
-
+        <%= render partial: 'shared/header' %>
+        <%= render partial: 'shared/nav' %>
       </div>
     </header>
 
-    <%= render 'cms/header_image' %>
+    <%= render 'shared/header_image' %>
 
   </div>
 
   <%= yield %>
 
-  <%= render 'cms/footer' %>
+  <%= render 'shared/footer' %>
+  <%= render 'shared/flap' %>
 
 
 <% if scrivito_user %>

@@ -15,6 +15,8 @@
   <div class="page-header">
     <%= scrivito_tag :h1, @obj, :title %>
   </div>
-  <%= render partial: 'cms/breadcrumbs' %>
+  <%= render partial: 'shared/breadcrumbs' %>
   <%= scrivito_tag :div, @obj, :content %>
 </div><!-- /#content -->
+
+<%= render 'shared/other_content' %>
