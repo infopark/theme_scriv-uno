@@ -1,7 +1,7 @@
 class TextWidget < Widget
-  #
-  # TextWidget (not binary)
-  #
-  #   content :html
-  #
+
+  def description_for_editor
+    "Text"
+  end
+
 end
