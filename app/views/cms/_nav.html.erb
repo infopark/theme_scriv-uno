@@ -5,14 +5,14 @@
     <% if item.show_in_navigation? -%>
       <%= list.tag(:li, data: {path: item.path}, class: "dropdown") do %>
         <%= link_to(scrivito_path(item), class: "dropdown-toggle") do %>
-          <%= item.headline %>
+          <%= strip_tags(item.title) %>
           <span class="caret"></span>
         <% end %>
         <%= scrivito_tag_list(:ul, item, :toclist, class: "dropdown-menu", role: "menu") do |list2, item2| %>
           <% if item2.show_in_navigation? -%>
             <%= list2.tag(:li, data: {path: item2.path}) do %>
               <%= link_to(scrivito_path(item2)) do %>
-                <%= item2.headline %>
+                <%= strip_tags(item2.title) %>
               <% end -%>
             <% end -%>
           <% end -%>

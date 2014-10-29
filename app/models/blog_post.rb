@@ -4,10 +4,6 @@ class BlogPost < ::Obj
     self.parent
   end
 
-  def comments
-    self.toclist
-  end
-
   def show_in_navigation?
     false
   end

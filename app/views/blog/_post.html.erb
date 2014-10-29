@@ -3,7 +3,7 @@
     <img alt="Gravatar" class="blog_item_image" src="http://localhost:3000/assets/dummy/square_01.png">
     <div class="blog_heading_content">
       <a name="<%= post.id %>">
-      <%= scrivito_tag :h3, post, :headline, class: "h2" %>
+      <%= scrivito_tag :h3, post, :title, class: "h2" %>
       <span class="date"><time datetime="<%= post.date %>"><%= post.date.strftime("%B %d, %Y") %></time></span>
       <%= scrivito_tag :span, post, :author, class: "author" %>
     </div>

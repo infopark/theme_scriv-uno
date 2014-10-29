@@ -6,28 +6,13 @@ class Obj < ::Scrivito::BasicObj
     #objects.select { |object| object.show_in_navigation? }
   end
 
-  def headline
-    self[:headline].presence || self.title || ""
-  end
-
   def homepage
-    #TODO: improve
-    if self[:_path] == "/"
-      return Obj.find_by_path("/en")
-    end
-    if self.is_a?(Homepage)
-      self
-    else
-      self.ancestors.select{|o| o.is_a?(Homepage)}.first
-    end
+    self.is_a?(Homepage) ? self : self.ancestors.select{|o| o.is_a?(Homepage)}.first
   end
 
   def show_in_navigation?
-    if self.respond_to?('show_in_navigation') && self.show_in_navigation != "yes"
-      false
-    else
-      true    
-    end
+    # single ObjClasses may overwrite this method
+    self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
   end
 
   def valid_widget_classes_for(field_name)

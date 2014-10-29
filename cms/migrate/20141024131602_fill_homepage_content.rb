@@ -1,15 +1,15 @@
 class FillHomepageContent < ::Scrivito::Migration
   def up
     # upload emtpy grey image:
-    Image.create(_path: "/images/grey", blob: File.new("app/assets/images/dummy/grey.png"))
+    Image.create(_path: "/_resources/grey", blob: File.new("app/assets/images/dummy/grey.png"))
 
     # TWO-COLUMN ROW
     #add two-column widget:
-    Homepage.default.update(content: Homepage.default.content << TwoColumnWidget.new)
+    Homepage.default.update(content: [TwoColumnWidget.new])
 
     #fill two-column widget with listitem widgets:
-    left = ListitemWidget.new(headline: "Headline of left Content", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
-    right = ListitemWidget.new(headline: "Headline of Content on the right", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left = ListitemWidget.new(headline: "Headline of left Content", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/_resources/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
+    right = ListitemWidget.new(headline: "Headline of Content on the right", headline_level: "h2", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...", image: Image.find_by_path("/_resources/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
     col1 = Homepage.default.content[0].column_1 << left
     Homepage.default.content[0].update(column_1: col1)
     col2 = Homepage.default.content[0].column_2 << right
@@ -22,9 +22,9 @@ class FillHomepageContent < ::Scrivito::Migration
 
     #fill three-column widget with widgets:
     left_one = HeadlineWidget.new(headline: "Latest News")
-    left_two = ListitemWidget.new(headline: "Headline first item", subline: "Chicago, 22.-30.01", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum ...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
-    left_three = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte ...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
-    left_four = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte lorem ipsum...", image: Image.find_by_path("/images/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left_two = ListitemWidget.new(headline: "Headline first item", subline: "Chicago, 22.-30.01", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum ...", image: Image.find_by_path("/_resources/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "Click!"))
+    left_three = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte ...", image: Image.find_by_path("/_resources/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
+    left_four = ListitemWidget.new(headline: "Headline of Content ", content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte lorem ipsum...", image: Image.find_by_path("/_resources/grey"), link: Scrivito::Link.new(obj: Homepage.default, title: "More info"))
 
     col1 = Homepage.default.content[1].column_1 << left_one << left_two << left_three << left_four
     Homepage.default.content[1].update(column_1: col1)
@@ -71,7 +71,7 @@ class FillHomepageContent < ::Scrivito::Migration
     # fill Tabbed Content:
     # create tabs:
     (1..3).each do |index|
-      image = Image.create(_path: "/images/teaser_0#{index + 4}", blob: File.new("app/assets/images/dummy/teaser_0#{index + 4}.jpg"))
+      image = Image.create(_path: "/_resources/teaser_0#{index + 4}", blob: File.new("app/assets/images/dummy/teaser_0#{index + 4}.jpg"))
       tabsw.tabs << TabbedContentTabWidget.new(headline: "Built For Ruby on Rails")
       tabsw.update(tabs: tabsw.tabs)
       tab = tabsw.tabs.last
