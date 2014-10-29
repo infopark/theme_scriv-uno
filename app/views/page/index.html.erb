@@ -1,4 +1,4 @@
-<% if @obj.teaser_headline.presence || @obj.teaser_content.presence || @in_edit_mode %>
+<% if @obj.teaser_headline.presence || @obj.teaser_content.presence || scrivito_in_editable_view? %>
   <div class="bg_grey1">
     <div id="#content" class="container">
       <div class="row">
