@@ -180,7 +180,7 @@ ul {padding-left:20px;}
 .margin_bottom { margin-bottom:20px;}
 
 .green { color: #008256!important;}
-
+.modal-backdrop {z-index:auto;}
 
 /* btn
 ================================================== */
@@ -190,8 +190,6 @@ ul {padding-left:20px;}
 .btn_green {background:#008256; color:#fff; @include transition(all .3s ease-in-out); }
 .btn_green:hover {background:lighten(#008256, 5%); color:#fff;}
 .btn_green:active {background:darken(#008256, 5%); color:#fff;}
-
-
 
 /* header
 ================================================== */
@@ -451,18 +449,75 @@ ul {padding-left:20px;}
 ================================================== */
 
 .box_white,
-.box_grey { padding:10px 15px; margin: 0 0 25px 0;
+.box_grey,
+.box_green,
+.box_blue { padding:10px 15px; margin: 0 0 25px 0;
   background:#fff;box-shadow:0 0 3px rgba(0,0,0,.25);
   @include clearfix;
   }
-
 .box_grey { background:#fafafa;}
+.box_green { background:#78c9a6;}
+.box_green * { color:#fff;}
+.box_blue { background:#465b66;}
+.box_blue * { color:#fff;}
 
 .box_image { padding:10px 15px; margin: 15px 0 25px 0; min-height:120px;
   background: #fff image_url('bg_applicator.jpg') no-repeat top / cover;
   box-shadow:0 0 3px rgba(0,0,0,.25);
   @include clearfix;
   }
+
+
+/* box_icon
+================================================== */
+
+.box_icon {
+	text-align:center;
+	padding-left: 15px;
+  padding-right: 15px;
+	}
+
+.box_icon_i{
+	border:2px solid #aaa;
+	border-radius:50%;
+	width:90px;
+	height:90px;
+	margin:15px auto 25px;
+	}
+
+.box_icon_i.green{ border:2px solid #78c9a6; }
+.box_icon_i.blue{ border:2px solid #465b66; }
+
+.box_icon_i span {
+    background:#aaa;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.box_icon_i.green span { background:#78c9a6; }
+.box_icon_i.blue span{ background:#465b66;	}
+.box_icon_i i{
+	color: #fff;
+  font-size: 40px;
+  line-height:80px;
+  margin: 0;
+  padding:0;
+  position: relative;
+  z-index: 20;
+	}
+
+.box_icon h3{
+	font-size:18px;
+	margin:15px 0 18px;
+	}
+
+.box_icon p{
+	font-size:16px;
+	margin:0px;
+	}
+
 
 /* list_item *
 ================================================== */
@@ -497,32 +552,22 @@ ul {padding-left:20px;}
 .list_item .list_item_content .meta i {font-size:12px; color:#999;}
 
 .more_link { font-size: 10px; color:#888; text-align:right; display:block; font-weight:600; margin:-10px 0 10px;}
-.more_link .web_icon { font-size:12px; margin:0 3px 0 0; color:#888;}
+.more_link i { font-size:12px; margin:0 3px 0 0; color:#888;}
 
-
-/* line_list *
+/* list_icon *
 ================================================== */
 
-.line_list { color:#008256; border-bottom:1px solid rgba(1,135,82,.5);
-  text-transform:uppercase; font-weight:600; font-size:13px;
-  display:block; padding:5px 0 3px 25px; position:relative;
-  background:rgba(255,255,255,0);
-  @include transition(all .3s ease-in-out);
-  }
-.line_list .web_icon { position:absolute; top:6px; left:3px; font-size:15px; color:#008256;}
-.line_list:hover {background:rgba(255,255,255,.5); cursor:pointer;}
-.line_list.active {background:rgba(255,255,255,.8);}
-.line_list.active .web_icon {color:rgba(255,255,255,0); left:-16px;}
-.line_list.active .web_icon:after {content:"\F003"; color:#008256;}
+.list_icon { list-style-type:none; display:block; padding:0;}
+.list_icon li { font-size: 14px; margin: 10px 0; padding: 0;}
+.list_icon li .list_icon_col1 { float: left; text-align: center; width: 60px; }
+.list_icon li .list_icon_col1 i {padding:0; font-size:24px;}
+.list_icon li .list_icon_col2 { overflow:hidden;}
 
-/* icon_list *
+/* progress-bar *
 ================================================== */
 
-ul.icon_list,
-.icon_list ul { list-style-type:none; display:block; padding:0;}
-.icon_list li { color:#666; font-size:12px;display:block; line-height:18px; padding:2px 0 0 18px; position:relative;}
-
-.icon_list.grey li a{ color:#666;}
+.progress-bar { background-color: #465b66;}
+.progress-bar.progress-bar-success { background-color: #78c9a6;}
 
 /* floating_form *
 ================================================== */
@@ -693,8 +738,6 @@ ul.icon_list,
 .blog_item.short .blog_body { @include clearfix; border-left: 0px; margin:0 0 0 20px; padding:0 0 20px 20px; font-size:12px;}
 
 
-
-
 /* blueimp-gallery
 ================================================== */
 
@@ -784,9 +827,6 @@ ul.icon_list,
     padding-right: 5%;
   }
 }
-
-
-
 
 
 /* RESPONSIVE
