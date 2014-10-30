@@ -43,25 +43,16 @@ class FillHomepageContent < ::Scrivito::Migration
       Homepage.default.content[1].column_2[0].panels[index - 1].update(content: p)
     end
 
-    right = TeaserWidget.new(headline: 'Lorem ipsum', content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-
-    col3 = Homepage.default.content[1].column_3 << right
-    Homepage.default.content[1].update(column_3: col3)
-
-    if false
-      #TEXT ROW
-      #add two-column widget to Homepage main content:
-      twocol = Homepage.default.content << TwoColumnWidget.new
-      Homepage.default.update(content: twocol)
-
-      #fill two-column widget with stuff:
-      left = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-      right = TextWidget.new(content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")
-      col1 = Homepage.default.content[2].column_1 << left
-      Homepage.default.content[2].update(column_1: col1)
-      col2 = Homepage.default.content[2].column_2 << right
-      Homepage.default.content[2].update(column_2: col2)
-    end
+    Homepage.default.content[1].update(column_3: [
+      HeadlineWidget.new(headline: "Designs"), 
+      TextWidget.new(content: "<p>
+        <a href=\"/design/start_page_slider.html\">Homepage</a></p>\n<p>
+        <a href=\"/design/content_page.html\">Content Page</a></p>\n<p>
+        <a href=\"/design/about_page.html\">About Page</a></p>\n<p>
+        <a href=\"/design/blog_page.html\">Blog Page</a></p>\n<p>
+        <a href=\"/design/gallery_page.html\">Gallery Page</a></p>\n<p>
+        <a href=\"/design/result_page.html\">Search Result Page</a></p>"),
+      TeaserWidget.new(headline: 'Lorem ipsum', content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")])
 
     # add TABBED CONTENT
     tb = Homepage.default.content << TabbedContentWidget.new
