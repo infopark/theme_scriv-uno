@@ -1,8 +1,7 @@
 class SearchPage < ::Obj
-  #
-  # SearchPage (not binary)
-  #
-  #   title   :string
-  #   content :widgets
-  #
+
+  def show_in_navigation?
+    false
+  end
+
 end
