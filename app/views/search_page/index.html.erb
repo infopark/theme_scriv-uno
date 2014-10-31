@@ -14,14 +14,56 @@
 
 <div class="bg_white">
   <div class="container">
-    <% if @query.present? && @hits.empty? -%>
-      <h2>No Search Results</h2>
-    <% else -%>
-      <% @hits.each do |hit| -%>
-        <h3 class="search_hit">
-          <%= link_to(hit[:title], scrivito_path(hit)) %>
-        </h3>
-      <% end -%>
-    <% end -%>
+    <div class="row">
+      <div class="col-md-9 col-md-push-3">
+        <% if @query.present? && @hits.empty? -%>
+          <h2>No Search Results</h2>
+        <% else -%>
+          <div class="headline"><h3>There are <%= @hits.size %> results for "<%= @query %>"</h3></div>
+
+<!-- TODO: get pagination active -->
+          <ul class="pagination clearfix">
+            <li class="disabled"><a href="#">«</a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">»</a></li>
+          </ul>
+
+          <% @hits.each do |hit| -%>
+            <div class="list_item">
+              <a href="#" class="square"><i class="foundicon-page"></i></a>
+              <div class="list_item_content">
+                <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
+                <span class="meta">TODO: 22.04.2014 - 121 kB</span>
+                <p>TODO: deliver summary: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or andomised words which don't look even slightly believable. If yo..
+                </p>
+              </div>
+            </div>
+          <% end -%>
+        <% end -%>
+      </div>
+
+<!-- TODO: Fill with dynamic box -->
+      <div class="col-md-3 col-md-pull-9">
+         <div class="headline"><h3>latest news</h3></div>
+         <div class="list_item">
+           <div class="list_item_content">
+             <h4><a href="#">Lorem Fresh Marketplace ...</a></h4>
+             <span class="meta">Chicago - 22. - 30.09.2014</span>
+             <p>Lorem fulfils virtually all customer-specific Lorem requirements in and ...</p>
+           </div>
+         </div>
+
+         <div class="list_item">
+           <div class="list_item_content">
+             <h4><a href="#">Lorem California Produce Growers to Help Ag Against</a></h4>
+             <span class="meta">22.04.2014</span>
+             <p>Feed the Lorem Lorem. Donation of Lorem Lorem  ...</p>
+           </div>
+         </div>
+      </div>
+
+    </div>
   </div>
 </div>
