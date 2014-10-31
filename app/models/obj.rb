@@ -1,9 +1,7 @@
 class Obj < ::Scrivito::BasicObj
 
   def breadcrumbs
-    objects = self.ancestors.split(self.homepage.parent).second.presence || []
-    objects + [self]
-    #objects.select { |object| object.show_in_navigation? }
+    (self.ancestors + [self]).select {|object| object.show_in_navigation?}
   end
 
   def has_other_content?

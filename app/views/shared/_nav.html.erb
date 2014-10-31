@@ -21,8 +21,8 @@
     <% end -%>
   <% end -%>
           
-  <form class="navbar-form navbar-right">
-    <input type="text" placeholder="Search..." class="form-control">
+  <form class="navbar-form navbar-right" action="<%= scrivito_path(Obj.find_by_path("/search_results")) %>">
+    <input name="q" type="text" placeholder="Search..." class="form-control">
   </form>
   <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Contact us</a></li>

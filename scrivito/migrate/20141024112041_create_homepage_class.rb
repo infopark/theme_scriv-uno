@@ -10,6 +10,6 @@ class CreateHomepageClass < ::Scrivito::Migration
         {name: 'locale', type: 'string'},
       ]
     )
-    Page.find_by_path("/").update(_obj_class: "Homepage")
+    Page.find_by_path("/").update(_obj_class: "Homepage", title: "Home")
   end
 end

@@ -1,0 +1,27 @@
+<div class="bg_grey1">
+  <div id="#content" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= form_tag(scrivito_path(@obj), class: "floating_form") do -%>
+          <%= text_field_tag 'q', @query, placeholder: 'Search' %>
+          <%= button_tag 'Search' -%>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bg_white">
+  <div class="container">
+    <% if @query.present? && @hits.empty? -%>
+      <h2>No Search Results</h2>
+    <% else -%>
+      <% @hits.each do |hit| -%>
+        <h3 class="search_hit">
+          <%= link_to(hit[:title], scrivito_path(hit)) %>
+        </h3>
+      <% end -%>
+    <% end -%>
+  </div>
+</div>
