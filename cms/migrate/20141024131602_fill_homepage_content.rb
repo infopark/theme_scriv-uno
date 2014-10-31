@@ -51,6 +51,7 @@ class FillHomepageContent < ::Scrivito::Migration
         <a href=\"/design/about_page.html\">About Page</a></p>\n<p>
         <a href=\"/design/blog_page.html\">Blog Page</a></p>\n<p>
         <a href=\"/design/gallery_page.html\">Gallery Page</a></p>\n<p>
+        <a href=\"/design/misc_page.html\">Misc Page (Icons, Videos)</a></p>\n<p>
         <a href=\"/design/result_page.html\">Search Result Page</a></p>"),
       TeaserWidget.new(headline: 'Lorem ipsum', content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")])
 

@@ -11,12 +11,42 @@
   </div>
 <% end %>
 
-<div class="container margin_top" id="#content">
-  <div class="page-header">
-    <%= scrivito_tag :h1, @obj, :title %>
+<div class="bg_white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-push-3">
+        <%= scrivito_tag :h1, @obj, :title %>
+        <%= render partial: 'shared/breadcrumbs' %>
+        <%= scrivito_tag :div, @obj, :content %>
+      </div>
+      <div class="col-md-3 col-md-pull-9">
+
+        <ul class="side_nav">
+          <li><a href="">More Lorem Ipsum</a></li>
+          <li><a href="">Egal Lormaot</a></li>
+          <li class="active">
+            <a href="">Fioenf and Andat</a>
+            <ul>
+              <li><a href="">2. Level  Dolor Cycle</a></li>
+              <li><a href="">Product Portfolio</a></li>
+              <li><a href="">Benefits</a>
+                <ul>
+                  <li><a href="">3. Level Ipsum Dolor Cycle</a></li>
+                  <li><a href="">Product Portfolio</a></li>
+                  <li><a href="">Benefits</a></li>
+                </ul>
+              </li>
+              <li><a href="">Food Lorem</a></li>
+            </ul>
+          </li>
+          <li><a href="">Lorem Dolorm</a></li>
+          <li><a href="">Egalfi Halaous</a></li>
+        </ul>
+
+      </div>
+
+    </div>
   </div>
-  <%= render partial: 'shared/breadcrumbs' %>
-  <%= scrivito_tag :div, @obj, :content %>
-</div><!-- /#content -->
+</div>
 
 <%= render 'shared/other_content' %>
