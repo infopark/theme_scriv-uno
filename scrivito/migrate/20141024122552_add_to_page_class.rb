@@ -5,7 +5,8 @@ class AddToPageClass < ::Scrivito::Migration
     Scrivito::ObjClass.find('Page').attributes.add(name: 'show_in_navigation', type: :enum, values: %w{yes no}, default: "yes")
     Obj.create(_obj_class: 'Page', _path: '/news', title: "News")
     Obj.create(_obj_class: 'Page', _path: '/about_us', title: "About us")
-    Obj.create(_obj_class: 'Page', _path: '/about_us/sub_content', title: "Sub-Content")
-    Obj.create(_obj_class: 'Page', _path: '/about_us/next_sub_content', title: "Next-Sub-Content")
+    Obj.create(_obj_class: 'Page', _path: '/about_us/people', title: "People")
+    Obj.create(_obj_class: 'Page', _path: '/about_us/more', title: "More About us")
+    Obj.create(_obj_class: 'Page', _path: '/people', title: "People Repo", show_in_navigation: "no")
   end
 end

@@ -1,0 +1,2 @@
+class PersonWidget < Widget
+end

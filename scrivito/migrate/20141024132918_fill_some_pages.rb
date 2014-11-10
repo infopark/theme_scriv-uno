@@ -1,6 +1,6 @@
 class FillSomePages < ::Scrivito::Migration
   def up
-   ["/about_us", "/news", "/about_us/sub_content", "/about_us/next_sub_content"].each do |path|
+   ["/about_us", "/news", "/about_us/more"].each do |path|
       page = Page.find_by_path(path)
       if path.length < 10
         page.update(teaser_headline: "Defense Commissary Agency Sees Environmental and more Impacts")

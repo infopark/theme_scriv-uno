@@ -1,0 +1,28 @@
+<% if widget.person.present? %>
+  <div class="box_white">
+    <img class="img-responsive" src="http://localhost:3000/assets/dummy/square_01.png" alt="">
+    <div class="h3"><%= scrivito_field widget.person, :title %></div>
+    <small><%= scrivito_field widget.person, :function %></small>
+    <p><%= scrivito_field widget.person, :street %><br>
+      <%= scrivito_field widget.person, :postal %><br>
+      <%= scrivito_field widget.person, :country %>
+    </p>
+    <p>
+      T: <%= scrivito_field widget.person, :telephone %><br>
+      F: <%= scrivito_field widget.person, :fax %><br>
+      M: <%= scrivito_field widget.person, :mobile %><br>
+    </p>
+    <p><a href="mailto:<%= scrivito_field widget.person, :email %>"><%= scrivito_field widget.person, :email %></a></p>
+    <% if widget.person.facebook.present? %>
+      <a href="<%= scrivito_field widget.person, :facebook %>"><i class="foundicon-facebook"></i></a>
+    <% end %>
+    <% if widget.person.twitter.present? %>
+      <a href="<%= scrivito_field widget.person, :twitter %>"><i class="foundicon-twitter"></i></a>
+    <% end %>
+  </div>
+<% else %>
+  <% if scrivito_in_editable_view? %>
+    <%= scrivito_edit_reference(widget, :person) %>
+  <% end %> 
+<% end %>
+  

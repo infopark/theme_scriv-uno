@@ -44,15 +44,15 @@ class FillHomepageContent < ::Scrivito::Migration
     end
 
     Homepage.default.content[1].update(column_3: [
-      HeadlineWidget.new(headline: "Designs"), 
+      HeadlineWidget.new(headline: "Page Designs"), 
       TextWidget.new(content: "<p>
-        <a href=\"/design/start_page_slider.html\">Homepage</a></p>\n<p>
-        <a href=\"/design/content_page.html\">Content Page</a></p>\n<p>
-        <a href=\"/design/about_page.html\">About Page</a></p>\n<p>
-        <a href=\"/design/blog_page.html\">Blog Page</a></p>\n<p>
-        <a href=\"/design/gallery_page.html\">Gallery Page</a></p>\n<p>
-        <a href=\"/design/misc_page.html\">Misc Page (Icons, Videos)</a></p>\n<p>
-        <a href=\"/design/result_page.html\">Search Result Page</a></p>"),
+        <a href=\"/design/start_page_slider.html\" target=\"_blank\">Homepage</a></p>\n<p>
+        <a href=\"/design/content_page.html\" target=\"_blank\">Content Page</a></p>\n<p>
+        <a href=\"/design/about_page.html\" target=\"_blank\">About Page</a></p>\n<p>
+        <a href=\"/design/blog_page.html\" target=\"_blank\">Blog Page</a></p>\n<p>
+        <a href=\"/design/gallery_page.html\" target=\"_blank\">Gallery Page</a></p>\n<p>
+        <a href=\"/design/misc_page.html\" target=\"_blank\">Misc Page (Icons, Videos)</a></p>\n<p>
+        <a href=\"/design/result_page.html\" target=\"_blank\">Search Result Page</a></p>"),
       TeaserWidget.new(headline: 'Lorem ipsum', content: "IFCOl im ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum dolor sit amte dor sita lorem doro am tusa lisat. Lormor amet lorem ipsum...")])
 
     # add TABBED CONTENT

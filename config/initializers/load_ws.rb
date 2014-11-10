@@ -1,3 +1,3 @@
-def load_ws_rtc
+def load_rtc
   ::Scrivito::Workspace.current = ::Scrivito::Workspace.find('rtc')
 end

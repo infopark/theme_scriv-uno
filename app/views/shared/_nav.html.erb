@@ -25,7 +25,7 @@
     <input name="q" type="text" placeholder="Search..." class="form-control">
   </form>
   <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Contact us</a></li>
+            <li><%= link_to("Contact", scrivito_path(Obj.find_by_path("/contact"))) %></li>
             <li class="dropdown">
               <a data-toggle="dropdown" class="dropdown-toggle" href="#">Countries <span class="caret"></span></a>
               <ul role="menu" class="dropdown-menu">

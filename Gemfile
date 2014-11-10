@@ -37,15 +37,22 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'scrivito', "~> 0.30.0.rc1"
+gem 'scrivito', "0.30.0"
 #gem 'scrivito_sdk', '0.18.1.311.230921710'
-gem 'scrivito_editors'
+gem 'scrivito_editors', "~> 0.30.0"
 gem 'dotenv-rails'
 
 gem 'haml'
 
 # adding widgets:
 gem 'scrivito_accordion'
+gem 'scrivito_google_maps_widget'
+gem 'scrivito_table_widget'
+gem 'scrivito_video'
+gem 'projekktor-rails'
+
+
+
 #local widgets:
 gem 'scrivito_tabbed_content_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_tabbed_content-0.0.1.gem'
 gem 'scrivito_two_column_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_two_columns-0.0.1.gem'
