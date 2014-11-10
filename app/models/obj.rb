@@ -17,6 +17,11 @@ class Obj < ::Scrivito::BasicObj
     self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
   end
 
+  def summary
+    # delivers first text from content widgets for display in search results and listings:
+    self.content.map(&:summary).flatten.join.first(200)
+  end
+
   def valid_widget_classes_for(field_name)
     if field_name == "full_slider"
       %w(ElasticSliderWidget)

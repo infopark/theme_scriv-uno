@@ -4,4 +4,8 @@ class TextWidget < Widget
     "Text"
   end
 
+  def summary
+    ActionController::Base.helpers.strip_tags(self.content).first(200)
+  end
+
 end

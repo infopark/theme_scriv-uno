@@ -1,0 +1,35 @@
+<ul class="side_nav">
+  <% @obj.homepage.toclist.each do |item| %>
+    <% if item.show_in_navigation? -%>
+      <li class="<%= active_class(item, @obj) %>">
+        <%= link_to(strip_tags(item.title), scrivito_path(item)) %>
+        <% if part_of_path?(item, @obj) %>
+          <%= scrivito_tag_list(:ul, item, :toclist) do |list2, item2| %>
+            <% if item2.show_in_navigation? -%>
+              <%= list2.tag(:li, data: {path: item2.path}, class: active_class(item2, @obj)) do %>
+                <%= link_to(strip_tags(item2.title), scrivito_path(item2)) %>
+                <% if part_of_path?(item2, @obj) %>
+                  <%= scrivito_tag_list(:ul, item2, :toclist) do |list3, item3| %>
+                    <% if item3.show_in_navigation? -%>
+                      <%= list3.tag(:li, data: {path: item3.path}, class: active_class(item3, @obj)) do %>
+                        <%= link_to(strip_tags(item3.title), scrivito_path(item3)) %>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </li>
+    <% end %>
+  <% end %>
+  <% contact = Obj.find_by_path("/contact") %>
+  <li class="<%= active_class(contact, @obj) %>">
+    <%= link_to(strip_tags(contact.title), scrivito_path(contact)) %>
+  </li>
+  <% search = Obj.find_by_path("/search_results") %>
+  <li class="<%= active_class(search, @obj) %>">
+    <%= link_to(strip_tags(search.title), scrivito_path(search)) %>
+  </li>
+</ul>

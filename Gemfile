@@ -48,7 +48,7 @@ gem 'haml'
 gem 'scrivito_accordion'
 gem 'scrivito_google_maps_widget'
 gem 'scrivito_table_widget'
-gem 'scrivito_video'
+gem 'scrivito_video_widget'
 gem 'projekktor-rails'
 
 

@@ -34,10 +34,8 @@
               <a href="#" class="square"><i class="foundicon-page"></i></a>
               <div class="list_item_content">
                 <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
-                <span class="meta">TODO: 22.04.2014 - 121 kB</span>
-                <p>TODO: deliver summary: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or andomised words which don't look even slightly believable. If yo..
-                </p>
+                <span class="meta"><%= hit.class.name %> <%= hit.last_changed %></span>
+                <p><%= hit.summary %></p>
               </div>
             </div>
           <% end -%>
@@ -46,22 +44,7 @@
 
 <!-- TODO: Fill with dynamic box -->
       <div class="col-md-3 col-md-pull-9">
-         <div class="headline"><h3>latest news</h3></div>
-         <div class="list_item">
-           <div class="list_item_content">
-             <h4><a href="#">Lorem Fresh Marketplace ...</a></h4>
-             <span class="meta">Chicago - 22. - 30.09.2014</span>
-             <p>Lorem fulfils virtually all customer-specific Lorem requirements in and ...</p>
-           </div>
-         </div>
-
-         <div class="list_item">
-           <div class="list_item_content">
-             <h4><a href="#">Lorem California Produce Growers to Help Ag Against</a></h4>
-             <span class="meta">22.04.2014</span>
-             <p>Feed the Lorem Lorem. Donation of Lorem Lorem  ...</p>
-           </div>
-         </div>
+        <%= render "shared/side_nav" %>
       </div>
 
     </div>

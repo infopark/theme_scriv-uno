@@ -1,0 +1,33 @@
+<div class="bg_white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= scrivito_image_tag(@obj, :image, class: "img-responsive") %>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-7">
+
+<div class="h3"><%= scrivito_field @obj, :title %></div>
+    <small><%= scrivito_field @obj, :function %></small>
+    <p><%= scrivito_field @obj, :street %><br>
+      <%= scrivito_field @obj, :postal %><br>
+      <%= scrivito_field @obj, :country %>
+    </p>
+    <p>
+      T: <%= scrivito_field @obj, :telephone %><br>
+      F: <%= scrivito_field @obj, :fax %><br>
+      M: <%= scrivito_field @obj, :mobile %><br>
+    </p>
+    <p><a href="mailto:<%= scrivito_field @obj, :email %>"><%= scrivito_field @obj, :email %></a></p>
+    <% if @obj.facebook.present? %>
+      <a href="<%= scrivito_field @obj, :facebook %>"><i class="foundicon-facebook"></i></a>
+    <% end %>
+    <% if @obj.twitter.present? %>
+      <a href="<%= scrivito_field @obj, :twitter %>"><i class="foundicon-twitter"></i></a>
+    <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

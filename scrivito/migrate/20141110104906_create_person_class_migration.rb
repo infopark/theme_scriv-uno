@@ -19,7 +19,7 @@ class CreatePersonClassMigration < ::Scrivito::Migration
     Image.create(_path: "/_resources/square_01", blob: File.new("app/assets/images/dummy/square_01.png"))
     (0..2).each do |index|
       Obj.create(_obj_class: "Person", _path: "/people/person#{index}", title: "James Doe", function: "Chief Executive Officer", 
-        street: "Roadstreet 7", postal: "82049 Exampletiown", country: "Germany", 
+        street: "Roadstreet 7", postal: "82049 Exampletown", country: "Germany", 
         telephone: "+49 (0)89 123 45 678", fax: "+49 (0)89 123 45 678", mobile: "+49 (0)89 123 45 678", email: "james.doe@company.com", 
         facebook: Scrivito::Link.new(title: "Facebook Link", url: "http://www.facebook.com"), 
         twitter: Scrivito::Link.new(title: "Twitter Link", url: "http://www.twitter.com"), 

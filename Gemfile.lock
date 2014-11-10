@@ -140,7 +140,7 @@ GEM
       scrivito
     scrivito_two_column_widget (0.0.1)
       scrivito
-    scrivito_video (1.0.1)
+    scrivito_video_widget (1.0.3)
       bundler
       projekktor-rails
       scrivito_sdk
@@ -190,7 +190,7 @@ DEPENDENCIES
   scrivito_teaser_widget
   scrivito_three_columns
   scrivito_two_column_widget
-  scrivito_video
+  scrivito_video_widget
   sdoc (~> 0.4.0)
   spring
   turbolinks

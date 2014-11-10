@@ -1,6 +1,6 @@
 <% if widget.person.present? %>
   <div class="box_white">
-    <img class="img-responsive" src="http://localhost:3000/assets/dummy/square_01.png" alt="">
+    <%= scrivito_image_tag(widget.person, :image, class: "img-responsive") %>
     <div class="h3"><%= scrivito_field widget.person, :title %></div>
     <small><%= scrivito_field widget.person, :function %></small>
     <p><%= scrivito_field widget.person, :street %><br>
