@@ -16,5 +16,6 @@
  *= require application/app
  *= require scrivito
  *= require google_maps_widget/application
- *= require scrivito_elastic_slider/application
+ *= require video_widget/application
+ *= require scrivito_elastic_slider_widget/application
  */

@@ -110,7 +110,7 @@ GEM
       railties
       scrivito
       scrivito_content_browser
-    scrivito_elastic_slider (0.0.1)
+    scrivito_elastic_slider_widget (0.0.2)
       bundler
       jquery-rails
       scrivito
@@ -136,7 +136,7 @@ GEM
       scrivito
     scrivito_teaser_widget (0.0.1)
       scrivito
-    scrivito_three_columns (0.0.1)
+    scrivito_three_column_widget (0.0.2)
       scrivito
     scrivito_two_column_widget (0.0.1)
       scrivito
@@ -183,12 +183,12 @@ DEPENDENCIES
   scrivito (= 0.30.0)
   scrivito_accordion
   scrivito_editors (~> 0.30.0)
-  scrivito_elastic_slider
+  scrivito_elastic_slider_widget
   scrivito_google_maps_widget
   scrivito_tabbed_content_widget
   scrivito_table_widget
   scrivito_teaser_widget
-  scrivito_three_columns
+  scrivito_three_column_widget
   scrivito_two_column_widget
   scrivito_video_widget
   sdoc (~> 0.4.0)
