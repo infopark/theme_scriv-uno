@@ -97,7 +97,7 @@ GEM
     scrivito (0.30.0)
       railties
       scrivito_sdk (= 0.30.0)
-    scrivito_accordion (1.0.1)
+    scrivito_accordion_widget (1.0.2)
       bundler
       scrivito
     scrivito_content_browser (0.30.0)
@@ -181,7 +181,7 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   scrivito (= 0.30.0)
-  scrivito_accordion
+  scrivito_accordion_widget
   scrivito_editors (~> 0.30.0)
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget

@@ -11,7 +11,7 @@ class FillHomepageFullSlider < ::Scrivito::Migration
     # create panels:
     (1..3).each do |index|
       image = Image.create(_path: "/_resources/teaser_0#{index}", blob: File.new("app/assets/images/dummy/teaser_0#{index}.jpg"))
-      panel = ElasticSliderPanelWidget.new(headline: "Example Headline #{index}", content: "Explore our new website!", image: image, button: Scrivito::Link.new(obj: Homepage.default, title: "Learn more!"))
+      panel = ElasticSliderPanelWidget.new(headline: "Welcome to our first Scrivito Theme!", content: "Explore this app to see what Scrivito can do", image: image, button: Scrivito::Link.new(obj: Homepage.default, title: "Learn more!"))
       panels = Homepage.default.full_slider[0].panels << panel
       Homepage.default.full_slider[0].update(panels: panels)
     end

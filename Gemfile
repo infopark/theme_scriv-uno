@@ -45,7 +45,7 @@ gem 'dotenv-rails'
 gem 'haml'
 
 # adding widgets:
-gem 'scrivito_accordion'
+gem 'scrivito_accordion_widget'
 gem 'scrivito_google_maps_widget'
 gem 'scrivito_table_widget'
 gem 'scrivito_video_widget'
