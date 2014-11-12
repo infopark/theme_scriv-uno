@@ -48,14 +48,11 @@ gem 'haml'
 gem 'scrivito_accordion_widget'
 gem 'scrivito_google_maps_widget'
 gem 'scrivito_table_widget'
-gem 'scrivito_video_widget'
-gem 'projekktor-rails'
+#gem 'scrivito_video_widget'
+#gem 'projekktor-rails'
 
-
-
-#local widgets:
-gem 'scrivito_tabbed_content_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_tabbed_content-0.0.1.gem'
-gem 'scrivito_two_column_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_two_columns-0.0.1.gem'
-gem 'scrivito_elastic_slider_widget' #not on RubyGems, install from https://github.com/kt-jet/scrivito_elastic_slider
-gem 'scrivito_three_column_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_three_column_widget-0.0.2.gem'
-gem 'scrivito_teaser_widget' #not on RubyGems, install from file that is stored within the app 'sudo gem install --local scrivito_teaser_widget-0.0.1.gem'
+gem 'scrivito_tabbed_content_widget'
+gem 'scrivito_two_column_widget'
+gem 'scrivito_elastic_slider_widget'
+gem 'scrivito_three_column_widget'
+gem 'scrivito_teaser_widget'

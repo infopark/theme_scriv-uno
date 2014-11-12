@@ -8,5 +8,7 @@ class AddToPageClass < ::Scrivito::Migration
     Obj.create(_obj_class: 'Page', _path: '/about_us/people', title: "People")
     Obj.create(_obj_class: 'Page', _path: '/about_us/more', title: "More About us")
     Obj.create(_obj_class: 'Page', _path: '/people', title: "People Repo", show_in_navigation: "no")
+    Obj.create(_obj_class: 'Page', _path: '/scrivuno', title: "ScrivUno")
+    Obj.create(_obj_class: 'Page', _path: '/contact', title: "Contact", show_in_navigation: "no")
   end
 end

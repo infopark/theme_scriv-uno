@@ -5,6 +5,6 @@
       <h4 class="h3"><a href="#<%= post_short.id %>"><span><%= post_short.title %></span></a></h4>
     </div>
   </div>
-  <div class="blog_body"><%= post_short.summary %></div>
+  <div class="blog_body"><%= post_short.summary.first(140) %></div>
 </div>
 
