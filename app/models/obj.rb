@@ -23,8 +23,11 @@ class Obj < ::Scrivito::BasicObj
   end
 
   def valid_widget_classes_for(field_name)
-    if field_name == "full_slider"
-      %w(ElasticSliderWidget)
+    case field_name
+      when "full_slider"
+        %w(ElasticSliderWidget)
+      when "other_content"
+        %w(BackgroundWidget)
     end
   end
 
