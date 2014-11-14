@@ -4,7 +4,7 @@ class AddSupportContentMigration < ::Scrivito::Migration
       p = Obj.find_by_path(path)
       p.update(other_content: p.other_content << BackgroundWidget.new(colour: "green",
         content: [
-          TextWidget.new(content: "<h3>If you get stuck, please check our online documentation or ask our Support Team</h3>"),
+          TextWidget.new(content: "<h3>If you get stuck, please check our Online Documentation or ask our Support Team</h3>"),
           TwoColumnWidget.new(
             column_1: [
               ListitemWidget.new(headline: "Our online Documentation", 

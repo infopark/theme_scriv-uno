@@ -1,7 +1,7 @@
 class FillHomepageContent < ::Scrivito::Migration
   def up
     # upload emtpy grey image:
-    Image.create(_path: "/_resources/grey", blob: File.new("app/assets/images/dummy/grey.png"))
+    Image.create(_path: "/_resources/grey", blob: File.new("app/assets/images/scriv-uno/grey.png"))
 
     # TWO-COLUMN ROW
     #add two-column widget:
@@ -67,7 +67,7 @@ class FillHomepageContent < ::Scrivito::Migration
     # fill Tabbed Content:
     # create tabs:
     (1..3).each do |index|
-      image = Image.create(_path: "/_resources/teaser_0#{index + 4}", blob: File.new("app/assets/images/dummy/teaser_0#{index + 4}.jpg"))
+      image = Image.create(_path: "/_resources/teaser_0#{index + 4}", blob: File.new("app/assets/images/scriv-uno/teaser_0#{index + 4}.jpg"))
       tabsw.tabs << TabbedContentTabWidget.new(headline: "Built For Ruby on Rails")
       tabsw.update(tabs: tabsw.tabs)
       tab = tabsw.tabs.last
