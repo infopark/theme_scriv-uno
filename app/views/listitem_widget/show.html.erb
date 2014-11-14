@@ -6,5 +6,8 @@
     <%= scrivito_tag level.to_sym, widget, :headline %>
     <%= scrivito_tag :span, widget, :subline, class: "meta" %>
     <%= scrivito_tag(:p, widget, :content) %>
+    <% if widget.link.present? %>
+      <%= link_to(widget.link.display_title, scrivito_path(widget.link)) %>
+    <% end %>
   </div>
 </div>
