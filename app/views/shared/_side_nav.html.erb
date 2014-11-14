@@ -1,5 +1,5 @@
 <ul class="side_nav">
-  <% @obj.homepage.toclist.each do |item| %>
+  <% @obj.homepage.child_order.each do |item| %>
     <% if item.show_in_navigation? -%>
       <li class="<%= active_class(item, @obj) %>">
         <%= link_to(strip_tags(item.title), scrivito_path(item)) %>

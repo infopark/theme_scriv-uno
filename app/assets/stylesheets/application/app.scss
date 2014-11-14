@@ -198,7 +198,7 @@ ul {padding-left:20px;}
 .navbar-toggle .icon-bar { background-color: #333; }
 .navbar-brand { margin:10px 0;
   height: 40px; width: 105px; overflow:hidden; text-indent:-1000px;
-  background: image_url('dummy/logo.svg') no-repeat 0 0 / cover ;
+  background: image_url('scriv-uno/logo.svg') no-repeat 0 0 / cover ;
   }
 
 .nav > li > a { @include transition(all .3s ease-in-out);}
@@ -432,7 +432,7 @@ ul {padding-left:20px;}
 .bg_green * { color:#fff;}
 
 .bg_blue { background:#465b66;}
-.bg_image {background: #ddd image_url('dummy/bg_image1.jpg') no-repeat 0 0 / cover ;}
+.bg_image {background: #ddd image_url('scriv-uno/bg_image1.jpg') no-repeat 0 0 / cover ;}
 
 
 /* headline *
@@ -625,7 +625,7 @@ ul {padding-left:20px;}
 .footer ul li:last-child a:after {content:''; }
 
 .footer .adress {line-height:16px; font-size:10px; color: #ccc; font-weight: 200; margin:0; text-align:left;}
-.footer .logo {background: image_url('dummy/logo_sw.svg') no-repeat center; display:block; width:110px; height:40px; margin-left:-10px;}
+.footer .logo {background: image_url('scriv-uno/logo_sw.svg') no-repeat center; display:block; width:110px; height:40px; margin-left:-10px;}
 
 
 /* slick-slider

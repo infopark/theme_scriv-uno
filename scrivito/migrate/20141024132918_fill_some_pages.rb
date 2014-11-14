@@ -1,5 +1,6 @@
 class FillSomePages < ::Scrivito::Migration
   def up
+    image = Image.create(_path: "/_resources/teaser_07", blob: File.new("app/assets/images/scriv-uno/teaser_07.jpg"))
    ["/about_us", "/about_us/people", "/about_us/more", "/contact", "/misc", "/misc/gallery", "/misc/icon_boxes", "/scrivito", "/scrivito/modify"].each do |path|
       page = Page.find_by_path(path)
       page.update(teaser_headline: "This is a sample Scrivito App. Modify it to meet your own needs!")
@@ -9,7 +10,8 @@ class FillSomePages < ::Scrivito::Migration
 
 Phasellus ullamcorper purus sed justo pretium laoreet. Sed nunc felis, mattis et elit vitae, pretium rutrum ipsum. Morbi eu orci ut leo feugiat luctus. Cras ultricies consectetur sem eu dapibus. In lacinia volutpat commodo. Nullam semper tempor odio, ac porta tellus luctus in. Ut consectetur, metus id scelerisque hendrerit, lorem odio commodo sapien, sed commodo mauris eros nec purus. Quisque in convallis ipsum. Mauris auctor tempor tellus, a semper ipsum vestibulum id. Etiam sit amet ligula quam.</p><p>
 
-Phasellus ullamcorper purus sed justo pretium laoreet. Sed nunc felis, mattis et elit vitae, pretium rutrum ipsum. Morbi eu orci ut leo feugiat luctus. Cras ultricies consectetur sem eu dapibus. In lacinia volutpat commodo. Nullam semper tempor odio, ac porta tellus luctus in. Ut consectetur, metus id scelerisque hendrerit, lorem odio commodo sapien, sed commodo mauris eros nec purus. Quisque in convallis ipsum. Mauris auctor tempor tellus, a semper ipsum vestibulum id. Etiam sit amet ligula quam.</p>")
+Phasellus ullamcorper purus sed justo pretium laoreet. Sed nunc felis, mattis et elit vitae, pretium rutrum ipsum. Morbi eu orci ut leo feugiat luctus. Cras ultricies consectetur sem eu dapibus. In lacinia volutpat commodo. Nullam semper tempor odio, ac porta tellus luctus in. Ut consectetur, metus id scelerisque hendrerit, lorem odio commodo sapien, sed commodo mauris eros nec purus. Quisque in convallis ipsum. Mauris auctor tempor tellus, a semper ipsum vestibulum id. Etiam sit amet ligula quam.</p>"),
+        ImageWidget.new(image: image)
       ])
     end
 

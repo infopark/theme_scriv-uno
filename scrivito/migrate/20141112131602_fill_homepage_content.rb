@@ -1,5 +1,8 @@
 class FillHomepageContent < ::Scrivito::Migration
   def up
+
+    Homepage.default.update(child_order: [Obj.find_by_path("/about_us"), Obj.find_by_path("/blog"), Obj.find_by_path("/misc"), Obj.find_by_path("/scrivito")])
+
     # upload emtpy grey image:
     Image.create(_path: "/_resources/grey", blob: File.new("app/assets/images/scriv-uno/grey.png"))
 
@@ -67,7 +70,7 @@ class FillHomepageContent < ::Scrivito::Migration
     # fill Tabbed Content:
     # create tabs:
     (1..3).each do |index|
-      image = Image.create(_path: "/_resources/teaser_0#{index + 4}", blob: File.new("app/assets/images/scriv-uno/teaser_0#{index + 4}.jpg"))
+      image = Image.create(_path: "/_resources/teaser_0#{index + 3}", blob: File.new("app/assets/images/scriv-uno/teaser_0#{index + 3}.jpg"))
       tabsw.tabs << TabbedContentTabWidget.new(headline: "Built For Ruby on Rails")
       tabsw.update(tabs: tabsw.tabs)
       tab = tabsw.tabs.last
