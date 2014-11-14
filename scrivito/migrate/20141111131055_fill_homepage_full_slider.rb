@@ -17,7 +17,7 @@ class FillHomepageFullSlider < ::Scrivito::Migration
     end
 
     # tweak some values:
-    Homepage.default.full_slider[0].panels[1].update(headline: "Start here!", content: "You can use this app to develop your own. Just start by modifying the content according to your needs.", button: Scrivito::Link.new(obj: Obj.find_by_path("/scrivuno"), title: ""))
+    Homepage.default.full_slider[0].panels[1].update(headline: "Start here!", content: "You can use this app to develop your own.<br />Just start by modifying the content according to your needs.", button: Scrivito::Link.new(obj: Obj.find_by_path("/scrivuno"), title: ""))
     Homepage.default.full_slider[0].panels[2].update(headline: "We have already created some basics for you.", content: "Check out the Blog, the News or other sections in this app and add your own content there.", button: Scrivito::Link.new(obj: Obj.find_by_path("/news"), title: "Start with the News!"))
 
   end
