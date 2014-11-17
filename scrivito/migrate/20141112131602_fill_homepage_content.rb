@@ -8,7 +8,7 @@ class FillHomepageContent < ::Scrivito::Migration
 
     # TWO-COLUMN ROW
     #add two-column widget:
-    Homepage.default.update(content: [TwoColumnWidget.new])
+    Homepage.default.update(teaser: [TwoColumnWidget.new])
 
     #fill two-column widget with listitem widgets:
     left = ListitemWidget.new(headline: "Built for Ruby on Rails", headline_level: "h2", 
@@ -17,15 +17,15 @@ class FillHomepageContent < ::Scrivito::Migration
     right = ListitemWidget.new(headline: "It's a cloud service", headline_level: "h2", 
       content: "We like to save your time so you can focus on the important things: Developing your website functionality and look. That's why we built Scrivito as a cloud service.", 
       image: Image.find_by_path("/_resources/grey")) 
-    Homepage.default.content[0].update(column_1: [left])
-    Homepage.default.content[0].update(column_2: [right])
+    Homepage.default.teaser[0].update(column_1: [left])
+    Homepage.default.teaser[0].update(column_2: [right])
 
     # THREE-COLUMN ROW
     #add three-column widget:
-    Homepage.default.update(content: Homepage.default.content << ThreeColumnWidget.new)
+    Homepage.default.update(content: [ThreeColumnWidget.new])
 
     #fill three-column widget with widgets:
-    cont1 = Homepage.default.content[1]
+    cont = Homepage.default.content[0]
     # left:
     left_one = HeadlineWidget.new(headline: "What's more")
     left_two = ListitemWidget.new(headline: "Scalable and available", 
@@ -34,10 +34,10 @@ class FillHomepageContent < ::Scrivito::Migration
     )
     left_three = ListitemWidget.new(headline: "Act locally, work globally", content: "Multiple language support and internationalization work seamlessly, powered by Rails I18n.", image: Image.find_by_path("/_resources/grey"))
     left_four = ListitemWidget.new(headline: "Mobile to the max", content: "Build websites for desktop computers and mobile devices.", image: Image.find_by_path("/_resources/grey"))
-    cont1.update(column_1: [left_one, left_two, left_three, left_four])
+    cont.update(column_1: [left_one, left_two, left_three, left_four])
 
     # middle:
-    cont1.update(column_2: [AccordionWidget.new()])
+    cont.update(column_2: [AccordionWidget.new()])
     panel1 = AccordionPanelWidget.new(headline: "Get your content delivered. Fast.", 
       content: [TextWidget.new(content: "Your content is fast because of our great CDN. We deliver your stuff from the cloud, directly to you and your customers. No worries about server maintenance, scalability or performance. No matter whether your site is content-heavy or lightweight - it will be fast.")]
     )
@@ -48,9 +48,9 @@ class FillHomepageContent < ::Scrivito::Migration
     panel3 = AccordionPanelWidget.new(headline: "Pay as you go", 
       content: [TextWidget.new(content: "With our simple pricing scheme it's easy to choose the plan you need. Start small, grow big. There are no long-term commitments - and you can try Scrivito for free for 30 days.")]
     )
-    cont1.column_2[0].update(panels: [panel1, panel2, panel3]) 
+    cont.column_2[0].update(panels: [panel1, panel2, panel3]) 
 
-    cont1.update(column_3: [
+    cont.update(column_3: [
       HeadlineWidget.new(headline: "Included Page Designs"), 
       TextWidget.new(content: "<p>We are using Bootstrap for this sample app and have provided some page style suggestions here:</p><p>
         <a href=\"/design/start_page_slider.html\" target=\"_blank\">Homepage</a></p>\n<p>

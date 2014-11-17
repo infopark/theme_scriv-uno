@@ -15,3 +15,4 @@
 //= require bootstrap.min
 //= require scrivito
 //= require google_maps_widget/application
+//= require scrivito_slick_slider_widget/application

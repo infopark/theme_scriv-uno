@@ -56,3 +56,5 @@ gem 'scrivito_two_column_widget'
 gem 'scrivito_elastic_slider_widget'
 gem 'scrivito_three_column_widget'
 gem 'scrivito_teaser_widget'
+
+gem 'scrivito_slick_slider_widget'

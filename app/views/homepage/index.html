@@ -1,6 +1,13 @@
+<% if @obj.teaser.present? || scrivito_in_editable_view? %>
+  <div class="bg_image">
+    <%= scrivito_tag :div, @obj, :teaser, class: "container", id: "#content" %>
+  </div>
+<% end %>
+
 <div class="bg_white">
   <div class="container">
     <%= scrivito_tag :div, @obj, :content %>
   </div>
 </div>
+
 <%= render 'shared/other_content' %>

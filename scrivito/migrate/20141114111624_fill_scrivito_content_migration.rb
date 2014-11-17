@@ -22,8 +22,9 @@ class FillScrivitoContentMigration < ::Scrivito::Migration
         <li><strong>Convention Over Configuration:</strong> Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files.</li></ul>"),
       HeadlineWidget.new(headline: "For more"),
       TextWidget.new(content: "<p>Find everything you need on</p>
-        <a href=\"http://rubyonrails.org/\" target=\"_blank\">http://rubyonrails.org/</a>
-        <a href=\"http://railscasts.com/\" target=\"_blank\">http://railscasts.com/</a>")
+        <ul>
+        <li><a href=\"http://rubyonrails.org/\" target=\"_blank\">http://rubyonrails.org/</a></li>
+        <li><a href=\"http://railscasts.com/\" target=\"_blank\">http://railscasts.com/</a></li></ul>")
     ])
 
     # sort 'em:
