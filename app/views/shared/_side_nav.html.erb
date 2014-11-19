@@ -28,7 +28,7 @@
   <li class="<%= active_class(contact, @obj) %>">
     <%= link_to(strip_tags(contact.title), scrivito_path(contact)) %>
   </li>
-  <% search = Obj.find_by_path("/search_results") %>
+  <% search = Obj.find_by_path("/search") %>
   <li class="<%= active_class(search, @obj) %>">
     <%= link_to(strip_tags(search.title), scrivito_path(search)) %>
   </li>
