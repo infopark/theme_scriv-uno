@@ -18,6 +18,7 @@
       <div class="col-md-9 col-md-push-3">
         <% if @query.present? && @hits.empty? -%>
           <h2>No Search Results</h2>
+          <p>Unfortunately, we could not find any content matching your search. Please try with a broader search term.</p>
         <% else -%>
           <div class="headline"><h3>There are <%= @hits.size %> results for "<%= @query %>"</h3></div>
 

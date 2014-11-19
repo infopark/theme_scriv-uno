@@ -1,6 +1,8 @@
 <% if widget.person.present? %>
   <div class="box_white">
-    <%= scrivito_image_tag(widget.person, :image, class: "img-responsive") %>
+    <% unless widget.show_picture == "no" %>
+      <%= scrivito_image_tag(widget.person, :image, class: "img-responsive") %>
+    <% end %>
     <div class="h3"><%= scrivito_field widget.person, :title %></div>
     <small><%= scrivito_field widget.person, :function %></small>
     <p><%= scrivito_field widget.person, :street %><br>
