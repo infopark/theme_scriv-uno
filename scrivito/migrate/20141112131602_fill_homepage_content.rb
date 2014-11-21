@@ -68,29 +68,40 @@ class FillHomepageContent < ::Scrivito::Migration
     tabsw = Homepage.default.widget_from_pool(tb.last.id)
 
     # fill Tabbed Content:
+    headline1 = "Built For Ruby on Rails"
+    text1 = "<p>With Scrivito, you can develop your website like you always did. Locally on your laptop with your favorite IDE, your favorite templating langu
+age, your version control system and favorite deployment environment. It just works \"The Rails Way\".</p>
+          <p>Drop the Scrivito SDK, editors, and Widget gems into your app, and you're ready to go!</p>" 
+
+    headline2 = "Your clients will love it, too"
+    text2 = "<p>Your clients can edit content in place, directly on the website. Scrivito is based on widgets as the building blocks of pages. Fill widgets with your content, move them using drag and drop, cut or copy and paste them to give your pages your favorite layout.</p>
+      <p>You can easily add new widgets to provide functionality for your editors which they can instantly use to keep their content up to date. Intuitively, without any training or HTML skills. And the best is: You can reuse your widgets between projects as well!</p>"
+    
+    headline3 = "It's a cloud service"
+    text3 = "<p>We like to save your time so you can focus on the important things: Developing your website functionality and look. That's why we built Scrivito as a cloud service. So you don't have to keep on updating your CMS all the time. And you always get the latest features.</p>
+      <p>We're running Scrivito on Amazon Web Services, distributed over three data centres, so your data is secure and highly available.</p>
+      <p>Still, when it comes to deployment of your Scrivito Rails app, you have all options available: Locally, on AWS, on Heroku, … - it's your decision.</p>"
+
     # create tabs:
     (1..3).each do |index|
-      image = Image.create(_path: "/_resources/teaser_0#{index + 3}", blob: File.new("app/assets/images/scriv-uno/teaser_0#{index + 3}.jpg"))
-      tabsw.tabs << TabbedContentTabWidget.new(headline: "Built For Ruby on Rails")
+      image = Image.find_by_path("/_resources/teaser_0#{index}")
+      tabsw.tabs << TabbedContentTabWidget.new(headline: (eval "headline#{index}"))
       tabsw.update(tabs: tabsw.tabs)
       tab = tabsw.tabs.last
       twocol = tab.content << TwoColumnWidget.new()
       tab.update(content: twocol)
       if index != 2
-        text = tab.content.last.column_1 << TextWidget.new(content: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.")
+        text = tab.content.last.column_1 << TextWidget.new(content: (eval "text#{index}"))
         tab.content.last.update(column_1: text)
         image = tab.content.last.column_2 << ImageWidget.new(image: image)
         tab.content.last.update(column_2: image)
       else
-        text = tab.content.last.column_2 << TextWidget.new(content: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.")
+        text = tab.content.last.column_2 << TextWidget.new(content: text2)
         tab.content.last.update(column_2: text)
         image = tab.content.last.column_1 << ImageWidget.new(image: image)
         tab.content.last.update(column_1: image)
       end
     end
-
-    tabsw.tabs[1].update(headline: "Your clients will love it, too!")
-    tabsw.tabs[1].update(headline: "It's a cloud service.")
 
   end
 end

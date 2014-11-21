@@ -20,14 +20,28 @@
           <h2>No Search Results</h2>
           <p>Unfortunately, we could not find any content matching your search. Please try with a broader search term.</p>
         <% else -%>
-          <div class="headline"><h3>There are <%= @hits.size %> results for "<%= @query %>"</h3></div>
+          <div class="headline"><h3>There are <%= @total %> results for "<%= @query %>"</h3></div>
 
-<!-- TODO: get pagination active -->
           <ul class="pagination clearfix">
-            <li class="disabled"><a href="#">«</a></li>
-            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">»</a></li>
+            <% if @previous_page %>
+              <li><%= link_to '«', @previous_page, class: "active" %></li>
+            <% else %>
+              <li class="disabled"><a href="#">«</a></li>
+            <% end %>
+
+            <% (1..@total_pages).each do |page| %>
+              <% if page == @showing_page %>
+                <li class="active"><a href=""><%= page %><span class="sr-only">(current)</span></a></li>
+              <% else %>
+                <li><%= link_to page, scrivito_path(@obj, q: @query, offset: (@hits_per_page * (page - 1))) %></li>
+              <% end %>
+            <% end %>
+
+            <% if @next_page %>
+              <li><%= link_to '»', @next_page, class: "active" %></li>
+            <% else %>
+              <li class="disabled"><a href="#">»</a></li>
+            <% end %>
           </ul>
 
           <% @hits.each do |hit| -%>
@@ -43,7 +57,6 @@
         <% end -%>
       </div>
 
-<!-- TODO: Fill with dynamic box -->
       <div class="col-md-3 col-md-pull-9">
         <%= render "shared/side_nav" %>
       </div>
