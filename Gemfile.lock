@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/Scrivito/scrivito_slick_slider_widget.git
+  revision: ba084a38090ea4b081db6cc6cb0973d16b366a94
+  specs:
+    scrivito_slick_slider_widget (0.0.1)
+      rails (~> 4.1.6)
+      scrivito (>= 0.30.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -127,9 +135,6 @@ GEM
       nokogiri (~> 1.5.6)
       rails (~> 4.1.1)
       rake (>= 0.9.2.2)
-    scrivito_slick_slider_widget (0.0.1)
-      rails (~> 4.1.6)
-      scrivito (>= 0.30.0)
     scrivito_tabbed_content_widget (0.0.1)
       haml
       scrivito
@@ -183,7 +188,7 @@ DEPENDENCIES
   scrivito_editors (~> 0.30.0)
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
-  scrivito_slick_slider_widget
+  scrivito_slick_slider_widget!
   scrivito_tabbed_content_widget
   scrivito_table_widget
   scrivito_teaser_widget

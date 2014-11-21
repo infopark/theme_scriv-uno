@@ -22,6 +22,10 @@ class Obj < ::Scrivito::BasicObj
     self.content.map(&:summary).flatten.join.first(200)
   end
 
+  def thumbnail_icon
+    "foundicon-page"
+  end 
+  
   def valid_widget_classes_for(field_name)
     case field_name
       when "full_slider"

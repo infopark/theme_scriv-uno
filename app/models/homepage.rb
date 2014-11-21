@@ -8,4 +8,8 @@ class Homepage < Obj
     self
   end
 
+  def thumbnail_icon
+    "foundicon-home"
+  end
+
 end

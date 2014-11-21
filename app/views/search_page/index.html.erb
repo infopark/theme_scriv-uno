@@ -46,7 +46,7 @@
 
           <% @hits.each do |hit| -%>
             <div class="list_item">
-              <a href="#" class="square"><i class="foundicon-page"></i></a>
+              <a href="#" class="square"><i class="<%= hit.thumbnail_icon %>"></i></a>
               <div class="list_item_content">
                 <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
                 <span class="meta"><%= hit.class.name %> <%= hit.last_changed %></span>

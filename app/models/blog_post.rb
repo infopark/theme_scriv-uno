@@ -1,5 +1,9 @@
 class BlogPost < ::Obj
 
+  def self.valid_page_classes_beneath(path)
+    %w(BlogPostComment)
+  end
+
   def blog
     self.parent
   end
@@ -8,8 +12,8 @@ class BlogPost < ::Obj
     false
   end
 
-  def self.valid_page_classes_beneath(path)
-    %w(BlogPostComment)
+  def thumbnail_icon
+    "foundicon-monitor"
   end
 
 end
