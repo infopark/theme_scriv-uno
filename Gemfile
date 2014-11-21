@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use SCSS for stylesheets
@@ -59,3 +58,5 @@ gem 'scrivito_three_column_widget'
 gem 'scrivito_teaser_widget'
 
 gem 'scrivito_slick_slider_widget', :git => "https://github.com/Scrivito/scrivito_slick_slider_widget.git"
+
+gem 'rails_12factor', group: :production
