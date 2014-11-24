@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/Scrivito/scrivito_slick_slider_widget.git
-  revision: ba084a38090ea4b081db6cc6cb0973d16b366a94
+  revision: 70249eb5dd877d7f808b0652c98e3bec4665355a
   specs:
-    scrivito_slick_slider_widget (0.0.1)
+    scrivito_slick_slider_widget (0.0.2)
       rails (~> 4.1.6)
       scrivito (>= 0.30.0)
 
