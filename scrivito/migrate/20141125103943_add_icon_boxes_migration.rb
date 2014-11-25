@@ -20,7 +20,7 @@ class AddIconBoxesMigration < ::Scrivito::Migration
           BoxWidget.new(show_frame: "no", content: [
             IconBoxWidget.new(icon: "lock", color: "green", background_color: "white", size: "medium"),
             TextWidget.new(content: "<h3>Security</h3>
-              <p>We leverage all the security measures and advantages that AWS provides to always keep your data secure.</p>")
+              <p>We leverage all of AWS's security measures to keep your data secure.</p>")
           ])]
       ),
       HeadlineWidget.new(headline: "And More"),
@@ -35,7 +35,7 @@ class AddIconBoxesMigration < ::Scrivito::Migration
           BoxWidget.new(show_frame: "yes", colour: "grey", content: [
             IconBoxWidget.new(icon: "star", color: "blue", size: "medium"),
             TextWidget.new(content: "<h3>Get your content delivered. Fast.</h3>
-              <p>Your content is fast because of our great CDN. We deliver your stuff from the cloud, directly to your customers.</p>")
+              <p>We deliver your stuff from the cloud, directly to your customers.</p>")
           ])], 
         column_3: [
           BoxWidget.new(show_frame: "yes", content: [
@@ -62,7 +62,7 @@ class AddIconBoxesMigration < ::Scrivito::Migration
           BoxWidget.new(show_frame: "yes", colour: "green", content: [
             IconBoxWidget.new(icon: "lock", color: "green", background_color: "white", size: "medium"),
             TextWidget.new(content: "<h3>Security</h3>
-              <p>We leverage all the security measures and advantages that AWS provides to always keep your data secure.</p>")
+              <p>We leverage all of AWS's security measures to keep your data secure.</p>")
           ])]
       )
     ])
