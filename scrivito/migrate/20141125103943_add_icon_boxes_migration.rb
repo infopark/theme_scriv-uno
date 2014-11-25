@@ -29,7 +29,7 @@ class AddIconBoxesMigration < ::Scrivito::Migration
           BoxWidget.new(show_frame: "yes", content: [
             IconBoxWidget.new(icon: "globe", size: "medium"),
             TextWidget.new(content: "<h3>Act locally, work globally</h3>
-              <p>Multiple language support and internationalization work seamlessly, powered by Rails I18n.</p>")
+              <p>Multiple language support and internationalization powered by I18n.</p>")
           ])], 
         column_2: [
           BoxWidget.new(show_frame: "yes", colour: "grey", content: [

@@ -1,10 +1,11 @@
 class CreateBroadPageMigration < ::Scrivito::Migration
   def up
     Scrivito::ObjClass.create(name: 'BroadPage', attributes: [
+      {name: 'content', type: :widget},
       {name: 'teaser_headline', type: :string},
       {name: 'teaser_content', type: :html},
+      {name: 'title', type: :string},
       {name: 'show_in_navigation', type: :enum, values: %w{yes no}, default: "yes"},
-      {name: 'content', type: :widget}
     ])
 
     # do something about icons page:

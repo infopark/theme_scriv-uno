@@ -16,43 +16,48 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-md-push-3">
-        <% if @query.present? && @hits.empty? -%>
-          <h2>No Search Results</h2>
-          <p>Unfortunately, we could not find any content matching your search. Please try with a broader search term.</p>
-        <% else -%>
-          <div class="headline"><h3>There are <%= @total %> results for "<%= @query %>"</h3></div>
+        <% if not @query.present? -%>
+          <h2>Please enter a Search term</h2>
+          <p>Please use the input field above to enter a search term. Then run the Search.</p>
+        <% else %>
+          <% if @hits.empty? -%>
+            <h2>No Search Results</h2>
+            <p>Unfortunately, we could not find any content matching your search. Please try with a broader search term.</p>
 
-          <ul class="pagination clearfix">
-            <% if @previous_page %>
-              <li><%= link_to '«', @previous_page, class: "active" %></li>
-            <% else %>
-              <li class="disabled"><a href="#">«</a></li>
-            <% end %>
-
-            <% (1..@total_pages).each do |page| %>
-              <% if page == @showing_page %>
-                <li class="active"><a href=""><%= page %><span class="sr-only">(current)</span></a></li>
+          <% else -%>
+            <div class="headline"><h3>There are <%= @total %> results for "<%= @query %>"</h3></div>
+            <ul class="pagination clearfix">
+              <% if @previous_page %>
+                <li><%= link_to '«', @previous_page, class: "active" %></li>
               <% else %>
-                <li><%= link_to page, scrivito_path(@obj, q: @query, offset: (@hits_per_page * (page - 1))) %></li>
+                <li class="disabled"><a href="#">«</a></li>
               <% end %>
-            <% end %>
 
-            <% if @next_page %>
-              <li><%= link_to '»', @next_page, class: "active" %></li>
-            <% else %>
-              <li class="disabled"><a href="#">»</a></li>
-            <% end %>
-          </ul>
+              <% (1..@total_pages).each do |page| %>
+                <% if page == @showing_page %>
+                  <li class="active"><a href=""><%= page %><span class="sr-only">(current)</span></a></li>
+                <% else %>
+                  <li><%= link_to page, scrivito_path(@obj, q: @query, offset: (@hits_per_page * (page - 1))) %></li>
+                <% end %>
+              <% end %>
 
-          <% @hits.each do |hit| -%>
-            <div class="list_item">
-              <a href="#" class="square"><i class="<%= hit.thumbnail_icon %>"></i></a>
-              <div class="list_item_content">
-                <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
-                <span class="meta"><%= hit.class.name %> <%= hit.last_changed %></span>
-                <p><%= hit.summary %></p>
+              <% if @next_page %>
+                <li><%= link_to '»', @next_page, class: "active" %></li>
+              <% else %>
+                <li class="disabled"><a href="#">»</a></li>
+              <% end %>
+            </ul>
+
+            <% @hits.each do |hit| -%>
+              <div class="list_item">
+                <a href="#" class="square"><i class="<%= hit.thumbnail_icon %>"></i></a>
+                <div class="list_item_content">
+                  <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
+                  <span class="meta"><%= hit.class.name %> <%= hit.last_changed %></span>
+                  <p><%= hit.summary %></p>
+                </div>
               </div>
-            </div>
+            <% end -%>
           <% end -%>
         <% end -%>
       </div>
@@ -64,3 +69,5 @@
     </div>
   </div>
 </div>
+
+<%= render 'shared/other_content' %>
