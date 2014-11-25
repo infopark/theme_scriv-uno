@@ -13,7 +13,7 @@ class Obj < ::Scrivito::BasicObj
   end
 
   def show_in_navigation?
-    # single ObjClasses may overwrite this method
+    # single ObjClasses often overwrite this method
     self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
   end
 
@@ -34,7 +34,6 @@ class Obj < ::Scrivito::BasicObj
         %w(BackgroundWidget)
     end
   end
-
 
 end
 
