@@ -21,32 +21,32 @@
     <% end -%>
   <% end -%>
           
-  <form class="navbar-form navbar-right" action="<%= scrivito_path(Obj.find_by_path("/search")) %>">
+  <form class="navbar-form navbar-right" action="<%= scrivito_path(Scrivito::NamedLink.get_object("search")) %>">
     <input name="q" type="text" placeholder="Search..." class="form-control">
   </form>
   <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to("Contact", scrivito_path(Obj.find_by_path("/contact"))) %></li>
+            <li><%= link_to("Contact", scrivito_path(Scrivito::NamedLink.get_object("contact"))) %></li>
             <li class="dropdown">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Countries <span class="caret"></span></a>
+              <a data-toggle="dropdown" class="dropdown-toggle" href="<%= scrivito_path(Scrivito::NamedLink.get_object("contact")) %>">Countries <span class="caret"></span></a>
               <ul role="menu" class="dropdown-menu">
                 <li class="dropdown-header">Europe</li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Austria</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Croatia</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Czech Republic</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Denmark</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Finland</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">France</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Germany</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Greece</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Hungary</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Italy</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Norway</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>#">Poland</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Portugal</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Spain</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Switzerland</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">Turkey</a></li>
-                <li><a href="<%= scrivito_path(Obj.find_by_path("/contact")) %>">UK</a></li>
+                <li><a href="#">Austria</a></li>
+                <li><a href="#">Croatia</a></li>
+                <li><a href="#">Czech Republic</a></li>
+                <li><a href="#">Denmark</a></li>
+                <li><a href="#">Finland</a></li>
+                <li><a href="#">France</a></li>
+                <li><a href="#">Germany</a></li>
+                <li><a href="#">Greece</a></li>
+                <li><a href="#">Hungary</a></li>
+                <li><a href="#">Italy</a></li>
+                <li><a href="#">Norway</a></li>
+                <li><a href="#">Poland</a></li>
+                <li><a href="#">Portugal</a></li>
+                <li><a href="#">Spain</a></li>
+                <li><a href="#">Switzerland</a></li>
+                <li><a href="#">Turkey</a></li>
+                <li><a href="#">UK</a></li>
               </ul>
             </li>
   </ul>

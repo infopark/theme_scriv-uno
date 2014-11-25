@@ -4,18 +4,10 @@ class CreateTeaserWidget < ::Scrivito::Migration
       name: 'TeaserWidget',
       is_binary: false,
       attributes: [
-        {
-          name: 'headline',
-          type: :string,
-        },
-        {
-          name: 'content',
-          type: :html,
-        },
-        {
-          name: 'link_to',
-          type: :link,
-        },
+        {name: 'headline', type: :string},
+        {name: 'content', type: :html},
+        {name: 'image', type: :reference},
+        {name: 'link_to', type: :link},
       ]
     )
   end

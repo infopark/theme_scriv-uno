@@ -51,6 +51,8 @@ GEM
       dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -129,6 +131,10 @@ GEM
     scrivito_google_maps_widget (0.1.2)
       bundler
       scrivito_sdk
+    scrivito_icon_box_widget (1.0.3)
+      bundler
+      font-awesome-rails
+      scrivito_sdk
     scrivito_sdk (0.30.0)
       addressable (~> 2.3.2)
       diff-lcs (~> 1.2.5)
@@ -182,6 +188,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dotenv-rails
+  font-awesome-rails
   haml
   jbuilder (~> 2.0)
   jquery-rails
@@ -194,6 +201,7 @@ DEPENDENCIES
   scrivito_editors (~> 0.30.0)
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
+  scrivito_icon_box_widget
   scrivito_slick_slider_widget!
   scrivito_tabbed_content_widget
   scrivito_table_widget

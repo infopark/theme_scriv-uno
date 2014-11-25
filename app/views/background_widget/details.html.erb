@@ -4,13 +4,3 @@
     <%= scrivito_tag :input, widget, "colour", type: "button", colour: colour, class: "button_editor bg_#{colour}", style: "padding: 20px;", 'data-editor' => 'none' %>
   <% end %>
 </div>
-<script type="text/javascript">
-  scrivito.on("content", function() { 
-    if (scrivito.in_editable_view()) {
-      $(document).on("click.button_editor", ".button_editor", function(event) {
-        var button = $(event.target);
-        button.scrivito('save', button.attr('colour'));
-      }); 
-    }; 
-  });
-</script>

@@ -24,11 +24,11 @@
       </li>
     <% end %>
   <% end %>
-  <% contact = Obj.find_by_path("/contact") %>
+  <% contact = Scrivito::NamedLink.get_object("contact") %>
   <li class="<%= active_class(contact, @obj) %>">
     <%= link_to(strip_tags(contact.title), scrivito_path(contact)) %>
   </li>
-  <% search = Obj.find_by_path("/search") %>
+  <% search = Scrivito::NamedLink.get_object("search") %>
   <li class="<%= active_class(search, @obj) %>">
     <%= link_to(strip_tags(search.title), scrivito_path(search)) %>
   </li>
