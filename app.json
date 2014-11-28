@@ -1,0 +1,11 @@
+{
+  "name": "Scrivito Theme App Scriv-Uno",
+  "description": "A sample Scrivito app giving you a full app with bootstrap-based styles and some sample content",
+  "repository": "https://github.com/Scrivito/theme_scriv-uno",
+  "logo": "https://avatars3.githubusercontent.com/u/9336796?v=3&s=200",
+  "keywords": ["scrivito", "theme", "application"],
+  "env": {
+    "SCRIVITO_TENANT": "Fill in full key from your CMS API credentials here.",
+    "SCRIVITO_API_KEY": "Fill in full key from your CMS API credentials here."
+  }
+}
