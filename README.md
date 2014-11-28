@@ -8,6 +8,8 @@ Deploy to heroku:
 
 Fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, display full API keys of your CMS)
 
+Explore your new Scrivito app.
+
 ## Local Installation
 
 - download onto your machine
