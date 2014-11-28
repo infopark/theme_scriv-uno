@@ -4,7 +4,8 @@ class CreateBlogClass < ::Scrivito::Migration
       name: 'Blog',
       is_binary: false,
       attributes: [
-         {name: 'content', type: :widget}
+         {name: 'content', type: :widget},
+         {name: 'header_image', type: :reference}
       ]
     )
     Scrivito::ObjClass.create(
