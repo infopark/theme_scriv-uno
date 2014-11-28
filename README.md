@@ -6,7 +6,9 @@ Deploy to heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, display full API keys of your CMS)
+Fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, get a fresh trial CMS, display full API keys)
+
+Wait until Heroku is finished deploying.
 
 Explore your new Scrivito app.
 
