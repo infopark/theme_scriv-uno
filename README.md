@@ -1,6 +1,6 @@
-# ScrivUno - a sample app with theme for Scrivito
+# ScrivUno - Scrivito sample app and theme
 
-# Take this app for a Test Drive!
+## Take this app for a Test Drive!
 
 Deploy to heroku:
 
@@ -8,7 +8,7 @@ Deploy to heroku:
 - open your app's config variables settings on the Heroku Platform API (https://dashboard-next.heroku.com/apps)
 - fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, display full API keys of your CMS)
 
-# Local Installation
+## Local Installation
 
 - download onto your machine
 - run 'bundle'
