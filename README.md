@@ -4,9 +4,9 @@
 
 Deploy to heroku:
 
-- [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-- open your app's config variables settings on the Heroku Platform API (https://dashboard-next.heroku.com/apps)
-- fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, display full API keys of your CMS)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+Fill in your Scrivito CMS credentials (Log in or sign up at htts://scrivito.com, display full API keys of your CMS)
 
 ## Local Installation
 
