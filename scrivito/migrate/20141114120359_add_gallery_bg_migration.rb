@@ -3,9 +3,9 @@ class AddGalleryBgMigration < ::Scrivito::Migration
 
     Scrivito::ObjClass.find('Blog').attributes.add(name: 'other_content', type: :widget)
 
-    ["/search", "/blog"].each do |path|
+    ["/", "/search", "/blog"].each do |path|
       p = Obj.find_by_path(path)
-      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "grey2",
+      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "green",
         content: [TwoColumnWidget.new(
           column_1: [
             ImageWidget.new(image: Image.find_by_path("/_resources/teaser_02")),

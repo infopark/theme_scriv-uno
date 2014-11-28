@@ -1,7 +1,8 @@
 class FillScrivitoContentMigration < ::Scrivito::Migration
   def up
     s = Obj.find_by_path("/scrivito")
-    s.update(content: [
+    s.update(header_image: Image.find_by_path("/_resources/teaser_07"))
+    s.content.first.update(column_2: [
       HeadlineWidget.new(headline: "A professional Cloud CMS built for Ruby on Rails."),
       TextWidget.new(content: "<h3>A professional Cloud CMS built for Ruby on Rails.</h3>
           <p>With Scrivito, you can develop your website like you always did. It just works, and it just works \"The Rails Way\".</p>
@@ -12,7 +13,8 @@ class FillScrivitoContentMigration < ::Scrivito::Migration
     ])
 
     s = Obj.find_by_path("/scrivito/rails")
-    s.update(content: [
+    s.update(header_image: Image.find_by_path("/_resources/teaser_07"))
+    s.content.first.update(column_2: [
       HeadlineWidget.new(headline: "What is Rails?"),
       TextWidget.new(content: "<p>Rails is a web application development framework written in the Ruby language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code while accomplishing more than many other languages and frameworks. Experienced Rails developers also report that it makes web application development more fun.</p>
       <p>Rails is opinionated software. It makes the assumption that there is the 'best' way to do things, and it's designed to encourage that way - and in some cases to discourage alternatives. If you learn 'The Rails Way' you'll probably discover a tremendous increase in productivity. If you persist in bringing old habits from other languages to your Rails development, and trying to use patterns you learned elsewhere, you may have a less happy experience.</p>"),

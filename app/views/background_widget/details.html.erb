@@ -1,6 +1,6 @@
 <div class="details-view">
   <h4>Select background colour</h4>
   <% Scrivito::ObjClass.find("BackgroundWidget").attributes["colour"].values.each do |colour| %>
-    <%= scrivito_tag :input, widget, "colour", type: "button", colour: colour, class: "button_editor bg_#{colour}", style: "padding: 20px;", 'data-editor' => 'none' %>
+    <%= scrivito_tag :input, widget, "colour", type: "button", 'button-value' => colour, class: "button_editor bg_#{colour}", style: "padding: 20px;", 'data-editor' => 'none' %>
   <% end %>
 </div>

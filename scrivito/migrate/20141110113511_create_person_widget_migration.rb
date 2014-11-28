@@ -6,25 +6,30 @@ class CreatePersonWidgetMigration < ::Scrivito::Migration
       {name: 'colour', type: :enum, values: %w(grey white)},
     ])
     p = Obj.find_by_path("/about_us/people")
-    p.update(content: [TextWidget.new(content: "<p>This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team.</p>")])
+    p.content.first.update(column_2: [TextWidget.new(content: "<p>This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team.</p>")])
 
     # first row of people
-    p.update(content: p.content << ThreeColumnWidget.new())
-    p.content[1].update(column_1: [] << PersonWidget.new(person: Obj.find_by_path("/people/person0")))
-    p.content[1].update(column_2: [] << PersonWidget.new(person: Obj.find_by_path("/people/person1"), colour: "grey"))
-    p.content[1].update(column_3: [] << PersonWidget.new(person: Obj.find_by_path("/people/person2")))
+    col = p.content.first.column_2
+    p.content.first.update(column_2: col << ThreeColumnWidget.new(
+      column_1: [PersonWidget.new(person: Obj.find_by_path("/people/person0"))],
+      column_2: [PersonWidget.new(person: Obj.find_by_path("/people/person1"), colour: "grey")],
+      column_3: [PersonWidget.new(person: Obj.find_by_path("/people/person2"))]
+    ))
 
     # second row of people
-    p.update(content: p.content << ThreeColumnWidget.new())
-    p.content[2].update(column_1: [] << PersonWidget.new(person: Obj.find_by_path("/people/person1"), 
-      show_picture: "no", colour: "grey"))
-    p.content[2].update(column_2: [] << PersonWidget.new(person: Obj.find_by_path("/people/person0"), 
-      show_picture: "no", colour: "grey"))
+    col = p.content.first.column_2
+    p.content.first.update(column_2: col << ThreeColumnWidget.new(
+      column_1: [PersonWidget.new(person: Obj.find_by_path("/people/person1"), 
+        show_picture: "no", colour: "grey")],
+      column_2: [PersonWidget.new(person: Obj.find_by_path("/people/person0"), 
+        show_picture: "no", colour: "grey")]
+    ))
 
     # add the company to several pages
     ["/about_us", "/about_us/more", "/about_us/people", "/contact"].each do |path|
       p = Obj.find_by_path(path)
-      p.update(content: p.content << PersonWidget.new(person: Obj.find_by_path("/people/company1"),
+      col = p.content.first.column_2
+      p.content.first.update(column_2: col << PersonWidget.new(person: Obj.find_by_path("/people/company1"),
       show_picture: "no", colour: "grey"))
     end
     

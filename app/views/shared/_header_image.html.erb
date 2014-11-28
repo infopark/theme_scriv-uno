@@ -2,7 +2,11 @@
   <%= scrivito_tag :div, @obj, :full_slider %>
 <% else %>
   <div class="teaser small">
-    <img src="http://localhost:3000/assets/scriv-uno/teaser_06.jpg" alt="">
+    <% if (@obj.respond_to?('header_image') && !@obj.header_image.blank?) || scrivito_in_editable_view? %>
+      <%= scrivito_image_tag @obj, :header_image, data: {filter: 'images'} %>
+    <% else %>
+      <img src="http://localhost:3000/assets/scriv-uno/teaser_06.jpg" alt="">
+    <% end %>
     <div class="container">
       <h1 class="h1"><i class="foundicon-globe2"></i><%= @obj.title %></h1>
     </div>

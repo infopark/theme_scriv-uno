@@ -2,11 +2,11 @@ class AddSupportContentMigration < ::Scrivito::Migration
   def up
     supportimage = Image.create(_path: "/_resources/support", blob: File.new("app/assets/images/scriv-uno/support.jpg"))
     docuimage = Image.create(_path: "/_resources/documentation", blob: File.new("app/assets/images/scriv-uno/documentation.jpg"))
-    ["/", "/contact", "/scrivito", "/scrivito/modify"].each do |path|
+    ["/contact", "/scrivito", "/scrivito/modify"].each do |path|
       p = Obj.find_by_path(path)
-      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "green",
+      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "grey2",
         content: [
-          TextWidget.new(content: "<h3>If you get stuck, please check our Online Documentation or ask our Support Team</h3>"),
+          HeadlineWidget.new(headline: "If you get stuck, please check our Online Documentation or ask our Support Team"),
           TwoColumnWidget.new(
             column_1: [
               ListitemWidget.new(headline: "Our online Documentation", 
