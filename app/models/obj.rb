@@ -8,6 +8,14 @@ class Obj < ::Scrivito::BasicObj
     self.respond_to?('other_content') && !self.other_content.blank? ? true : false
   end
 
+  def has_subnav_content?
+    if not self.toclist.select{|t| t.show_in_navigation?}.blank?
+      true
+    else
+      false
+    end
+  end
+
   def homepage
     self.is_a?(Homepage) ? self : self.ancestors.select{|o| o.is_a?(Homepage)}.first
   end

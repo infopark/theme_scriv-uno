@@ -6,7 +6,9 @@
       <%= list.tag(:li, data: {path: item.path}, class: "dropdown") do %>
         <%= link_to(scrivito_path(item), class: "dropdown-toggle") do %>
           <%= strip_tags(item.title) %>
-          <span class="caret"></span>
+          <% if item.has_subnav_content? %>
+            <span class="caret"></span>
+          <% end %>
         <% end %>
         <%= scrivito_tag_list(:ul, item, :toclist, class: "dropdown-menu", role: "menu") do |list2, item2| %>
           <% if item2.show_in_navigation? -%>
@@ -26,28 +28,5 @@
   </form>
   <ul class="nav navbar-nav navbar-right">
             <li><%= link_to("Contact", scrivito_path(Scrivito::NamedLink.get_object("contact"))) %></li>
-            <li class="dropdown">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="<%= scrivito_path(Scrivito::NamedLink.get_object("contact")) %>">Countries <span class="caret"></span></a>
-              <ul role="menu" class="dropdown-menu">
-                <li class="dropdown-header">Europe</li>
-                <li><a href="#">Austria</a></li>
-                <li><a href="#">Croatia</a></li>
-                <li><a href="#">Czech Republic</a></li>
-                <li><a href="#">Denmark</a></li>
-                <li><a href="#">Finland</a></li>
-                <li><a href="#">France</a></li>
-                <li><a href="#">Germany</a></li>
-                <li><a href="#">Greece</a></li>
-                <li><a href="#">Hungary</a></li>
-                <li><a href="#">Italy</a></li>
-                <li><a href="#">Norway</a></li>
-                <li><a href="#">Poland</a></li>
-                <li><a href="#">Portugal</a></li>
-                <li><a href="#">Spain</a></li>
-                <li><a href="#">Switzerland</a></li>
-                <li><a href="#">Turkey</a></li>
-                <li><a href="#">UK</a></li>
-              </ul>
-            </li>
   </ul>
 </nav>
