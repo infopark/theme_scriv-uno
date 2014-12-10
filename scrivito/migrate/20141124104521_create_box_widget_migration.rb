@@ -7,7 +7,6 @@ class CreateBoxWidgetMigration < ::Scrivito::Migration
       attributes: [
         {name: "colour", type: :enum, values: %w(blue green grey white)},
         {name: "content", type: :widget},
-        {name: "show_frame", type: :enum, values: %w(yes no)},
       ]
     )
 
