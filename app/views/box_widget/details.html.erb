@@ -1,6 +1,12 @@
 <div class="details-view">
+  <h4>Show Frame?</h4>
+  <p><em>Only with a frame background colour settings will be recognised.</em></p>
+  <% %w(yes no).each do |value| %>
+    <% activeclass = (value == widget.show_frame) ? "active" : "" %>
+    <%= scrivito_tag :input, widget, :show_frame, type: "button", value: value, 'button-value' => value, class: "button_editor btn btn-default #{activeclass}", 'data-editor' => 'none' %>
+  <% end %>
   <h4>Select background colour</h4>
   <% Scrivito::ObjClass.find("BoxWidget").attributes["colour"].values.each do |colour| %>
-    <%= scrivito_tag :input, widget, "colour", type: "button", colour: colour, class: "button_editor box_#{colour}", style: "padding: 20px;", 'data-editor' => 'none' %>
+    <%= scrivito_tag :input, widget, "colour", type: "button", 'button-value' => colour, class: "button_editor box_#{colour}", style: "padding: 20px;", 'data-editor' => 'none' %>
   <% end %>
 </div>

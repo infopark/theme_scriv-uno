@@ -6,6 +6,7 @@
   "keywords": ["scrivito", "theme", "application"],
   "env": {
     "SCRIVITO_TENANT": "Fill in full key from your CMS API credentials here.",
-    "SCRIVITO_API_KEY": "Fill in full key from your CMS API credentials here."
+    "SCRIVITO_API_KEY": "Fill in full key from your CMS API credentials here.",
+    "SCRIVITO_PW": "Choose a password for the demo user."
   }
 }

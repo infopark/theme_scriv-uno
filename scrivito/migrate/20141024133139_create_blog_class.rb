@@ -27,7 +27,7 @@ class CreateBlogClass < ::Scrivito::Migration
       ImageWidget.new(image: Image.find_by_path("/_resources/teaser_06"))
     ])
     Obj.create(_obj_class: 'BlogPost', _path: "/blog/post3", title: "Thank you, Scrivito!", date: 1.day.ago, author: "Maxi Muster", content: [
-      TextWidget.new(content: "<p>Dear Scrivito Team, thanks for the great service and the support during our relaunch. You made it really easy for us to love your product.</p><p>Here is a video for those of you who have not yet been introduced to the Scrivito experience yet.</p>"),
+      TextWidget.new(content: "<p>Dear Scrivito Team, thanks for the great service and the support during our relaunch. You made it really easy for us to love your product.</p><p>Here is a video for those of you who have not yet been introduced to the Scrivito experience.</p>"),
       TextWidget.new(content: "<iframe width=\"100%\" height=\"425\" frameborder=\"0\" allowfullscreen=\"\" src=\"http://www.youtube.com/embed/pFCtdGtkJv0\"></iframe>")
     ])
   end
