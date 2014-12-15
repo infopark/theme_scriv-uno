@@ -7,4 +7,15 @@ Scrivito.configure do |config|
   # config.tenant = 'my-tenant-123'
   # config.api_key = 'secret'
   #
+
+  Scrivito.configure do |config| 
+    config.editing_auth do |env| 
+      request = ActionDispatch::Request.new(env) 
+      if request.session[:user].present? 
+        Scrivito::User.system_user 
+      end 
+    end 
+  end
+
+
 end
