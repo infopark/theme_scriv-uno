@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   private
 
   def valid_credentials?(login, password)
-    login == 'demo' && password == 'password'
+    login == 'demo' && password == ENV['SCRIVITO_PW']
   end
 
 end
