@@ -4,7 +4,7 @@
 
       <div class="col-md-9">
         <%= render partial: 'shared/breadcrumbs' %>
-        <%= scrivito_tag :div, @obj, :content if scrivito_in_editable_view? || @obj.content.presence %>
+        <%= scrivito_tag :div, @obj, :body if scrivito_in_editable_view? || @obj.body.presence %>
         <%= render partial: 'blog/post', collection: @blogposts %>
       </div>
 

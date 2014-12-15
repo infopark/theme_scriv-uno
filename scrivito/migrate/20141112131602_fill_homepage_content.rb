@@ -22,10 +22,10 @@ class FillHomepageContent < ::Scrivito::Migration
 
     # THREE-COLUMN ROW
     #add three-column widget:
-    Homepage.default.update(content: [ThreeColumnWidget.new])
+    Homepage.default.update(body: [ThreeColumnWidget.new])
 
     #fill three-column widget with widgets:
-    cont = Homepage.default.content[0]
+    cont = Homepage.default.body[0]
     # left:
     left_one = HeadlineWidget.new(headline: "What's more")
     left_two = ListitemWidget.new(headline: "Scalable and available", 
@@ -39,20 +39,20 @@ class FillHomepageContent < ::Scrivito::Migration
     # middle:
     cont.update(column_2: [AccordionWidget.new()])
     panel1 = AccordionPanelWidget.new(headline: "Get your content delivered. Fast.", 
-      content: [TextWidget.new(content: "Your content is fast because of our great CDN. We deliver your stuff from the cloud, directly to you and your customers. No worries about server maintenance, scalability or performance. No matter whether your site is content-heavy or lightweight - it will be fast.")]
+      content: [TextWidget.new(text: "Your content is fast because of our great CDN. We deliver your stuff from the cloud, directly to you and your customers. No worries about server maintenance, scalability or performance. No matter whether your site is content-heavy or lightweight - it will be fast.")]
     )
     panel2 = AccordionPanelWidget.new(headline: "Bootstrap bootstraps you",
-      content: [TextWidget.new(content: "<p>We love Bootstrap, so it's included right away. Just use the sample app in front of you and extend it the way you want to.</p><p>
+      content: [TextWidget.new(text: "<p>We love Bootstrap, so it's included right away. Just use the sample app in front of you and extend it the way you want to.</p><p>
         <a href=\"http://getbootstrap.com/\">Explore Bootstrap</a></p>")]
     )
     panel3 = AccordionPanelWidget.new(headline: "Pay as you go", 
-      content: [TextWidget.new(content: "With our simple pricing scheme it's easy to choose the plan you need. Start small, grow big. There are no long-term commitments - and you can try Scrivito for free for 30 days.")]
+      content: [TextWidget.new(text: "With our simple pricing scheme it's easy to choose the plan you need. Start small, grow big. There are no long-term commitments - and you can try Scrivito for free for 30 days.")]
     )
     cont.column_2[0].update(panels: [panel1, panel2, panel3]) 
 
     cont.update(column_3: [
       HeadlineWidget.new(headline: "Included Page Designs"), 
-      TextWidget.new(content: "<p>We are using Bootstrap for this sample app and have provided some page style suggestions here:</p><p>
+      TextWidget.new(text: "<p>We are using Bootstrap for this sample app and have provided some page style suggestions here:</p><p>
         <a href=\"/design/start_page_slider.html\" target=\"_blank\">Homepage</a></p>\n<p>
         <a href=\"/design/content_page.html\" target=\"_blank\">Content Page</a></p>\n<p>
         <a href=\"/design/about_page.html\" target=\"_blank\">About Page</a></p>\n<p>
@@ -63,8 +63,8 @@ class FillHomepageContent < ::Scrivito::Migration
     ])
 
     # add TABBED CONTENT
-    tb = Homepage.default.content << TabbedContentWidget.new
-    Homepage.default.update(content: tb)
+    tb = Homepage.default.body << TabbedContentWidget.new
+    Homepage.default.update(body: tb)
     tabsw = Homepage.default.widget_from_pool(tb.last.id)
 
     # fill Tabbed Content:
@@ -91,12 +91,12 @@ age, your version control system and favorite deployment environment. It just wo
       twocol = tab.content << TwoColumnWidget.new()
       tab.update(content: twocol)
       if index != 2
-        text = tab.content.last.column_1 << TextWidget.new(content: (eval "text#{index}"))
+        text = tab.content.last.column_1 << TextWidget.new(text: (eval "text#{index}"))
         tab.content.last.update(column_1: text)
         image = tab.content.last.column_2 << ImageWidget.new(image: image)
         tab.content.last.update(column_2: image)
       else
-        text = tab.content.last.column_2 << TextWidget.new(content: text2)
+        text = tab.content.last.column_2 << TextWidget.new(text: text2)
         tab.content.last.update(column_2: text)
         image = tab.content.last.column_1 << ImageWidget.new(image: image)
         tab.content.last.update(column_1: image)

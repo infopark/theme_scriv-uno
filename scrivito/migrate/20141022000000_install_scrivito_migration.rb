@@ -1,27 +1,30 @@
-class InstallScrivito < Scrivito::Migration
+class InstallScrivitoMigration < Scrivito::Migration
   def up
-    Scrivito::ObjClass.create(name: 'Page', is_binary: false, attributes: [
-      {name: 'content',     type: 'widget'},
+    Scrivito::ObjClass.create(name: 'Page', attributes: [
+      {name: 'title', type: 'string'},
+      {name: 'body',     type: 'widget'},
       {name: 'child_order', type: 'referencelist'},
     ])
 
-    Scrivito::ObjClass.create(name: 'HeadlineWidget', is_binary: false, attributes: [
-      {name: 'headline', type: :string}
+    Scrivito::ObjClass.create(name: 'HeadlineWidget', attributes: [
+      {name: 'headline', type: 'string'},
     ])
 
-    Scrivito::ObjClass.create(name: 'TextWidget', is_binary: false, attributes: [
-      {name: 'content', type: 'html'}
+    Scrivito::ObjClass.create(name: 'TextWidget', attributes: [
+      {name: 'text', type: 'html'},
     ])
 
-    Scrivito::ObjClass.create(name: 'Image', is_binary: true)
+    Scrivito::ObjClass.create(name: 'Image', attributes:[
+      {name: 'blob', type: 'binary'},
+    ])
 
-    Scrivito::ObjClass.create(name: 'ImageWidget', is_binary: false, attributes: [
+    Scrivito::ObjClass.create(name: 'ImageWidget', attributes: [
       {name: 'image',  type: 'reference'}
     ])
 
-    Page.create(_path: '/', title: 'Welcome to Scrivito!', content: [
+    Page.create(_path: '/', title: 'Welcome to Scrivito!', body: [
       HeadlineWidget.new(headline: 'A professional Cloud CMS built for Ruby on Rails.'),
-      TextWidget.new(content: %{
+      TextWidget.new(text: %{
         <h3>Add content management to your website</h3>
         <p>
         With Scrivito, you can develop your website like you always did.

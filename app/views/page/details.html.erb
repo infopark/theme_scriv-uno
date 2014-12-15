@@ -1,6 +1,6 @@
 <div class="details-view">
   <h4>Title</h4>
-  <%= scrivito_tag(:span, @obj, :title) %>
+  <%= scrivito_tag :span, @obj, :title %>
   <h4>Show in Navigation?</h4>
   <% %w(yes no).each do |value| %>
     <% activeclass = (value == @obj.show_in_navigation) ? "active" : "" %>

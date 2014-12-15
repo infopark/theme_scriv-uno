@@ -1,4 +1,4 @@
-class Obj < ::Scrivito::BasicObj
+class Obj < Scrivito::BasicObj
 
   def breadcrumbs
     (self.ancestors + [self]).select {|object| object.show_in_navigation?}
@@ -27,7 +27,7 @@ class Obj < ::Scrivito::BasicObj
 
   def summary
     # delivers first text from content widgets for display in search results and listings:
-    self.content.map(&:summary).flatten.join.first(200)
+    self.body.map(&:summary).flatten.join.first(200)
   end
 
   def thumbnail_icon

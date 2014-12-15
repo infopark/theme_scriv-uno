@@ -1,8 +1,8 @@
 class FillModifyPageMigration < ::Scrivito::Migration
   def up
     p = Obj.find_by_path("/scrivito/modify")
-    p.content.first.update(column_2: [
-      TextWidget.new(content: "<p>You can modify this app according to your needs. While it already contains a number of basic page types and a collection of widgets you certainly come to the point where you want to add your own formats and page elements. Check the <a href=\"https://scrivito.com/documentation\" target=\"_blank\">Scrivito Documentation</a> for all the details. This page is just to give you some orientation.</p>
+    p.body.first.update(column_2: [
+      TextWidget.new(text: "<p>You can modify this app according to your needs. While it already contains a number of basic page types and a collection of widgets you certainly come to the point where you want to add your own formats and page elements. Check the <a href=\"https://scrivito.com/documentation\" target=\"_blank\">Scrivito Documentation</a> for all the details. This page is just to give you some orientation.</p>
         <h3>Pages (ObjClasses)</h3>
         <p>This theme app comes with a handful of basic page types. We call them Object Classes. Existing object classes are 'Page', 'Homepage' and 'Person'. Each of those classes is being created by a migration (in folder Rails.root/scrivito/migrate). They each have their class definition in app/models and their own views. Feel free to tweak the 'index' views of the existing classes to achieve a different page layout for all Scrivito objects of that class. For instance, if you want to change the layout of the standard pages (ObjClass 'Page') just go to Rails.root/app/views/page/index.html.erb and modify the width of the columns, the teaser display or whatever you fancy.</p>
         <p>You can also add attributes to the existing classes and then use those attributes to refine the view files. Or you can create new object classes to hold and display new kinds of content, e.g. product pages, news...</p>
