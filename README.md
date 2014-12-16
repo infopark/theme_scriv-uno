@@ -14,9 +14,8 @@ Explore your new Scrivito app.
 
 ## Local Installation
 
-- download onto your machine
+- download/clone onto your machine
 - run 'bundle'
-You may need to install gems locally (see Gemfile for details)
 - create an .env file with your API credentials for a fresh Scrivito tenant
 - run 'rake scrivito:migrate'
 - run 'rails s'
