@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       redirect_to scrivito_path(Obj.homepage)
     else
       flash[:alert] = "The credentials you provided are invalid"
-      redirect_to scrivito_path(LoginPage.instance)
+      redirect_to scrivito_path(Obj.homepage)
     end
   end
 
