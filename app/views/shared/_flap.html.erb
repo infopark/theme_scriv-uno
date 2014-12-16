@@ -13,10 +13,14 @@
 
       <div class="modal-body">
 
-        <% if flash[:alert].present? %>
+        <% if flash[:alert].present? && flash[:alert] =~ /^LOGIN/ %>
           <div class="alert alert-danger" role="alert">
             <%= flash[:alert] %>
           </div>
+          <script type="text/javascript">
+            // open the login flap if it has something to say
+            $("div.flap a").click();
+          </script>
         <% end %>
 
         <% if not logged_in? %>
@@ -28,6 +32,7 @@
               <%= password_field_tag :password, '', class: 'form-control', placeholder: 'Enter password' %>
             </div>
             <div class="modal-footer">
+              <%= hidden_field_tag :showing_obj, @obj.id %>
               <button type="submit" class="btn btn-primary pull-left">Login</button>
               <button type="submit" class="btn btn-default pull-left disabled">Register</button>
             </div>
