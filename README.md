@@ -16,7 +16,12 @@ Explore your new Scrivito app.
 
 - download/clone onto your machine
 - run 'bundle'
-- create an .env file with your API credentials for a fresh Scrivito tenant
+- create an .env file with your API credentials for a fresh Scrivito tenant and a password for your demo user. It should look something like this:
+
+   SCRIVITO_TENANT = d078f_some_long_letters_n_numbers_68b
+   SCRIVITO_API_KEY = 65e_get_them_for_a_trial_cms_on_scrivito.com_b660
+   SCRIVITO_PW = demo
+
 - run 'rake scrivito:migrate'
 - run 'rails s'
 - open in your browser: http://localhost:3000/?_scrivito_workspace_id=rtc
