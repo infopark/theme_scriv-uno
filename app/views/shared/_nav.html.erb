@@ -12,7 +12,7 @@
         <% end %>
         <%= scrivito_tag_list(:ul, item, :toclist, class: "dropdown-menu", role: "menu") do |list2, item2| %>
           <% if item2.show_in_navigation? -%>
-            <%= list2.tag(:li, data: {path: item2.path}) do %>
+            <%= list2.tag(:li, data: {path: item2.path}, class: active_class(item2, @obj)) do %>
               <%= link_to(scrivito_path(item2)) do %>
                 <%= strip_tags(item2.title) %>
               <% end -%>
