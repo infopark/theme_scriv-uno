@@ -203,7 +203,8 @@ ul {padding-left:20px;}
 
 .nav > li > a { @include transition(all .3s ease-in-out);}
 .nav > li > a:hover,
-.nav > li > a:focus { background:#f3f3f3; }
+.nav > li > a:focus,
+.nav > li.active > a { background:#f3f3f3; }
 
 .nav > li:hover .dropdown-menu { display:block; position: absolute;}
 
@@ -409,6 +410,34 @@ ul {padding-left:20px;}
   width: auto; display:inline;
   }
 
+/* redactor_editor fixes
+================================================== */
+
+.redactor_box {background:transparent!important;}
+.redactor_editor {background:transparent!important;}
+
+.redactor_editor h1,
+.redactor_editor h2,
+.redactor_editor h3,
+.redactor_editor h4,
+.redactor_editor h5,
+.redactor_editor h6 { color: inherit!important;}
+
+.redactor_editor div,
+.redactor_editor p,
+.redactor_editor ul,
+.redactor_editor ol,
+.redactor_editor table,
+.redactor_editor dl,
+.redactor_editor blockquote,
+.redactor_editor pre,
+.redactor_editor h1,
+.redactor_editor h2,
+.redactor_editor h3,
+.redactor_editor h4,
+.redactor_editor h5,
+.redactor_editor h6 {font-family: inherit!important; font-size:inherit!important;}
+
 
 
 /* bg_*
@@ -420,6 +449,7 @@ ul {padding-left:20px;}
 .bg_grey2,
 .bg_grey3,
 .bg_green,
+.bg_blue,
 .bg_image  { @include clearfix; padding: 20px 0;}
 
 
@@ -432,6 +462,9 @@ ul {padding-left:20px;}
 .bg_green * { color:#fff;}
 
 .bg_blue { background:#465b66;}
+.bg_blue * { color:#eee;}
+.bg_blue .headline { border-bottom:none;}
+
 .bg_image {background: #ddd image_url('scriv-uno/bg_image1.jpg') no-repeat 0 0 / cover ;}
 
 
