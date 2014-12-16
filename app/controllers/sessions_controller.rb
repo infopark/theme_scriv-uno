@@ -1,10 +1,13 @@
 class SessionsController < ApplicationController
 
   def create
+    logger.warn "\nLogin attempt with Login name '#{params[:login]}'"
     if valid_credentials?(params[:login], params[:password])
       session[:user] = params[:login]
+      logger.warn "successfull.\n"
       redirect_to scrivito_path(Obj.find(params[:showing_obj]))
     else
+      logger.warn "NOT successfull!\n"
       flash[:alert] = "LOGIN: The credentials you provided are invalid"
       redirect_to scrivito_path(Obj.find(params[:showing_obj]))
     end
