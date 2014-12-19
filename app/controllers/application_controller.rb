@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   def logged_in?
     session[:user].present? 
   end 
-  helper_method :logged_in?
 
+  helper_method :logged_in?
 
 
 end

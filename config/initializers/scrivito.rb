@@ -9,10 +9,12 @@ Scrivito.configure do |config|
   #
 
   Scrivito.configure do |config| 
-    config.editing_auth do |env| 
-      request = ActionDispatch::Request.new(env) 
-      if request.session[:user].present? 
-        Scrivito::User.system_user 
+    unless Rails.env.development?
+      config.editing_auth do |env| 
+        request = ActionDispatch::Request.new(env) 
+        if request.session[:user].present? 
+          Scrivito::User.system_user 
+        end 
       end 
     end 
   end
