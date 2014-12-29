@@ -2,14 +2,14 @@ class AddMoreContentMigration < ::Scrivito::Migration
   def up
 
     # /about_us
-    Obj.create(_obj_class: "Person", _path: "/people/you", title: "YOU!", 
+    you = Obj.create(_obj_class: "Person", _path: "/people/you", title: "YOU!", 
       function: "Scrivito Nerd",
       image: Image.find_by_path("/_resources/square_01"))    
 
     p = Obj.find_by_path("/about_us")
     col = p.body.first.column_2
     p.body.first.update(column_2: col << TwoColumnWidget.new(column_1_width: 4, 
-      column_1: [PersonWidget.new(person: Obj.find_by_path("/people/you"))],
+      column_1: [PersonWidget.new(person: you)],
       column_2_width: 8,
       column_2: [HeadlineWidget.new(headline: "We are hiring!"),
         TextWidget.new(text: "<p>Are you looking for new challenges?</p><p>Is Ruby your native language?</p><p>Please contact us and we can find out what we can achieve together.</p>")

@@ -27,7 +27,7 @@ class Obj < Scrivito::BasicObj
 
   def summary
     # delivers first text from content widgets for display in search results and listings:
-    self.body.map(&:summary).flatten.join.first(200)
+    self.body.map(&:summary).flatten.join.first(200) rescue ""
   end
 
   def thumbnail_icon

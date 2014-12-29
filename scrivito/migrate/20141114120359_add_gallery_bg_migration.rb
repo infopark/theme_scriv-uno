@@ -13,7 +13,7 @@ class AddGalleryBgMigration < ::Scrivito::Migration
               <p>Sign up at <a href=\"https://scrivito.com\" target=\"_blank\">https://scrivito.com</a> to get your very own trial CMS. It is valid for 30 days and allows you to test run your own Scrivito App.</p>")
           ],
           column_2: [
-            ImageWidget.new(image: Image.find_by_path("/_resources/teaser_05")),
+            ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04")),
             TextWidget.new(text: "<h3>Scrivito Demo</h3>
             <p>Sign up at <a href=\"https://scrivito.com\" target=\"_blank\">https://scrivito.com</a> to go through the Scrivito Demo tour. Just follow the link on the Dashboard to explore Scrivito and see what it can do.</p>")
           ] 

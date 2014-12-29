@@ -1,7 +1,7 @@
 class FillScrivitoContentMigration < ::Scrivito::Migration
   def up
     s = Obj.find_by_path("/scrivito")
-    s.update(header_image: Image.find_by_path("/_resources/teaser_07"))
+    s.update(header_image: Image.find_by_path("/_resources/teaser_02"))
     s.body.first.update(column_2: [
       HeadlineWidget.new(headline: "A professional Cloud CMS built for Ruby on Rails."),
       TextWidget.new(text: "<h3>A professional Cloud CMS built for Ruby on Rails.</h3>
@@ -13,7 +13,7 @@ class FillScrivitoContentMigration < ::Scrivito::Migration
     ])
 
     s = Obj.find_by_path("/scrivito/rails")
-    s.update(header_image: Image.find_by_path("/_resources/teaser_07"))
+    s.update(header_image: Image.find_by_path("/_resources/teaser_03"))
     s.body.first.update(column_2: [
       HeadlineWidget.new(headline: "What is Rails?"),
       TextWidget.new(text: "<p>Rails is a web application development framework written in the Ruby language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code while accomplishing more than many other languages and frameworks. Experienced Rails developers also report that it makes web application development more fun.</p>
