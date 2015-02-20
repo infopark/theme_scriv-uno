@@ -45,5 +45,10 @@ class InstallScrivitoMigration < Scrivito::Migration
         </p>
       })
     ])
+
+    Scrivito::ObjClass.create(name: 'Download', attributes:[
+       {name: 'blob', type: 'binary'},
+    ])
+
   end
 end

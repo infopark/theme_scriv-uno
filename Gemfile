@@ -36,9 +36,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'scrivito', "0.30.0"
-#gem 'scrivito_sdk', '0.18.1.311.230921710'
-gem 'scrivito_editors', "~> 0.30.0"
+gem 'scrivito', "0.42.0"
+gem 'scrivito_editors'
 gem "scrivito_content_browser"
 gem 'dotenv-rails'
 
