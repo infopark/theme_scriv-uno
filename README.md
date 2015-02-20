@@ -24,7 +24,9 @@ Create an .env file with your API credentials for a fresh Scrivito tenant and a 
     SCRIVITO_API_KEY = 65e_get_them_for_a_trial_cms_on_scrivito.com_b660
     SCRIVITO_PW = demo
 
-Run 'rake scrivito:migrate'
+You get the first two of these keys from scrivito.com. The SCRIVITO PW is specific for this app and you can define it as you like.
+
+Run 'bundle exec rake scrivito:migrate'
 
 Run 'rails s'
 

@@ -199,8 +199,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   scrivito (= 0.42.0)
   scrivito_accordion_widget
-  scrivito_content_browser
-  scrivito_editors
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
   scrivito_icon_box_widget

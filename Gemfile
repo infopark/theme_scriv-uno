@@ -37,8 +37,6 @@ gem 'spring',        group: :development
 
 
 gem 'scrivito', "0.42.0"
-gem 'scrivito_editors'
-gem "scrivito_content_browser"
 gem 'dotenv-rails'
 
 gem 'haml'
