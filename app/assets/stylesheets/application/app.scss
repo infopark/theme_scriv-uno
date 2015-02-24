@@ -558,6 +558,7 @@ ul {padding-left:20px;}
 .list_item { @include clearfix; margin:0 10px 0 0;}
 .list_item .square { background:#f1f1f1; width:85px; height:85px;
   margin:0 15px 15px 0; display:block; float:left; overflow:hidden;
+  border-radius:50%;
   @include transition(all .3s ease-in-out); position:relative;
   }
 .list_item .square:hover { background:#ddd; }
@@ -697,7 +698,7 @@ ul {padding-left:20px;}
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 
 /* Arrows */
-.slick-prev, .slick-next { position: absolute; display: block; height: 40px; width: 30px;
+.slick-prev, .slick-next { position: absolute; display: block; height: 40px; width: 40px;
   line-height: 40px; font-size: 0; cursor: pointer; background: transparent;
   color: transparent; top: 50%; margin-top: -10px; padding: 0; border: none; outline: none;
   }
