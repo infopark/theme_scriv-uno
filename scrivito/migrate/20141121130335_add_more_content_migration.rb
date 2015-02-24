@@ -4,7 +4,7 @@ class AddMoreContentMigration < ::Scrivito::Migration
     # /about_us
     you = Obj.create(_obj_class: "Person", _path: "/people/you", title: "YOU!", 
       function: "Scrivito Nerd",
-      image: Image.find_by_path("/_resources/square_01"))    
+      image: Image.find_by_path("/_resources/person"))    
 
     p = Obj.find_by_path("/about_us")
     col = p.body.first.column_2

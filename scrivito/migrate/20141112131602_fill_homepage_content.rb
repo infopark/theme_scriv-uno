@@ -3,8 +3,11 @@ class FillHomepageContent < ::Scrivito::Migration
 
     Homepage.default.update(child_order: [Obj.find_by_path("/about_us"), Obj.find_by_path("/blog"), Obj.find_by_path("/misc"), Obj.find_by_path("/scrivito")])
 
-    # upload emtpy grey image:
-    grey = Image.create(_path: "/_resources/grey", blob: File.new("app/assets/images/scriv-uno/grey.png"))
+    # upload square images:
+    s1 = Image.create(_path: "/_resources/square_01", blob: File.new("app/assets/images/scriv-uno/square_01.jpg"))
+    s2 = Image.create(_path: "/_resources/square_02", blob: File.new("app/assets/images/scriv-uno/square_02.jpg"))
+    s3 = Image.create(_path: "/_resources/square_03", blob: File.new("app/assets/images/scriv-uno/square_03.jpg"))
+    s4 = Image.create(_path: "/_resources/square_04", blob: File.new("app/assets/images/scriv-uno/square_04.jpg"))
 
     # TWO-COLUMN ROW
     #add two-column widget:
@@ -13,12 +16,12 @@ class FillHomepageContent < ::Scrivito::Migration
         column_1: [
           ListitemWidget.new(headline: "Built for Ruby on Rails", headline_level: "h2", 
             content: "With Scrivito, you can develop your website like you always did. On your laptop with your favorite IDE, templating language and environment. It just works \"The Rails Way\".", 
-            image: grey)
+            image: s1)
         ], 
         column_2: [
           ListitemWidget.new(headline: "It's a cloud service", headline_level: "h2", 
             content: "We like to save your time so you can focus on the important things: Developing your website functionality and look. That's why we built Scrivito as a cloud service.", 
-            image: grey) 
+            image: s2) 
         ]
       )
     ])
@@ -31,10 +34,10 @@ class FillHomepageContent < ::Scrivito::Migration
           HeadlineWidget.new(headline: "What's more"),
           ListitemWidget.new(headline: "Scalable and available", 
             content: "Distibuted over three data centres, we're always there for you.", 
-            image: grey, 
+            image: s3, 
           ),
-          ListitemWidget.new(headline: "Act locally, work globally", content: "Multiple language support and internationalization work seamlessly, powered by Rails I18n.", image: grey),
-          ListitemWidget.new(headline: "Mobile to the max", content: "Build websites for desktop computers and mobile devices.", image: grey),
+          ListitemWidget.new(headline: "Act locally, work globally", content: "Multiple language support and internationalization work seamlessly, powered by Rails I18n.", image: s1),
+          ListitemWidget.new(headline: "Mobile to the max", content: "Build websites for desktop computers and mobile devices.", image: s4),
         ],
         column_2: [
           AccordionWidget.new(panels: [
