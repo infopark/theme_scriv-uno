@@ -50,7 +50,9 @@
 
             <% @hits.each do |hit| -%>
               <div class="list_item">
-                <a href="#" class="square"><i class="<%= hit.thumbnail_icon %>"></i></a>
+                <%= link_to scrivito_path(hit), class: "square" do |l| %>
+                  <i class="<%= hit.thumbnail_icon %>"></i>
+                <% end %>
                 <div class="list_item_content">
                   <h4><%= link_to(hit[:title], scrivito_path(hit)) %></h4>
                   <span class="meta"><%= hit.class.name %> <%= hit.last_changed %></span>

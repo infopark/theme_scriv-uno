@@ -1,32 +1,47 @@
 <div class="bg_white">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <%= scrivito_image_tag(@obj, :image, class: "img-responsive") %>
-      </div>
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-7">
+      <div class="col-md-9 col-md-push-3">
+        <h1 class="h2">Person Profile</h1>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box_white">
+              <div class="row">
+                <div class="col-md-4">
+                  <%= scrivito_image_tag(@obj, :image, class: "img-responsive") %>
+                </div>
+                <div class="col-md-8">
+                  <div class="h3"><%= scrivito_field @obj, :title %></div>
+                  <small><%= scrivito_field @obj, :function %></small>
+                  <p><%= scrivito_field @obj, :street %><br>
+                    <%= scrivito_field @obj, :postal %><br>
+                    <%= scrivito_field @obj, :country %>
+                  </p>
+                  <p>
+                    T: <%= scrivito_field @obj, :telephone %><br>
+                    F: <%= scrivito_field @obj, :fax %><br>
+                    M: <%= scrivito_field @obj, :mobile %><br>
+                  </p>
+                  <p><a href="mailto:<%= scrivito_field @obj, :email %>"><%= scrivito_field @obj, :email %></a></p>
+                  <% if @obj.facebook.present? %>
+                    <a href="<%= scrivito_field @obj, :facebook %>"><i class="foundicon-facebook"></i></a>
+                  <% end %>
+                  <% if @obj.twitter.present? %>
+                    <a href="<%= scrivito_field @obj, :twitter %>"><i class="foundicon-twitter"></i></a>
+                  <% end %>
 
-<div class="h3"><%= scrivito_field @obj, :title %></div>
-    <small><%= scrivito_field @obj, :function %></small>
-    <p><%= scrivito_field @obj, :street %><br>
-      <%= scrivito_field @obj, :postal %><br>
-      <%= scrivito_field @obj, :country %>
-    </p>
-    <p>
-      T: <%= scrivito_field @obj, :telephone %><br>
-      F: <%= scrivito_field @obj, :fax %><br>
-      M: <%= scrivito_field @obj, :mobile %><br>
-    </p>
-    <p><a href="mailto:<%= scrivito_field @obj, :email %>"><%= scrivito_field @obj, :email %></a></p>
-    <% if @obj.facebook.present? %>
-      <a href="<%= scrivito_field @obj, :facebook %>"><i class="foundicon-facebook"></i></a>
-    <% end %>
-    <% if @obj.twitter.present? %>
-      <a href="<%= scrivito_field @obj, :twitter %>"><i class="foundicon-twitter"></i></a>
-    <% end %>
-
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-pull-9">
+        <ul class="side_nav">
+          <% Person.all.to_a.each do |person| %>
+            <li <% if person == @obj %>class="active"<% end %>><%= link_to person.title, scrivito_path(person) %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>

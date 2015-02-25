@@ -7,10 +7,10 @@ class AddSlickSliderMigration < ::Scrivito::Migration
       # create panels:
       panels = []
       (1..4).each do |index|
-        panels << SlickSliderPanelWidget.new(image: Image.find_by_path("/_resources/teaser_0#{index}"), link: Scrivito::Link.new(obj: Homepage.default, title: "Slider Panel #{index}"))
+        panels << SlickSliderPanelWidget.new(image: Image.find_by_path("/_resources/square_0#{index}"), link: Scrivito::Link.new(obj: Homepage.default, title: "Slider Panel #{index}"))
       end
       (1..3).each do |index|
-        panels << SlickSliderPanelWidget.new(image: Image.find_by_path("/_resources/teaser_0#{index}"), link: Scrivito::Link.new(obj: Homepage.default, title: "Slider Panel #{index + 4}"))
+        panels << SlickSliderPanelWidget.new(image: Image.find_by_path("/_resources/square_0#{index}"), link: Scrivito::Link.new(obj: Homepage.default, title: "Slider Panel #{index + 4}"))
       end
       p.other_content.last.content.first.update(panels: panels)
     end
