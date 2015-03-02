@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= scrivito_head_tags %>
+  <meta charset="UTF-8" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <%= scrivito_head_tags %>
+  <%= javascript_include_tag('//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places') %>
 </head>
 <body class="scrivito_dialog">
   <%= scrivito_body_tags %>
   <%= yield %>
-  <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'editing' %>
   <%= stylesheet_link_tag 'editing' %>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"></script>
 </body>
 </html>

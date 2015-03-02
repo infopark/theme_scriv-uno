@@ -52,8 +52,8 @@ gem 'scrivito_tabbed_content_widget'
 gem 'scrivito_two_column_widget'
 gem 'scrivito_elastic_slider_widget'
 gem 'scrivito_three_column_widget'
-gem 'scrivito_teaser_widget'
 gem 'scrivito_icon_box_widget'
+gem 'scrivito_advanced_editors'
 gem 'font-awesome-rails'
 
 gem 'scrivito_slick_slider_widget', :git => "https://github.com/Scrivito/scrivito_slick_slider_widget.git"

@@ -20,6 +20,10 @@ class Obj < Scrivito::BasicObj
     self.is_a?(Homepage) ? self : self.ancestors.select{|o| o.is_a?(Homepage)}.first
   end
 
+  def icon
+    self[:icon].presence || "globe"
+  end
+
   def show_in_navigation?
     # single ObjClasses often overwrite this method
     self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true

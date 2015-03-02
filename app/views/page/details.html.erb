@@ -1,11 +1,13 @@
 <div class="details-view">
   <h4>Title</h4>
   <%= scrivito_tag :span, @obj, :title %>
+  <h4>Header Image</h4>
+  <%= scrivito_image_tag(@obj, :header_image, data: { filter: 'images' }) %>
+  <h4>Header Icon</h4>
+  <%= render 'icon_box_widget/partials/icon_picker', widget: @obj, attribute: :icon %>
   <h4>Show in Navigation?</h4>
   <% %w(yes no).each do |value| %>
     <% activeclass = (value == @obj.show_in_navigation) ? "active" : "" %>
     <%= scrivito_tag :input, @obj, :show_in_navigation, type: "button", value: value, 'button-value' => value, class: "button_editor btn btn-default #{activeclass}", 'data-editor' => 'none' %>
   <% end %>
-  <h4>Header Image</h4>
-  <%= scrivito_image_tag(@obj, :header_image, data: { filter: 'images' }) %>
 </div>

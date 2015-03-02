@@ -116,6 +116,11 @@ GEM
     scrivito_accordion_widget (1.0.2)
       bundler
       scrivito
+    scrivito_advanced_editors (0.0.5)
+      bundler
+      font-awesome-rails
+      rails
+      scrivito_sdk
     scrivito_content_browser (0.42.0)
       coffee-rails
       railties
@@ -153,8 +158,6 @@ GEM
       scrivito
     scrivito_table_widget (0.1.0)
       bundler
-      scrivito
-    scrivito_teaser_widget (0.0.1)
       scrivito
     scrivito_three_column_widget (0.0.2)
       scrivito
@@ -199,13 +202,13 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   scrivito (= 0.42.0)
   scrivito_accordion_widget
+  scrivito_advanced_editors
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
   scrivito_icon_box_widget
   scrivito_slick_slider_widget!
   scrivito_tabbed_content_widget
   scrivito_table_widget
-  scrivito_teaser_widget
   scrivito_three_column_widget
   scrivito_two_column_widget
   sdoc (~> 0.4.0)
