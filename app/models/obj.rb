@@ -40,10 +40,14 @@ class Obj < Scrivito::BasicObj
   
   def valid_widget_classes_for(field_name)
     case field_name
+      when "body"
+        %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget ImageWidget ListitemWidget NavigationWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget)
       when "full_slider"
         %w(ElasticSliderWidget)
       when "other_content"
         %w(BackgroundWidget)
+      when "teaser"
+        %w(HeadlineWidget IconBoxWidget ImageWidget ListitemWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget)
     end
   end
 
