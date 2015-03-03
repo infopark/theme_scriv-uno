@@ -1,6 +1,6 @@
 class AddSlickSliderMigration < ::Scrivito::Migration
   def up
-    ["/", "/about_us/more", "/misc"].each do |path|
+    ["/", "/about_us"].each do |path|
       p = Obj.find_by_path(path)
       p.update(other_content: p.other_content << BackgroundWidget.new(colour: "grey1"))
       p.other_content.last.update(content: [SlickSliderWidget.new])

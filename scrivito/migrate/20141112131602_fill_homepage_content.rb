@@ -1,7 +1,7 @@
 class FillHomepageContent < ::Scrivito::Migration
   def up
 
-    Homepage.default.update(child_order: [Obj.find_by_path("/about_us"), Obj.find_by_path("/blog"), Obj.find_by_path("/misc"), Obj.find_by_path("/scrivito")])
+    Homepage.default.update(child_order: [Obj.find_by_path("/about_us"), Obj.find_by_path("/blog"), Obj.find_by_path("/scrivito")])
 
     # upload square images:
     s1 = Image.create(_path: "/_resources/square_01", blob: File.new("app/assets/images/scriv-uno/square_01.jpg"))

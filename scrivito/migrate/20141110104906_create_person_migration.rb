@@ -86,7 +86,7 @@ class CreatePersonMigration < ::Scrivito::Migration
     ])
 
     # add the company to several pages
-    ["/about_us", "/about_us/more", "/about_us/people", "/contact"].each do |path|
+    ["/about_us", "/about_us/people", "/contact"].each do |path|
       p = Obj.find_by_path(path)
       col = p.body.first.column_2
       p.body.first.update(column_2: col << PersonWidget.new(person: Obj.find_by_path("/people/company1"),

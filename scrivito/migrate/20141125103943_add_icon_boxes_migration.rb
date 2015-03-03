@@ -1,7 +1,28 @@
 class AddIconBoxesMigration < ::Scrivito::Migration
   def up
-    p = Obj.find_by_path("/misc/icon_boxes")
-    p.update(body: [
+    p = Obj.find_by_path("/scrivito")
+    p.body.first.update(column_2: [
+      HeadlineWidget.new(headline: "Scrivito"),
+      ThreeColumnWidget.new(
+        column_1: [
+          BoxWidget.new(content: [
+            IconBoxWidget.new(icon: "cloud", background_color: "white", size: "medium"),
+            TextWidget.new(text: "<h3>Your Cloud CMS</h3>
+              <p>Scrivito is a professional Cloud Content Management System built for Ruby on Rails.</p>")
+          ])], 
+        column_2: [
+          BoxWidget.new(content: [
+            IconBoxWidget.new(icon: "male", background_color: "white", size: "medium"),
+            TextWidget.new(text: "<h3>No editor training</h3>
+              <p>Your clients edit content in-place, directly on the website. Without training or HTML skills.</p>")
+          ])], 
+        column_3: [
+          BoxWidget.new(content: [
+            IconBoxWidget.new(icon: "dashboard", color: "green", background_color: "white", size: "medium"),
+            TextWidget.new(text: "<h3>No installation required</h3>
+              <p>Scrivito is a cloud service. Just focus on the functionality and look of your website.</p>")
+          ])]
+      ),
       HeadlineWidget.new(headline: "Your Benefits"),
       ThreeColumnWidget.new(
         column_1: [
@@ -13,7 +34,7 @@ class AddIconBoxesMigration < ::Scrivito::Migration
         column_2: [
           BoxWidget.new(content: [
             IconBoxWidget.new(icon: "home", color: "blue", background_color: "white", size: "medium"),
-            TextWidget.new(text: "<h3>Bootstrap bootstraps you</h3>
+            TextWidget.new(text: "<h3>You are bootstrapped</h3>
               <p>We love Bootstrap, so it's included right away. Just use this boilerplate app.</p>")
           ])], 
         column_3: [
@@ -40,31 +61,10 @@ class AddIconBoxesMigration < ::Scrivito::Migration
         column_3: [
           BoxWidget.new(content: [
             IconBoxWidget.new(icon: "database", color: "green", size: "medium"),
-            TextWidget.new(text: "<h3>Scalable and available</h3>
+            TextWidget.new(text: "<h3>Scalable and available around the World</h3>
               <p>Distibuted over three data centres, we're always there for you.</p>")
           ])]
       ),
-      HeadlineWidget.new(headline: "Your Benefits"),
-      ThreeColumnWidget.new(
-        column_1: [
-          BoxWidget.new(colour: "green", content: [
-            IconBoxWidget.new(icon: "mobile", color: "blue", size: "medium"),
-            TextWidget.new(text: "<h3>Mobile to the max</h3>
-              <p>Build websites for desktop computers and mobile devices.</p>")
-          ])], 
-        column_2: [
-          BoxWidget.new(colour: "blue", content: [
-            IconBoxWidget.new(icon: "home", color: "blue", background_color: "white", size: "medium"),
-            TextWidget.new(text: "<h3>Bootstrap bootstraps you</h3>
-              <p>We love Bootstrap, so it's included right away. Just use this boilerplate app.</p>")
-          ])], 
-        column_3: [
-          BoxWidget.new(colour: "green", content: [
-            IconBoxWidget.new(icon: "lock", color: "green", background_color: "white", size: "medium"),
-            TextWidget.new(text: "<h3>Security</h3>
-              <p>We leverage all of AWS's security measures to keep your data secure.</p>")
-          ])]
-      )
     ])
   end
 end
