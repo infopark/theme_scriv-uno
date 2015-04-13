@@ -56,6 +56,6 @@ gem 'scrivito_icon_box_widget'
 gem 'scrivito_advanced_editors'
 gem 'font-awesome-rails'
 
-gem 'scrivito_slick_slider_widget', :git => "https://github.com/Scrivito/scrivito_slick_slider_widget.git"
+gem 'scrivito_slick_slider_widget'
 
 gem 'rails_12factor', group: :production

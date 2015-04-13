@@ -4,7 +4,7 @@
   <h4>Header Image</h4>
   <%= scrivito_image_tag(@obj, :header_image, data: { filter: 'images' }) %>
   <h4>Header Icon</h4>
-  <%= render 'icon_box_widget/partials/icon_picker', widget: @obj, attribute: :icon %>
+  <%= render 'icon_box_widget/partials/icons_picker', widget: @obj, attribute: :icon %>
   <h4>Show in Navigation?</h4>
   <% %w(yes no).each do |value| %>
     <% activeclass = (value == @obj.show_in_navigation) ? "active" : "" %>
