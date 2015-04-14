@@ -28,6 +28,6 @@ module ScrivUno
     # config.i18n.default_locale = :de
 
     # deployment to heroku wants some asset tweaking:
-    config.serve_static_assets = true
+    config.serve_static_files = true
   end
 end

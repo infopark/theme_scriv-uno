@@ -1,0 +1,31 @@
+<div class="details-view">
+  <h4>Title & Name</h4>
+  <%= scrivito_tag :span, @obj, :title %>
+
+  <h4>Is A Company?</h4>
+  <%= scrivito_toggle_button_editor(@obj, "is_company", %w(yes no)) do |elem|
+    scrivito_tag(:button, @obj, "is_company", class: "#{elem == @obj.send("is_company") ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
+      elem
+    end
+  end %>
+
+  <h4>Function</h4>
+  <%= scrivito_tag :span, @obj, :function %>
+  <h4>Telephone</h4>
+  <%= scrivito_tag :span, @obj, :telephone %>
+  <h4>Mobile</h4>
+  <%= scrivito_tag :span, @obj, :mobile %>
+  <h4>Email</h4>
+  <%= scrivito_tag :span, @obj, :email %>
+
+  <h4>Street</h4>
+  <%= scrivito_tag :span, @obj, :street %>
+  <h4>Postal (PLZ)</h4>
+  <%= scrivito_tag :span, @obj, :postal %>
+  <h4>Country</h4>
+  <%= scrivito_tag :span, @obj, :country %>
+  <h4>Image</h4>
+
+  <%= scrivito_image_tag(@obj, :image) %>
+
+</div>
