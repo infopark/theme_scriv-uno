@@ -44,7 +44,7 @@ class Obj < Scrivito::BasicObj
   
   def valid_widget_classes_for(field_name)
     #TBD: when Widgets can also be blacklisted, we can remove all this whitelisting here:
-    my_standard_widgets = %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget ImageWidget ListitemWidget NavigationWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget)
+    my_standard_widgets = %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget ImageWidget ListitemWidget NaviWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget)
     case field_name
       when "body"
         my_standard_widgets

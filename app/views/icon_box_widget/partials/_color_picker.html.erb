@@ -1,5 +1,5 @@
-<div class="button-picker-wraper">
-  <% widget.selectable_color_classes("", "").each do |color| %>
-    <%= scrivito_tag(:button, widget, attribute, class: "scrivito_button button-picker box_#{color} #{widget.send(attribute) == color ? "activated" : ""}", :"data-picker-content" =>  color, :"data-editor" => 'button-picker') do %><%= color %><% end %>
-  <% end %>
-</div>
+<%= scrivito_toggle_button_editor(widget, attribute, widget.selectable_color_classes(widget.obj_class.name, attribute)) do |elem|
+  scrivito_tag(:button, widget, attribute, class: "#{elem == widget.send(attribute) ? 'active' : ''} box_#{elem} scrivito_button button-picker", data: {editor: 'scrivito-toggle-button', content: elem}) do
+    elem
+  end
+end %>

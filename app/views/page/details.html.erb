@@ -6,8 +6,9 @@
   <h4>Header Icon</h4>
   <%= render 'icon_box_widget/partials/icons_picker', widget: @obj, attribute: :icon %>
   <h4>Show in Navigation?</h4>
-  <% %w(yes no).each do |value| %>
-    <% activeclass = (value == @obj.show_in_navigation) ? "active" : "" %>
-    <%= scrivito_tag :input, @obj, :show_in_navigation, type: "button", value: value, 'button-value' => value, class: "button_editor btn btn-default #{activeclass}", 'data-editor' => 'none' %>
-  <% end %>
+  <%= scrivito_toggle_button_editor(@obj, "show_in_navigation", %w(yes no)) do |elem|
+    scrivito_tag(:button, @obj, "show_in_navigation", class: "#{elem == @obj.send("show_in_navigation") ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
+      elem
+    end
+  end %>
 </div>
