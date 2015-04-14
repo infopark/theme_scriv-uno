@@ -2,6 +2,9 @@
   <h4>Person</h4>
   <%= scrivito_edit_reference(widget, :person) %>
   <h4>Show Picture?</h4>
-  <%= scrivito_edit_enum(widget, :show_picture) %>
-
+  <%= scrivito_toggle_button_editor(widget, "show_picture", %w(yes no)) do |elem|
+    scrivito_tag(:button, widget, "show_picture", class: "#{elem == widget.send("show_picture") ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
+      elem
+    end
+  end %>
 </div>

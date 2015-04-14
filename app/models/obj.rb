@@ -54,6 +54,8 @@ class Obj < Scrivito::BasicObj
         my_standard_widgets
       when "column_3"
         my_standard_widgets
+      when "content"
+        my_standard_widgets
       when "full_slider"
         %w(ElasticSliderWidget)
       when "other_content"
