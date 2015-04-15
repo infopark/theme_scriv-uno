@@ -12,7 +12,7 @@ class AddSupportContentMigration < ::Scrivito::Migration
               ListitemWidget.new(headline: "Check our Online Documentation", 
                 content: "Create your own widget, or get to know the architecture. We have tutorials on how to solve common use cases along with explaining to you how to build your perfect site with Scrivito.",
                 image: docuimage,
-                link: Scrivito::Link.new(url: "https://scrivito.com/documentation", title: "Scrivito Documentation"))], 
+                link: Scrivito::Link.new(url: "https://scrivito.com/documentation", title: "Scrivito Documentation"))],
             column_2: [
               ListitemWidget.new(headline: "Ask our Support Team", 
                 content: "We don't like incompetent, enterprisy support. So that's why everybody in our support team is an engineer with deep knowledge of our product, committed to help you using our CMS. Just send us an e-mail at support@scrivito.com or use our ticket system. We love to help you.", 

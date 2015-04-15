@@ -1,13 +1,21 @@
 <div class="list_item">
-  <a href="#"></a>
-  <%= scrivito_image_tag widget, :image, class: "square" %>
+  <% if widget.link.present? && !scrivito_in_editable_view? %>
+    <%= link_to scrivito_path(widget.link) do %>
+      <%= scrivito_image_tag widget, :image, class: "square" %>
+    <% end %>
+  <% else %>
+    <%= scrivito_image_tag widget, :image, class: "square" %>
+  <% end %>
   <div class="list_item_content">
     <% level = widget.headline_level || "h4" %>
-    <%= scrivito_tag level.to_sym, widget, :headline %>
+    <% if widget.link.present? && !scrivito_in_editable_view? %>
+      <%= link_to scrivito_path(widget.link) do %>
+        <%= scrivito_tag level.to_sym, widget, :headline %>
+      <% end %>
+    <% else %>
+      <%= scrivito_tag level.to_sym, widget, :headline %>
+    <% end %>
     <%= scrivito_tag :span, widget, :subline, class: "meta" %>
     <%= scrivito_tag(:p, widget, :content) %>
-    <% if widget.link.present? %>
-      <%#= link_to(widget.link.display_title, scrivito_path(widget.link)) %>
-    <% end %>
   </div>
 </div>
