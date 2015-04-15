@@ -5,6 +5,7 @@ class CreateBlogClass < ::Scrivito::Migration
       attributes: [
          {name: 'body', type: :widget},
          {name: 'header_image', type: :reference},
+         {name: 'other_content', type: :widget},
          {name: 'title', type: :string}
       ]
     )

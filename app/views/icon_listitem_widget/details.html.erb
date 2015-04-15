@@ -1,0 +1,21 @@
+<div class="details-view">
+  <h4>Icon</h4>
+  <%= render 'icon_box_widget/partials/icons_picker', widget: widget, attribute: :icon %>
+
+  <h4>Headline</h4>
+  <%= scrivito_tag(:p, widget, :headline) %>
+
+  <h4>Headline Size</h4>
+  <%= scrivito_toggle_button_editor(widget, "headline_level", %w(h2 h3 h4)) do |elem|
+    scrivito_tag(:button, widget, "headline_level", class: "#{elem == widget.send("headline_level") ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
+      elem
+    end
+  end %>
+
+  <h4>Text</h4>
+  <%= scrivito_tag(:p, widget, :content) %>
+
+  <h4>Link</h4>
+  <%= scrivito_edit_link(widget, :link) %>
+
+</div>
