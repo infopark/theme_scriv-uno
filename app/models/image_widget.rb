@@ -4,4 +4,9 @@ class ImageWidget < Widget
   #
   #   image  :reference
   #
+
+  def lightbox_ref
+    self.lightbox_reference.presence || self.image
+  end
+
 end

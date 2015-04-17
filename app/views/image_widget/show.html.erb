@@ -1,1 +1,7 @@
-<%= scrivito_image_tag widget, :image, class: "img-responsive" %>
+<% if scrivito_in_editable_view? || widget.show_in_lightbox != "yes" %>
+  <%= scrivito_image_tag widget, :image, class: "img-responsive" %>
+<% else %>
+  <%= link_to(scrivito_path(widget.lightbox_ref), {:title => widget.image.title, data: {gallery:  widget.lightbox_gallery_name}}) do %>
+    <%= scrivito_image_tag widget, :image, class: "img-responsive" %>
+  <% end %>
+<% end %>
