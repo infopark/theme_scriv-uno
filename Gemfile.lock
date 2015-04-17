@@ -136,7 +136,7 @@ GEM
       scrivito_content_browser (= 0.50.0)
       scrivito_editors (= 0.50.0)
       scrivito_sdk (= 0.50.0)
-    scrivito_accordion_widget (1.0.6)
+    scrivito_accordion_widget (1.0.7)
       bundler
       scrivito
     scrivito_advanced_editors (0.0.7)
@@ -158,10 +158,10 @@ GEM
       bundler
       jquery-rails
       scrivito
-    scrivito_google_maps_widget (0.1.2)
+    scrivito_google_maps_widget (0.1.3)
       bundler
       scrivito_sdk
-    scrivito_icon_box_widget (1.1.4)
+    scrivito_icon_box_widget (1.1.6)
       bundler
       font-awesome-rails
       scrivito_advanced_editors
@@ -190,7 +190,7 @@ GEM
       scrivito
     scrivito_two_column_widget (0.0.3)
       scrivito
-    scrivito_video_widget (1.0.6)
+    scrivito_video_widget (1.0.7)
       bundler
       projekktor-rails
       scrivito_sdk
