@@ -14,7 +14,7 @@ class AddMoreContentMigration < ::Scrivito::Migration
     bg = p.other_content.unshift(BackgroundWidget.new(
       colour: "green", 
       content: [TwoColumnWidget.new(
-        column_1: [TextWidget.new(text: "<iframe src=\"//www.youtube.com/embed/07LEQi58x_4\" frameborder=\"0\" allowfullscreen></iframe>")],
+        column_1: [IframeWidget.new(link: Scrivito::Link.new(url: "http://www.youtube.com/embed/07LEQi58x_4"))],
         column_2: [HeadlineWidget.new(headline: "Infopark organises Relaunch"),
           TextWidget.new(text: "<p>Every year Infopark holds the Relaunch conference. See what is planned for next summer by checking out the website of <a href=\"https://relaunch-konferenz.de/\" target=\"_blank\">relaunch</a>.</p>")])]
       )

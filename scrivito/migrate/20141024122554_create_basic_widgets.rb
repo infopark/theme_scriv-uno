@@ -16,6 +16,12 @@ class CreateBasicWidgets < ::Scrivito::Migration
       ]
     )
 
+    Scrivito::ObjClass.create(name: 'IframeWidget', attributes: [
+      {name: 'link', type: :link},
+      {name: 'height', type: :string},
+      {name: 'width', type: :string},
+    ])
+
     Scrivito::ObjClass.create(
       name: 'ListitemWidget',
       is_binary: false,
