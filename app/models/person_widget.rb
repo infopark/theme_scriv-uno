@@ -1,4 +1,8 @@
 class PersonWidget < Widget
+  attribute :colour, :enum, values: ["grey", "white"]
+  attribute :person, :reference
+  attribute :show_picture, :enum, values: ["yes", "no"]
+
 
   def colour
     self[:colour].presence || "white"

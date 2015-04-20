@@ -1,4 +1,9 @@
 class Blog < ::Obj
+  attribute :body, :widgetlist
+  attribute :header_image, :reference
+  attribute :other_content, :widgetlist
+  attribute :title, :string
+
 
   def self.valid_page_classes_beneath(path)
     %w(BlogPost)

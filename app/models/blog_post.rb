@@ -1,4 +1,9 @@
 class BlogPost < ::Obj
+  attribute :author, :string
+  attribute :body, :widgetlist
+  attribute :date, :date
+  attribute :title, :string
+
 
   def self.valid_page_classes_beneath(path)
     %w(BlogPostComment)
