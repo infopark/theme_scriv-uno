@@ -1,4 +1,6 @@
 class HeadlineWidget < Widget
+  attribute :headline, :string
+
   #
   # HeadlineWidget (not binary)
   #

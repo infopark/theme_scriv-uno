@@ -1,4 +1,6 @@
 class TextWidget < Widget
+  attribute :text, :html
+
   #
   # TextWidget (not binary)
   #

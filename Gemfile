@@ -21,11 +21,19 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem 'debugger', group: [:development, :test]
-gem 'web-console', '~> 2.0', group: :development
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'web-console', '~> 2.0'
+end
+
 
 
 # SETTING UP SCRIVITO:
-gem 'scrivito', "0.50.0"
+gem 'scrivito', "0.60.0.rc1"
 gem 'scrivito_advanced_editors'
 gem 'dalli'
 gem 'dotenv-rails'
