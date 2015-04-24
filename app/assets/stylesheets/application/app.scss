@@ -518,9 +518,10 @@ ul {padding-left:20px;}
 	margin:15px auto 25px;
 	}
 
-.box_icon_i.green {border:2px solid #78c9a6; background-color: #78c9a6 !important;}
 .box_icon_i.blue {border:2px solid #465b66; background-color: #465b66 !important; }
+.box_icon_i.green {border:2px solid #78c9a6; background-color: #78c9a6 !important;}
 .box_icon_i.grey {background-color: #fafafa !important;}
+.box_icon_i.white {border: 1px solid #fff;}
 
 .box_icon_i span {
     background:#aaa;
@@ -530,27 +531,21 @@ ul {padding-left:20px;}
     height: 100%;
     width: 100%;
 }
-.box_icon_i.green span { background:#78c9a6; }
 .box_icon_i.blue span{ background:#465b66;	}
+.box_icon_i.green span { background:#78c9a6; }
+.box_icon_i.white span{ background:#fff;	}
 .box_icon_i i{
-	color: #fff;
+  color: #fff;
   font-size: 40px;
   line-height:80px;
   margin: 0;
   padding:0;
   position: relative;
   z-index: 20;
-	}
-
-.box_icon h3{
-	font-size:18px;
-	margin:15px 0 18px;
-	}
-
-.box_icon p{
-	font-size:16px;
-	margin:0px;
-	}
+}
+.box_icon_i span i.green {color: #78c9a6 !important;}
+.box_icon h3{ font-size:18px; margin:15px 0 18px; }
+.box_icon p{ font-size:16px; margin:0px; }
 
 
 /* list_item *
