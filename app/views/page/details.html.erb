@@ -2,7 +2,7 @@
   <h4>Title</h4>
   <%= scrivito_tag :span, @obj, :title %>
   <h4>Header Image</h4>
-  <%= scrivito_image_tag(@obj, :header_image, data: { filter: 'images' }) %>
+  <%= scrivito_image_tag(@obj, :header_image) %>
   <h4>Header Icon</h4>
   <%= render 'icon_box_widget/partials/icons_picker', widget: @obj, attribute: :icon %>
   <h4>Show in Navigation?</h4>

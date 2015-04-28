@@ -40,11 +40,21 @@ class Obj < Scrivito::BasicObj
 
   def thumbnail_icon
     "foundicon-page"
-  end 
-  
+  end
+
+  def self.valid_page_classes_beneath(parent_path)
+    obj = Obj.find_by_path(parent_path)
+
+    if obj.is_a?(Blog)
+      %w[BlogPost]
+    else
+      %w[Page Blog]
+    end
+  end
+
   def valid_widget_classes_for(field_name)
     #TBD: when Widgets can also be blacklisted, we can remove all this whitelisting here:
-    my_standard_widgets = %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget IconListitemWidget IframeWidget ImageWidget ListitemWidget NaviWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget VideoWidget)
+    my_standard_widgets = %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget IconListitemWidget IframeWidget ImageWidget ListitemWidget NaviWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget VideoWidget TextImageTeaserWidget)
     case field_name
       when "body"
         my_standard_widgets
