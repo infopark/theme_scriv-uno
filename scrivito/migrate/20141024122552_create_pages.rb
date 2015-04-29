@@ -1,5 +1,6 @@
 class CreatePages < ::Scrivito::Migration
   def up
+    Page.find_by_path("/").update(_obj_class: "Homepage", title: "Home")
     Obj.create(_obj_class: 'Page', _path: '/about_us', title: "About us")
     Obj.create(_obj_class: 'Page', _path: '/about_us/people', title: "People")
     Obj.create(_obj_class: 'Page', _path: '/about_us/gallery', title: "Gallery")

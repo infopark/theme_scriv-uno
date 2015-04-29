@@ -1,10 +1,5 @@
 class AddLightboxToImageWidgetMigration < Scrivito::Migration
   def up
-    Scrivito::ObjClass.find('ImageWidget').attributes.add(name: 'show_in_lightbox', type: :enum, values: %w(yes no))
-    Scrivito::ObjClass.find('ImageWidget').attributes.add(name: 'lightbox_gallery_name', type: :string)
-    Scrivito::ObjClass.find('ImageWidget').attributes.add(name: 'lightbox_reference', type: :reference)
-    Scrivito::ObjClass.find('Image').attributes.add(name: 'title', type: :string)
-
     Obj.find_by_path("/about_us/gallery").update(body: [
       HeadlineWidget.new(headline: "Image Gallery"),
       ThreeColumnWidget.new(column_1: [

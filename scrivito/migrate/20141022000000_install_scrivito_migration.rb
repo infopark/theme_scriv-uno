@@ -1,27 +1,6 @@
 class InstallScrivitoMigration < Scrivito::Migration
   def up
-    Scrivito::ObjClass.create(name: 'Page', attributes: [
-      {name: 'title', type: 'string'},
-      {name: 'body',     type: 'widget'},
-      {name: 'child_order', type: 'referencelist'},
-    ])
-
-    Scrivito::ObjClass.create(name: 'HeadlineWidget', attributes: [
-      {name: 'headline', type: 'string'},
-    ])
-
-    Scrivito::ObjClass.create(name: 'TextWidget', attributes: [
-      {name: 'text', type: 'html'},
-    ])
-
-    Scrivito::ObjClass.create(name: 'Image', attributes:[
-      {name: 'blob', type: 'binary'},
-    ])
-
-    Scrivito::ObjClass.create(name: 'ImageWidget', attributes: [
-      {name: 'image',  type: 'reference'}
-    ])
-
+    Scrivito::ObjClass.remove
     Page.create(_path: '/', title: 'Welcome to Scrivito!', body: [
       HeadlineWidget.new(headline: 'A professional Cloud CMS built for Ruby on Rails.'),
       TextWidget.new(text: %{
@@ -44,10 +23,6 @@ class InstallScrivitoMigration < Scrivito::Migration
         And you always get the newest features.
         </p>
       })
-    ])
-
-    Scrivito::ObjClass.create(name: 'Download', attributes:[
-       {name: 'blob', type: 'binary'},
     ])
 
   end

@@ -1,24 +1,5 @@
-class CreateBlogClass < ::Scrivito::Migration
+class CreateBlog < ::Scrivito::Migration
   def up
-    Scrivito::ObjClass.create(
-      name: 'Blog',
-      attributes: [
-         {name: 'body', type: :widget},
-         {name: 'header_image', type: :reference},
-         {name: 'other_content', type: :widget},
-         {name: 'title', type: :string}
-      ]
-    )
-    Scrivito::ObjClass.create(
-      name: 'BlogPost',
-      attributes: [
-         {name: 'author', type: :string},
-         {name: 'body', type: :widget},
-         {name: 'date', type: :date},
-         {name: 'title', type: :string},
-      ]
-    )
-
     Obj.create(_obj_class: 'Blog', _path: "/blog", title: "Blog", title: "Blog")
     Obj.create(_obj_class: 'BlogPost', _path: "/blog/post1", title: "We have relaunched!", 
       date: 3.weeks.ago, author: "John Doe", 

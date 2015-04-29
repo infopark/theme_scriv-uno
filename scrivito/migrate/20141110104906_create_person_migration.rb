@@ -1,28 +1,5 @@
 class CreatePersonMigration < ::Scrivito::Migration
   def up
-    Scrivito::ObjClass.create(name: 'Person', attributes: [
-      {name: 'title', type: :string},
-      {name: 'function', type: :string},
-      {name: 'street', type: :string},
-      {name: 'postal', type: :string},
-      {name: 'country', type: :string},
-      {name: 'telephone', type: :string},
-      {name: 'fax', type: :string},
-      {name: 'mobile', type: :string},
-      {name: 'email', type: :string},
-      {name: 'image', type: :reference},
-      {name: 'is_company', type: :enum, values: %w(yes no)},
-      {name: 'googlemap', type: :link},
-      {name: 'facebook', type: :link},
-      {name: 'twitter', type: :link},
-      {name: 'googleplus', type: :link},
-      {name: 'slideshare', type: :link},
-      {name: 'pinterest', type: :link},
-      {name: 'linkedin', type: :link},
-      {name: 'youtube', type: :link},
-      {name: 'flickr', type: :link},
-      {name: 'rss', type: :link},
-    ])
     image = Image.create(blob: File.new("app/assets/images/scriv-uno/square_01.png"))
     (0..2).each do |index|
       Obj.create(_obj_class: "Person", _path: "/people/person#{index}", title: "James Doe", function: "Chief Executive Officer", 
@@ -63,12 +40,6 @@ class CreatePersonMigration < ::Scrivito::Migration
       googlemap: Scrivito::Link.new(url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.562414844984!2d13.373995000000003!3d52.43272599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84536cd2de7a9%3A0x92f5cd9b1ecd6edd!2sInfopark+AG!5e0!3m2!1sde!2sde!4v1413988739362")        
     )
     
-    Scrivito::ObjClass.create(name: 'PersonWidget', attributes: [
-      {name: 'person', type: :reference},
-      {name: 'show_picture', type: :enum, values: %w(yes no)},
-      {name: 'colour', type: :enum, values: %w(grey white)},
-    ])
-
     p = Obj.find_by_path("/about_us/people")
     p.body.first.update(column_2: [
       TextWidget.new(text: "<p>This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team. This is the place to introduce our team.</p>"),
