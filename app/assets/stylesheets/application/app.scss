@@ -387,10 +387,19 @@ ul {padding-left:20px;}
 .teaser img {min-width: 100%; position:absolute;}
 
 .teaser .container { padding:30px 0;}
-.teaser .h1 {background: rgba(0, 0, 0, 0.4);
-  color: #fff; display: block; float: left;
-  font-size: 35px; line-height: 1.2em; padding: 0 10px;
+.teaser .h1 {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 35px;
+  line-height: 41px;
+  padding: 0 10px;
+  height: 40px;
+  .fa {
+    margin-right: 10px;
   }
+}
 
 /* forms
 ================================================== */
