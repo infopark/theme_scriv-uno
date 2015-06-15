@@ -33,7 +33,7 @@ end
 
 
 # SETTING UP SCRIVITO:
-gem 'scrivito', "0.60.0.rc2"
+gem 'scrivito', "0.65.0"
 gem 'scrivito_advanced_editors'
 gem 'dalli'
 gem 'dotenv-rails'
