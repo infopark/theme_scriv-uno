@@ -24,10 +24,6 @@ class Obj < Scrivito::BasicObj
     self[:icon].presence || "globe"
   end
 
-  def self.selectable_color_classes(obj_name, field_name)
-    return ["blue", "green", "grey", "white"]
-  end
-
   def show_in_navigation?
     # single ObjClasses often overwrite this method
     self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
