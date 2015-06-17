@@ -1,9 +1,9 @@
 <div class="details-view editing-colours">
-  <h4>Select background colour</h4>
-  <% Scrivito::ObjClass.find("BackgroundWidget").attributes["colour"].values.each do |colour| %>
-    <% classes = "button_editor bg_#{colour}" %>
-    <% if colour == widget.colour; classes += " active"; end %>
-    <%= scrivito_tag :input, widget, "colour", type: "button", 'button-value' => colour, class: classes, 'data-editor' => 'none' %>
+  <%= scrivito_details_for 'Select background colour' do %>
+    <%= scrivito_toggle_button_editor(widget, :colour, Obj.selectable_color_classes(widget.class.to_s, :colour)) do |elem|
+      scrivito_tag(:button, widget, :colour, class: "#{elem == widget.send(:colour) ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
+        elem
+      end
+    end %>
   <% end %>
 </div>
-

@@ -38,6 +38,10 @@ class Obj < Scrivito::BasicObj
     "foundicon-page"
   end
 
+  def self.selectable_color_classes(obj_name, field_name)
+    return ["blue", "green", "grey", "white"]
+  end
+
   def self.valid_page_classes_beneath(parent_path)
     obj = Obj.find_by_path(parent_path)
 
