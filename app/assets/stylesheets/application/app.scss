@@ -596,11 +596,10 @@ ul {padding-left:20px;}
 /* list_icon *
 ================================================== */
 
-.list_icon { list-style-type:none; display:block; padding:0;}
-.list_icon li { font-size: 14px; margin: 10px 0; padding: 0;}
-.list_icon li .list_icon_col1 { float: left; text-align: center; width: 60px; }
-.list_icon li .list_icon_col1 i {padding:0; font-size:24px;}
-.list_icon li .list_icon_col2 { overflow:hidden;}
+.list_icon { display:block; padding:0; font-size: 14px; margin: 10px 0; padding: 0;}
+.list_icon .list_icon_col1 { float: left; text-align: center; width: 60px; }
+.list_icon .list_icon_col1 i {padding: 0; font-size: 24px;}
+.list_icon .list_icon_col2 { overflow: hidden;}
 
 /* progress-bar *
 ================================================== */
