@@ -1,5 +1,0 @@
-<%= scrivito_toggle_button_editor(widget, attribute, widget.selectable_color_classes(widget.obj_class.name, attribute)) do |elem|
-  scrivito_tag(:button, widget, attribute, class: "#{elem == widget.send(attribute) ? 'active' : ''} box_#{elem} scrivito_button button-picker", data: {editor: 'scrivito-toggle-button', content: elem}) do
-    elem
-  end
-end %>

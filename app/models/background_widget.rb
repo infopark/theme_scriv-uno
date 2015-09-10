@@ -1,5 +1,5 @@
 class BackgroundWidget < Widget
-  attribute :colour, :enum, values: ["blue", "green", "grey1", "grey2", "white"]
+  attribute :colour, :string
   attribute :content, :widgetlist
 
 

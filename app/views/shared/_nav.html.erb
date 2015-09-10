@@ -1,4 +1,3 @@
-
 <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
 
   <%= scrivito_tag_list(:ul, @obj.homepage, :toclist, class: "nav navbar-nav") do |list, item| %>
@@ -22,11 +21,11 @@
       <% end -%>
     <% end -%>
   <% end -%>
-          
-  <form class="navbar-form navbar-right" action="<%= scrivito_path(Scrivito::NamedLink.get_object("search")) %>">
+
+  <form class="navbar-form navbar-right" action="<%= scrivito_path(SearchPage.all.first) %>">
     <input name="q" type="text" placeholder="Search..." class="form-control">
   </form>
   <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to("Contact", scrivito_path(Scrivito::NamedLink.get_object("contact"))) %></li>
+    <li><%= link_to("Contact", scrivito_path(@obj)) %></li>
   </ul>
 </nav>

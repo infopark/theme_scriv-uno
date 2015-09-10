@@ -1,10 +1,9 @@
 class BoxWidget < Widget
-  attribute :colour, :enum, values: ["blue", "green", "grey", "white"]
+  attribute :colour, :string, default: 'white'
   attribute :content, :widgetlist
+  attribute :show_shadow, :enum, values: ['Yes', 'No'], default: 'Yes'
 
-
-  def colour
-    self[:colour].presence || "white"
+  def show_shadow?
+    self.show_shadow == 'Yes'
   end
-
 end

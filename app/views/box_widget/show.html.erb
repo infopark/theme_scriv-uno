@@ -1,3 +1,3 @@
-<div class="box_icon box_<%= widget.colour %>">
+<div class="box_icon <%= widget.colour %> <%= widget.show_shadow? ? 'shadow' : '' %>">
   <%= scrivito_tag(:div, widget, :content) %>
 </div>

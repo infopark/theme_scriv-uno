@@ -24,10 +24,6 @@ class Obj < Scrivito::BasicObj
     self[:icon].presence || "globe"
   end
 
-  def self.selectable_color_classes(obj_name, field_name)
-    return ["blue", "green", "grey", "white"]
-  end
-
   def show_in_navigation?
     # single ObjClasses often overwrite this method
     self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
@@ -40,30 +36,37 @@ class Obj < Scrivito::BasicObj
 
   def thumbnail_icon
     "foundicon-page"
-  end 
-  
-  def valid_widget_classes_for(field_name)
-    #TBD: when Widgets can also be blacklisted, we can remove all this whitelisting here:
-    my_standard_widgets = %w(AccordionWidget BoxWidget ElasticSliderWidget GoogleMapsWidget HeadlineWidget IconBoxWidget IconListitemWidget IframeWidget ImageWidget ListitemWidget NaviWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget VideoWidget)
-    case field_name
-      when "body"
-        my_standard_widgets
-      when "column_1"
-        my_standard_widgets
-      when "column_2"
-        my_standard_widgets
-      when "column_3"
-        my_standard_widgets
-      when "content"
-        my_standard_widgets
-      when "full_slider"
-        %w(ElasticSliderWidget)
-      when "other_content"
-        %w(BackgroundWidget)
-      when "teaser"
-        %w(HeadlineWidget IconBoxWidget ImageWidget ListitemWidget PersonWidget SlickSliderWidget TabbedContentWidget TextWidget ThreeColumnWidget TwoColumnWidget)
+  end
+
+  def self.selectable_color_classes(obj_name, field_name)
+    ["bg_blue", "bg_green", "bg_grey1", "bg_grey2", "bg_grey3", "bg_white"]
+  end
+
+  def self.valid_page_classes_beneath(parent_path)
+    obj = Obj.find_by_path(parent_path)
+
+    if obj.is_a?(Blog)
+      [BlogPost]
+    else
+      [Page, Blog]
     end
   end
 
-end
+  def valid_widget_classes_for(field_name)
+    if field_name == "body"
+      Obj.section_widgets
+    else
+      Scrivito.models.widgets.map {|e| e} - Obj.section_widgets - Obj.hidden_widgets
+    end
+  end
 
+  private
+  def self.section_widgets
+    [BackgroundWidget, GoogleMapsWidget, ElasticSliderWidget]
+  end
+
+  def self.hidden_widgets
+    [ElasticSliderPanelWidget, Scrivito::ContentWidget]
+  end
+
+end

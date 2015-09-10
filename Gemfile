@@ -30,10 +30,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 end
 
-
-
 # SETTING UP SCRIVITO:
-gem 'scrivito', "0.60.0.rc1"
+gem 'scrivito', "0.70.0.rc2"
 gem 'scrivito_advanced_editors'
 gem 'dalli'
 gem 'dotenv-rails'
@@ -51,6 +49,7 @@ gem 'scrivito_table_widget'
 gem 'scrivito_three_column_widget'
 gem 'scrivito_two_column_widget'
 gem 'scrivito_video_widget'
+gem 'scrivito_seo_headline_extender'
 #gem 'projekktor-rails'
 
 gem 'font-awesome-rails'

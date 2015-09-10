@@ -1,5 +1,1 @@
-<%= scrivito_toggle_button_editor(obj, attribute, Scrivito::ObjClass.find(obj.class.name).attributes[attribute].values) do |elem|
-  scrivito_tag(:button, obj, attribute, class: "#{elem == obj.send(attribute) ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
-    elem
-  end
-end %>
+<%= scrivito_toggle_button_editor(obj, attribute) %>

@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require scrivito
-//= require google_maps_widget/application
-//= require scrivito_slick_slider_widget/application
+//= require scrivito_google_maps_widget
+//= require scrivito_slick_slider_widget
 //= require scrivito_icon_box_widget
 //= require scrivito_video_widget
+//= require scrivito_tabbed_content_widget
+//= require scrivito_accordion_widget
+//= require scrivito_slick_slider_widget
