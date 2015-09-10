@@ -1,9 +1,5 @@
 <div class="details-view editing-colours">
   <%= scrivito_details_for 'Select background colour' do %>
-    <%= scrivito_toggle_button_editor(widget, :colour, Obj.selectable_color_classes(widget.class.to_s, :colour)) do |elem|
-      scrivito_tag(:button, widget, :colour, class: "#{elem == widget.send(:colour) ? 'active' : ''} #{elem}", data: {editor: 'scrivito-toggle-button', content: elem}) do
-        elem
-      end
-    end %>
+    <%= render 'scrivito_advanced_editors/color_picker', widget: widget, attribute: :colour %>
   <% end %>
 </div>
