@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
 
   def destroy
     logger.warn "Logging out user '#{session[:user]}'."
-    session[:user] = nil 
-    redirect_to scrivito_path(Obj.homepage)
+    session[:user] = nil
+    redirect_to scrivito_path(Homepage.all.first)
   end
 
 
