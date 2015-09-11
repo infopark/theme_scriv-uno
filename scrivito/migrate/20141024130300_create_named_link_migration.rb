@@ -6,7 +6,5 @@ class CreateNamedLinkMigration < ::Scrivito::Migration
         Scrivito::Link.new(obj: Obj.find_by_path("/search"), title: "search")
       ]
     )
-  rescue
-    binding.pry
   end
 end
