@@ -1,6 +1,6 @@
 class InstallScrivitoMigration < Scrivito::Migration
   def up
-    Scrivito::ObjClass.remove
+    #Scrivito::ObjClass.remove
     Page.create(_path: '/', title: 'Welcome to Scrivito!', body: [
       HeadlineWidget.new(headline: 'A professional Cloud CMS built for Ruby on Rails.'),
       TextWidget.new(text: %{

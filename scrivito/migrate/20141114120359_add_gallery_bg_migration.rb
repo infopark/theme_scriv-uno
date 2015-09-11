@@ -3,7 +3,7 @@ class AddGalleryBgMigration < ::Scrivito::Migration
 
     ["/", "/search", "/blog"].each do |path|
       p = Obj.find_by_path(path)
-      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "green",
+      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "bg_green",
         content: [TwoColumnWidget.new(
           column_1: [
             ImageWidget.new(image: Image.find_by_path("/_resources/teaser_02")),
@@ -14,13 +14,13 @@ class AddGalleryBgMigration < ::Scrivito::Migration
             ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04")),
             TextWidget.new(text: "<h3>Scrivito Demo</h3>
             <p>Sign up at <a href=\"https://scrivito.com\" target=\"_blank\">https://scrivito.com</a> to go through the Scrivito Demo tour. Just follow the link on the Dashboard to explore Scrivito and see what it can do.</p>")
-          ] 
+          ]
         )]
       ))
     end
 
     Obj.find_by_path("/about_us/gallery").update(other_content: [
-      BackgroundWidget.new(colour: "grey1", content: [
+      BackgroundWidget.new(colour: "bg_grey1", content: [
         HeadlineWidget.new(headline: "a list with icons"),
         TwoColumnWidget.new(column_1: [
           IconListitemWidget.new(icon: "flag", headline: "Process Walkthrough", content: "Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim."),
@@ -33,6 +33,6 @@ class AddGalleryBgMigration < ::Scrivito::Migration
         ])
       ])
     ])
-   
+
   end
 end

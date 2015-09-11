@@ -2,10 +2,10 @@ class AddSlickSliderMigration < ::Scrivito::Migration
   def up
     ["/", "/about_us"].each do |path|
       p = Obj.find_by_path(path)
-      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "grey1"))
+      p.update(other_content: p.other_content << BackgroundWidget.new(colour: "bg_grey1"))
       p.other_content.last.update(content: [
-        HeadlineWidget.new(headline: "Our Business"), 
-        SlickSliderWidget.new])
+        HeadlineWidget.new(headline: "Our Business"),
+        SlickSliderWidget.new(slides_to_show: 5, slides_to_scroll: 1)])
       # create panels:
       panels = []
       (1..4).each do |index|

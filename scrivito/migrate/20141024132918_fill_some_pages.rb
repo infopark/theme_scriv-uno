@@ -9,7 +9,7 @@ class FillSomePages < ::Scrivito::Migration
       page.update(teaser_headline: "This is a sample Scrivito App. Modify it to meet your own needs!")
       page.update(teaser_content: "Begin by editing the content and trying out the widgets we have already integrated for you. Create new pages and content areas. Sort the navigation. And check it all in the preview. Once you got a feeling for it you can get to the more serious stuff like extending the page types and modifying the widget views.")
       page.update(body: [
-        TwoColumnWidget.new(column_1_width: 3, column_1: [NaviWidget.new()], column_2_width: 9),
+        TwoColumnWidget.new(column_1_width: 3, column_1: [NaviWidget.new()]),
       ])
     end
 
