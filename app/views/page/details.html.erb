@@ -1,10 +1,17 @@
 <div class="details-view">
-  <h4>Title</h4>
-  <%= scrivito_tag :span, @obj, :title %>
-  <h4>Header Image</h4>
-  <%= scrivito_image_tag(@obj, :header_image) %>
-  <h4>Header Icon</h4>
-  <%= render 'icon_box_widget/partials/icons_picker', widget: @obj, attribute: :icon %>
-  <h4>Show in Navigation?</h4>
-  <%= render partial: 'shared/toggle_buttons', locals: {obj: @obj, attribute: "show_in_navigation"} %>
+  <%= scrivito_details_for 'Title' do %>
+    <%= scrivito_tag :span, @obj, :title %>
+  <% end %>
+
+  <%= scrivito_details_for 'Header Image' do %>
+    <%= scrivito_image_tag(@obj, :header_image) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Header Icon' do %>
+    <%= render 'icon_box_widget/partials/icons_picker', widget: @obj, attribute: :icon %>
+  <% end %>
+
+  <%= scrivito_details_for 'Show in Navigation?' do %>
+    <%= render partial: 'shared/toggle_buttons', locals: {obj: @obj, attribute: "show_in_navigation"} %>
+  <% end %>
 </div>

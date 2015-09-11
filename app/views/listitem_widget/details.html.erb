@@ -1,20 +1,25 @@
 <div class="details-view">
-  <h4>Headline</h4>
-  <%= scrivito_tag(:p, widget, :headline) %>
+  <%= scrivito_details_for 'Headline' do %>
+    <%= scrivito_tag(:p, widget, :headline) %>
+  <% end %>
 
-  <h4>Headline Size</h4>
-  <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "headline_level"} %>
+  <%= scrivito_details_for 'Headline Size' do %>
+    <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "headline_level"} %>
+  <% end %>
 
-  <h4>Subline</h4>
-  <%= scrivito_tag(:p, widget, :subline) %>
+  <%= scrivito_details_for 'Subline' do %>
+    <%= scrivito_tag(:p, widget, :subline) %>
+  <% end %>
 
-  <h4>Text</h4>
-  <%= scrivito_tag(:p, widget, :content) %>
+  <%= scrivito_details_for 'Text' do %>
+    <%= scrivito_tag(:p, widget, :content) %>
+  <% end %>
 
-  <h4>Image</h4>
-  <%= scrivito_edit_reference(widget, :image) %>
+  <%= scrivito_details_for 'Image' do %>
+    <%= scrivito_edit_reference(widget, :image) %>
+  <% end %>
 
-  <h4>Link</h4>
-  <%= scrivito_edit_link(widget, :link) %>
-
+  <%= scrivito_details_for 'Link' do %>
+    <%= scrivito_edit_link(widget, :link) %>
+  <% end %>
 </div>

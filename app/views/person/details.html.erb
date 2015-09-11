@@ -1,27 +1,36 @@
 <div class="details-view">
-  <h4>Title & Name</h4>
-  <%= scrivito_tag :span, @obj, :title %>
+  <%= scrivito_details_for 'Title & Name' do %>
+    <%= scrivito_tag :span, @obj, :title %>
+  <% end %>
 
-  <h4>Is A Company?</h4>
-  <%= render partial: 'shared/toggle_buttons', locals: {obj: @obj, attribute: "is_company"} %>
+  <%= scrivito_details_for 'Is A Company?' do %>
+    <%= render partial: 'shared/toggle_buttons', locals: {obj: @obj, attribute: "is_company"} %>
+  <% end %>
 
-  <h4>Function</h4>
-  <%= scrivito_tag :span, @obj, :function %>
-  <h4>Telephone</h4>
-  <%= scrivito_tag :span, @obj, :telephone %>
-  <h4>Mobile</h4>
-  <%= scrivito_tag :span, @obj, :mobile %>
-  <h4>Email</h4>
-  <%= scrivito_tag :span, @obj, :email %>
+  <%= scrivito_details_for 'Function' do %>
+    <%= scrivito_tag :span, @obj, :function %>
+  <% end %>
+  <%= scrivito_details_for 'Telephone' do %>
+    <%= scrivito_tag :span, @obj, :telephone %>
+  <% end %>
+  <%= scrivito_details_for 'Mobile' do %>
+    <%= scrivito_tag :span, @obj, :mobile %>
+  <% end %>
+  <%= scrivito_details_for 'Email' do %>
+    <%= scrivito_tag :span, @obj, :email %>
+  <% end %>
 
-  <h4>Street</h4>
-  <%= scrivito_tag :span, @obj, :street %>
-  <h4>Postal (PLZ)</h4>
-  <%= scrivito_tag :span, @obj, :postal %>
-  <h4>Country</h4>
-  <%= scrivito_tag :span, @obj, :country %>
-  <h4>Image</h4>
+  <%= scrivito_details_for 'Street' do %>
+    <%= scrivito_tag :span, @obj, :street %>
+  <% end %>
+  <%= scrivito_details_for 'Postal (PLZ)' do %>
+    <%= scrivito_tag :span, @obj, :postal %>
+  <% end %>
+  <%= scrivito_details_for 'Country' do %>
+    <%= scrivito_tag :span, @obj, :country %>
+  <% end %>
 
-  <%= scrivito_image_tag(@obj, :image) %>
-
+  <%= scrivito_details_for 'Image' do %>
+    <%= scrivito_image_tag(@obj, :image) %>
+  <% end %>
 </div>
