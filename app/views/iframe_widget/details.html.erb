@@ -1,8 +1,13 @@
 <div class="details-view">
-  <h4>Link</h4>
-  <%= scrivito_edit_link widget, :link %>
-  <h4>Width (defaults to 100%)</h4>
-  <%= scrivito_tag(:span, widget, :width) %>
-  <h4>Height (defaults to 425px)</h4>
-  <%= scrivito_tag(:span, widget, :height) %>
+  <%= scrivito_details_for 'Link' do %>
+    <%= scrivito_edit_link widget, :link %>
+  <% end %>
+
+  <%= scrivito_details_for 'Width' do %>
+    <%= scrivito_tag(:span, widget, :width) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Height' do %>
+    <%= scrivito_tag(:span, widget, :height) %>
+  <% end %>
 </div>

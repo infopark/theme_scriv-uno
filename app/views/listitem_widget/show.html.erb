@@ -15,7 +15,7 @@
     <% else %>
       <%= scrivito_tag level.to_sym, widget, :headline %>
     <% end %>
-    <%= scrivito_tag :span, widget, :subline, class: "meta" %>
-    <%= scrivito_tag(:p, widget, :content) %>
+    <%= scrivito_tag :div, widget, :subline, class: "meta" %>
+    <%= scrivito_tag :p, widget, :content %>
   </div>
 </div>

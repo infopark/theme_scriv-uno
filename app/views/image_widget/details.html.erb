@@ -1,12 +1,21 @@
 <div class="details-view">
-  <h4>Image</h4>
-  <%= scrivito_image_tag widget, :image %>
-  <h4>Show Image in Gallery?</h4>
-  <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "show_in_lightbox"} %>
-  <h4>Define Lightbox Gallery Name</h4>
-  <p>(only needed for more than one lightbox gallery per page, must begin with a hashtag: '#')</p>
-  <%= scrivito_tag(:span, widget, :lightbox_gallery_name) %>
-  <h4>Reference to Large Version of Image</h4>
-  <p>(if not set we will use the same image)</p>
-  <%= scrivito_edit_reference(widget, :lightbox_reference) %>
+  <%= scrivito_details_for 'Image' do %>
+    <%= scrivito_image_tag widget, :image %>
+  <% end %>
+
+  <%= scrivito_details_for 'Show Image in Gallery' do %>
+    <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "show_in_lightbox"} %>
+  <% end %>
+
+  <%= scrivito_details_for 'Lightbox Gallery Name' do %>
+    <div class="alert alert-info">
+      Only needed for more than one lightbox gallery per page, must begin with a hashtag: '#'
+    </div>
+    <%= scrivito_tag(:span, widget, :lightbox_gallery_name) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Large Version of Image' do %>
+    <div class="alert alert-info">If not set we will use the same image)</div>
+    <%= scrivito_edit_reference(widget, :lightbox_reference) %>
+  <% end %>
 </div>
