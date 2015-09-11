@@ -169,7 +169,7 @@ GEM
       scrivito_content_browser (= 0.70.0.rc2)
       scrivito_editors (= 0.70.0.rc2)
       scrivito_sdk (= 0.70.0.rc2)
-    scrivito_accordion_widget (1.0.11)
+    scrivito_accordion_widget (1.0.12)
       bundler
       scrivito
     scrivito_advanced_editors (0.0.16)
@@ -219,7 +219,7 @@ GEM
     scrivito_slick_slider_widget (0.66.1)
       scrivito (>= 0.42.0)
       scrivito_advanced_editors
-    scrivito_tabbed_content_widget (0.66.0)
+    scrivito_tabbed_content_widget (0.70.0)
       haml
       scrivito
     scrivito_table_widget (0.5.5)
