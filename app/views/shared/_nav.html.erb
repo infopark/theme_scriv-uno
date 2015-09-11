@@ -26,6 +26,6 @@
     <input name="q" type="text" placeholder="Search..." class="form-control">
   </form>
   <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to("Contact", scrivito_path(@obj)) %></li>
+    <li><%= link_to("Contact", scrivito_path(Obj.find_by_path('/about_us'))) %></li>
   </ul>
 </nav>
