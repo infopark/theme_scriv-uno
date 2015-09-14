@@ -12,21 +12,30 @@ Explore your new Scrivito app.
 
 ## Local Installation
 
-Download/clone onto your machine
+Download/clone onto your machine and install used gems.
 
-Run 'bundle'
+```batchfile
+git clone git@github.com:Scrivito/theme_scriv-uno.git
+cd theme_scriv-uno
+bundle
+```
 
-Create an .env file with your API credentials for a fresh Scrivito tenant and a password for your demo user. It should look something like this:
+Create an .env file in your app root directory for your API credentials.
 
-    SCRIVITO_TENANT = d078f_some_long_letters_n_numbers_68b
-    SCRIVITO_API_KEY = 65e_get_them_for_a_trial_cms_on_scrivito.com_b660
-    SCRIVITO_PW = demo
+Your .env file should look like this:
+
+```yaml
+SCRIVITO_TENANT = some_long_letters_n_numbers
+SCRIVITO_API_KEY = get_them_for_a_trial_cms_on_scrivito
+SCRIVITO_PW = demo
+```
 
 You get the first two of these keys from scrivito.com. The SCRIVITO PW is specific for this app and you can define it as you like.
 
-Run 'bundle exec rake scrivito:migrate'
+```Batchfile
+bundle exec rake scrivito:migrate
+bundle exec rake scrivito:migrate:publish
+rails s
+```
 
-Run 'rails s'
-
-Open in your browser: http://localhost:3000/?_scrivito_workspace_id=rtc
-
+Open `http://localhost:3000` in your browser.
