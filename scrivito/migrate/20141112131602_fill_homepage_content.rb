@@ -42,6 +42,7 @@ class FillHomepageContent < ::Scrivito::Migration
         column_2: [
           AccordionWidget.new(panels: [
             AccordionPanelWidget.new(title: "Get your content delivered. Fast.",
+              background_color: 'bg_green',
               content: [TextWidget.new(text: "Your content is fast because of our great CDN. We deliver your stuff from the cloud, directly to you and your customers. No worries about server maintenance, scalability or performance. No matter whether your site is content-heavy or lightweight - it will be fast.")]
             ),
             AccordionPanelWidget.new(title: "Bootstrap bootstraps you",

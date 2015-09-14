@@ -3,7 +3,7 @@
     <% if widget.person.is_company? && widget.person.googlemap.present? %>
       <iframe frameborder="0" width="100%" height="250" src="<%= widget.person.googlemap.url %>" style="border:0"></iframe>
     <% end %>
-    <% unless widget.show_picture == "no" %>
+    <% unless widget.show_picture == "No" %>
       <%= scrivito_image_tag(widget.person, :image, class: "img-responsive") %>
     <% end %>
     <div class="h3"><%= scrivito_field widget.person, :title %></div>
@@ -34,6 +34,6 @@
 <% else %>
   <% if scrivito_in_editable_view? %>
     <%= scrivito_edit_reference(widget, :person) %>
-  <% end %> 
+  <% end %>
 <% end %>
-  
+

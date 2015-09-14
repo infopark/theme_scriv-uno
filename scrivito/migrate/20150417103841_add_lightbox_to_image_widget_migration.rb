@@ -3,14 +3,14 @@ class AddLightboxToImageWidgetMigration < Scrivito::Migration
     Obj.find_by_path("/about_us/gallery").update(body: [
       HeadlineWidget.new(headline: "Image Gallery"),
       ThreeColumnWidget.new(column_1: [
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_01"), show_in_lightbox: "yes"),
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04"), show_in_lightbox: "yes")
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_01"), show_in_lightbox: "Yes"),
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04"), show_in_lightbox: "Yes")
       ], column_2: [
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04"), show_in_lightbox: "yes"),
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_02"), show_in_lightbox: "yes")
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_04"), show_in_lightbox: "Yes"),
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_02"), show_in_lightbox: "Yes")
       ], column_3: [
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_03"), show_in_lightbox: "yes"),
-        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_01"), show_in_lightbox: "yes")
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_03"), show_in_lightbox: "Yes"),
+        ImageWidget.new(image: Image.find_by_path("/_resources/teaser_01"), show_in_lightbox: "Yes")
       ]),
       HeadlineWidget.new(headline: "Video Gallery"),
       TwoColumnWidget.new(column_1_width: 3, column_2: [

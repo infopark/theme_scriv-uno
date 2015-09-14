@@ -26,7 +26,7 @@ class Obj < Scrivito::BasicObj
 
   def show_in_navigation?
     # single ObjClasses often overwrite this method
-    self.respond_to?('show_in_navigation') && self.show_in_navigation == "no" ? false : true
+    self.respond_to?('show_in_navigation') && self.show_in_navigation == "No" ? false : true
   end
 
   def summary

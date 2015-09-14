@@ -66,8 +66,8 @@ class CreatePersonMigration < ::Scrivito::Migration
         column_3: [PersonWidget.new(person: person1)]
       ),
       ThreeColumnWidget.new(
-        column_1: [PersonWidget.new(person: person2, show_picture: "no", colour: "grey")],
-        column_2: [PersonWidget.new(person: person1, show_picture: "no", colour: "grey")]
+        column_1: [PersonWidget.new(person: person2, show_picture: "No", colour: "grey")],
+        column_2: [PersonWidget.new(person: person1, show_picture: "No", colour: "grey")]
       )
     ])
 
@@ -76,7 +76,7 @@ class CreatePersonMigration < ::Scrivito::Migration
       p = Obj.find_by_path(path)
       col = p.body.first.column_2
       p.body.first.update(column_2: col << PersonWidget.new(person: Obj.find_by_path("/people/company1"),
-      show_picture: "no", colour: "grey"))
+      show_picture: "No", colour: "grey"))
     end
 
     Obj.create(_obj_class: "Person", _path: "/people/you", title: "YOU!",

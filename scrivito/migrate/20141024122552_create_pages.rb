@@ -9,7 +9,7 @@ class CreatePages < ::Scrivito::Migration
     Obj.create(_obj_class: 'Page', _path: '/scrivito/modify', title: "Modify this App")
     Obj.create(_obj_class: 'Page', _path: '/scrivito/modify/widgets', title: "More Widgets")
     Obj.create(_obj_class: 'Page', _path: '/scrivito/modify/attributes', title: "Attributes and Page Types")
-    Obj.create(_obj_class: 'Page', _path: '/people', title: "People Repo", show_in_navigation: "no")
+    Obj.create(_obj_class: 'Page', _path: '/people', title: "People Repo", show_in_navigation: "No")
 
     Obj.create(_obj_class: "SearchPage", _path: "/search", title: "Search")
   end

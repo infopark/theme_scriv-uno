@@ -7,7 +7,7 @@ class FillHomepageFullSlider < ::Scrivito::Migration
     Homepage.default.update(full_slider: fs)
 
     # prepare Image folder:
-    Page.create(_path: '/_resources', show_in_navigation: "no")
+    Page.create(_path: '/_resources', show_in_navigation: "No")
 
     # create panels:
     panels = [ElasticSliderPanelWidget.new(

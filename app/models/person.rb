@@ -8,7 +8,7 @@ class Person < ::Obj
   attribute :googlemap, :link
   attribute :googleplus, :link
   attribute :image, :reference
-  attribute :is_company, :enum, values: ["yes", "no"]
+  attribute :is_company, :enum, values: ["Yes", "No"]
   attribute :linkedin, :link
   attribute :mobile, :string
   attribute :pinterest, :link
@@ -23,7 +23,7 @@ class Person < ::Obj
 
 
   def is_company?
-    self.is_company == "yes"
+    self.is_company == "Yes"
   end
 
   def thumbnail_icon
