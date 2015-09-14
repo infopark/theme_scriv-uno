@@ -5,12 +5,6 @@ class ImageWidget < Widget
   attribute :show_in_lightbox, :enum, values: ["Yes", "No"]
   attribute :show_shadow, :enum, values: ["Yes", "No"]
 
-  #
-  # ImageWidget (not binary)
-  #
-  #   image  :reference
-  #
-
   def lightbox_ref
     self.lightbox_reference.presence || self.image
   end
