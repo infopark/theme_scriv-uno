@@ -39,7 +39,7 @@ class Obj < Scrivito::BasicObj
   end
 
   def self.selectable_color_classes(obj_name, field_name)
-    ["bg_blue", "bg_green", "bg_grey1", "bg_grey2", "bg_grey3", "bg_white"]
+    ["", "bg_blue", "bg_green", "bg_grey1", "bg_grey2", "bg_grey3", "bg_white"]
   end
 
   def self.valid_page_classes_beneath(parent_path)
