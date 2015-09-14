@@ -23,15 +23,17 @@
 .bg_green {
   border-color: #78c9a6;
   background: #78c9a6 !important;
+  color: #fff;
 }
-.bg_green * { color: #fff !important;}
+.bg_green * { color: #fff; }
 
 .bg_blue {
   border-color: #465b66;
   background: #465b66 !important;
+  color: #eee;
 }
-.bg_blue * { color:#eee !important;}
-.bg_blue .headline { border-bottom:none;}
+.bg_blue * { color:#eee; }
+.bg_blue .headline { border-bottom:none; }
 
 
 i.bg_white {
