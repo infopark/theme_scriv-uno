@@ -5,7 +5,7 @@
       <a name="<%= post.id %>">
       <%= scrivito_tag :h3, post, :title, class: "h2" %>
       <span class="date"><time datetime="<%= post.date %>"><%= post.date.strftime("%B %d, %Y") %></time></span>
-      <%= scrivito_tag :span, post, :author, class: "author" %>
+      <%= scrivito_tag :div, post, :author, class: "author" %>
     </div>
   </div>
 
