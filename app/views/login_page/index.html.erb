@@ -1,0 +1,5 @@
+<%- if logged_in? %>
+  <%= render('login_page/logout_page') %>
+<%- else %>
+  <%= render('login_page/login_page') %>
+<% end %>

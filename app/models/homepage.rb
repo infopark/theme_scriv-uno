@@ -9,7 +9,7 @@ class Homepage < Obj
 
 
   def self.default
-    find_by_path('/')
+    Homepage.all.first
   end
 
   def homepage

@@ -12,19 +12,17 @@ Scrivito.configure do |config|
   # config.api_key = 'secret'
   #
 
-  Scrivito.configure do |config| 
+  Scrivito.configure do |config|
 
-    unless Rails.env.development?
-      config.editing_auth do |env| 
-        request = ActionDispatch::Request.new(env) 
-        if request.session[:user].present? 
-          Scrivito::User.system_user 
-        end 
-      end 
-    end 
+    config.editing_auth do |env|
+      request = ActionDispatch::Request.new(env)
+      if request.session[:user].present?
+        Scrivito::User.system_user
+      end
+    end
 
     config.second_level_cache = ActiveSupport::Cache::DalliStore.new(
-      'server-downstairs.localnetwork:1234',    
+      'server-downstairs.localnetwork:1234',
       'server-downstairs.localnetwork:4321',
       username: 'root', password: 'secret'
     )

@@ -1,0 +1,14 @@
+<div class="section">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+      <div class="panel panel-default drop_shadow">
+        <div class="panel-heading">Logout</div>
+        <div class="panel-body text-center">
+          <%= link_to(session_path, method: :delete, class: 'btn btn-primary') do %>
+            Logout
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

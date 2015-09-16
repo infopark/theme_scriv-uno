@@ -12,5 +12,7 @@ class CreatePages < ::Scrivito::Migration
     Obj.create(_obj_class: 'Page', _path: '/people', title: "People Repo", show_in_navigation: "No")
 
     Obj.create(_obj_class: "SearchPage", _path: "/search", title: "Search")
+
+    Obj.create(_obj_class: 'LoginPage', _path: '/_global/login_page', title: 'Log in', _permalink: 'login')
   end
 end

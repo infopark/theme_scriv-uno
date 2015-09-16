@@ -6,10 +6,8 @@ class ApplicationController < ActionController::Base
   private
 
   def logged_in?
-    session[:user].present? 
-  end 
+    session[:user].present?
+  end
 
   helper_method :logged_in?
-
-
 end
