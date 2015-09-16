@@ -32,10 +32,23 @@ SCRIVITO_PW = demo
 
 You get the first two of these keys from scrivito.com. `SCRIVITO_PW` is specific for this app and you can define it as you like.
 
-```Batchfile
+```batchfile
 bundle exec rake scrivito:migrate
 bundle exec rake scrivito:migrate:publish
 rails s
 ```
 
 Open `http://localhost:3000` in your browser.
+
+## Login
+
+After installing your app, you can activate the scrivito edit view.
+
+- Go to `http://localhost:3000/login` to log in or yuse the `My Flap` on right border
+- Use `login` as username and `password` as password
+- Create a working copy and select `edit`
+
+Now you can edit your content.
+
+To change the system to log in, look in the `session_controller.rb` and change the method `valid_credentials?(login, password)`. Here you can insert a log in against crm, oauth or ticketing systems.
+
