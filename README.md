@@ -27,10 +27,9 @@ Your .env file should look like this:
 ```yaml
 SCRIVITO_TENANT = some_long_letters_n_numbers
 SCRIVITO_API_KEY = get_them_for_a_trial_cms_on_scrivito
-SCRIVITO_PW = demo
 ```
 
-You get the first two of these keys from scrivito.com. `SCRIVITO_PW` is specific for this app and you can define it as you like.
+Than run
 
 ```batchfile
 bundle exec rake scrivito:migrate
