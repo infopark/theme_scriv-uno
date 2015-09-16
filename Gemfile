@@ -50,6 +50,7 @@ gem 'scrivito_three_column_widget'
 gem 'scrivito_two_column_widget'
 gem 'scrivito_video_widget'
 gem 'scrivito_seo_headline_extender'
+gem 'scrivito_space_widget'
 #gem 'projekktor-rails'
 
 gem 'font-awesome-rails'

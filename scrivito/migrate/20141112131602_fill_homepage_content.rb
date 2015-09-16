@@ -66,7 +66,8 @@ class FillHomepageContent < ::Scrivito::Migration
             <a href=\"/design/misc_page.html\" target=\"_blank\">Misc Page (Icons, Videos)</a></p>\n<p>
             <a href=\"/design/result_page.html\" target=\"_blank\">Search Result Page</a></p>")
         ]
-      )
+      ),
+      SpaceWidget.new()
     ])
 
     # add TABBED CONTENT

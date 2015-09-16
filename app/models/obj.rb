@@ -53,7 +53,7 @@ class Obj < Scrivito::BasicObj
   end
 
   def valid_widget_classes_for(field_name)
-    if field_name == "body"
+    if ['other_content'].include? field_name
       Obj.section_widgets
     else
       Scrivito.models.widgets.map {|e| e} - Obj.section_widgets - Obj.hidden_widgets

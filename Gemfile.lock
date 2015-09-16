@@ -219,6 +219,10 @@ GEM
     scrivito_slick_slider_widget (0.66.1)
       scrivito (>= 0.42.0)
       scrivito_advanced_editors
+    scrivito_space_widget (1.1.6)
+      bundler
+      scrivito (>= 0.30.0)
+      scrivito_advanced_editors
     scrivito_tabbed_content_widget (0.70.1)
       haml
       scrivito
@@ -292,6 +296,7 @@ DEPENDENCIES
   scrivito_icon_box_widget
   scrivito_seo_headline_extender
   scrivito_slick_slider_widget
+  scrivito_space_widget
   scrivito_tabbed_content_widget
   scrivito_table_widget
   scrivito_three_column_widget
