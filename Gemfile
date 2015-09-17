@@ -8,19 +8,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'responders', '~>2.0'
 
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'spring', group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-# Use unicorn as the app server
-# gem 'unicorn'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-# gem 'debugger', group: [:development, :test]
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
@@ -33,7 +24,6 @@ end
 # SETTING UP SCRIVITO:
 gem 'scrivito', "0.70.0.rc2"
 gem 'scrivito_advanced_editors'
-gem 'dalli'
 gem 'dotenv-rails'
 gem 'haml'
 
@@ -42,7 +32,6 @@ gem 'scrivito_accordion_widget'
 gem 'scrivito_elastic_slider_widget'
 gem 'scrivito_google_maps_widget'
 gem 'scrivito_icon_box_widget'
-
 gem 'scrivito_slick_slider_widget'
 gem 'scrivito_tabbed_content_widget'
 gem 'scrivito_table_widget'
