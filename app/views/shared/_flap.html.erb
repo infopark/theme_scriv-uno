@@ -24,6 +24,9 @@
         <% end %>
 
         <% if not logged_in? %>
+          <div class="alert alert-info">
+            Use <span class="badge">login</span> as user and <span class="badge">password</span> as password.
+          </div>
           <%= form_tag session_path, role: 'form' do %>
             <div class="form-group">
               <%= text_field_tag :login, 'login', class: 'form-control', placeholder: 'Enter login' %>
