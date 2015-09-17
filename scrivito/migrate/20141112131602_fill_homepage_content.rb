@@ -57,14 +57,7 @@ class FillHomepageContent < ::Scrivito::Migration
         ],
         column_3: [
           HeadlineWidget.new(headline: "Included Page Designs"),
-          TextWidget.new(text: "<p>We are using Bootstrap for this sample app and have provided some page style suggestions here:</p><p>
-            <a href=\"/design/start_page_slider.html\" target=\"_blank\">Homepage</a></p>\n<p>
-            <a href=\"/design/content_page.html\" target=\"_blank\">Content Page</a></p>\n<p>
-            <a href=\"/design/about_page.html\" target=\"_blank\">About Page</a></p>\n<p>
-            <a href=\"/design/blog_page.html\" target=\"_blank\">Blog Page</a></p>\n<p>
-            <a href=\"/design/gallery_page.html\" target=\"_blank\">Gallery Page</a></p>\n<p>
-            <a href=\"/design/misc_page.html\" target=\"_blank\">Misc Page (Icons, Videos)</a></p>\n<p>
-            <a href=\"/design/result_page.html\" target=\"_blank\">Search Result Page</a></p>")
+          TextWidget.new(text: "<p>We are using Bootstrap for this sample app and have provided some page style suggestions in this App.</p>")
         ]
       ),
       SpaceWidget.new()
