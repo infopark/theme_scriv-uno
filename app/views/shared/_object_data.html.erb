@@ -1,0 +1,15 @@
+<%= scrivito_details_for 'ID' do %>
+  <%= @obj.id %>
+<% end %>
+
+<%= scrivito_details_for 'Object Type' do %>
+  <%= @obj.class.name %>
+<% end %>
+
+<%= scrivito_details_for 'Object Path' do %>
+  <%= @obj.path %>
+<% end %>
+
+<%= scrivito_details_for 'Last changed' do %>
+  <%= @obj.last_changed %>
+<% end %>

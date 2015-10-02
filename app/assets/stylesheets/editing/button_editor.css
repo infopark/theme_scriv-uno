@@ -1,3 +1,7 @@
 /* details-view */
 .details-view input.button_editor {padding: 20px;}
 .details-view input.button_editor.active {border: medium inset grey;}
+
+.tag-editor .tag-editor-delete i:before {
+  content: '';
+}

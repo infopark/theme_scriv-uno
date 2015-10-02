@@ -5,8 +5,15 @@
   <meta charset="UTF-8" />
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
   <title>ScrivUno - <%= strip_tags(@obj.title) %> </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimal-ui">
+
+  <%= render 'seo_page_extender/meta_data' %>
+  <%= render 'seo_page_extender/twitter_cards' %>
+  <%= render 'seo_page_extender/open_graph' %>
+  <%= render 'seo_page_extender/canonical_link' %>
+
+  <%#= render 'seo_page_extender/google_analytics', key: 'your-googleAnalytics-key' %>
+
   <link rel="apple-touch-icon-precomposed" href="<%= asset_path('apple-touch-icon-precomposed') %>">
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>">
 
@@ -31,6 +38,13 @@
 
 </head>
 <body>
+  <script>
+    window.onload = function() {
+      scrivito.on('content', function() {
+        Gifffer();
+      });
+    }
+  </script>
   <div>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <header role="banner" id="top" class="navbav">

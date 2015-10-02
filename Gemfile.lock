@@ -171,7 +171,7 @@ GEM
     scrivito_accordion_widget (1.0.16)
       bundler
       scrivito
-    scrivito_advanced_editors (0.0.16)
+    scrivito_advanced_editors (0.0.18)
       bundler
       font-awesome-rails
       rails
@@ -215,6 +215,10 @@ GEM
       bundler
       scrivito_advanced_editors
       scrivito_sdk
+    scrivito_seo_page_extender (0.70.0)
+      bundler
+      scrivito_advanced_editors
+      scrivito_sdk
     scrivito_slick_slider_widget (0.66.1)
       scrivito (>= 0.42.0)
       scrivito_advanced_editors
@@ -222,7 +226,7 @@ GEM
       bundler
       scrivito (>= 0.30.0)
       scrivito_advanced_editors
-    scrivito_tabbed_content_widget (0.70.2)
+    scrivito_tabbed_content_widget (0.70.3)
       haml
       scrivito
     scrivito_table_widget (0.5.5)
@@ -291,6 +295,7 @@ DEPENDENCIES
   scrivito_google_maps_widget
   scrivito_icon_box_widget
   scrivito_seo_headline_extender
+  scrivito_seo_page_extender
   scrivito_slick_slider_widget
   scrivito_space_widget
   scrivito_tabbed_content_widget

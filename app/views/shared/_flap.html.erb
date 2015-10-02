@@ -44,6 +44,9 @@
 
         <% if logged_in? %>
           <p>You are logged in as user '<%= session[:user] %>'.</p>
+
+          <%= render 'seo_page_extender/word_density', obj: @obj, attribute: :body %>
+
           <div class="modal-footer">
             <%= link_to session_path, class: 'navbar-btn navbar-right', method: :delete do %>
               <button class="btn btn-warning">Log out</button>

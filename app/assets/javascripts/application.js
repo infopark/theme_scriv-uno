@@ -19,3 +19,5 @@
 //= require scrivito_icon_box_widget
 //= require scrivito_video_widget
 //= require scrivito_slick_slider_widget
+//= require scrivito_seo_page_extender
+//= require_tree ./application

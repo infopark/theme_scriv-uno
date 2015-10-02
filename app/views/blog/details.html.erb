@@ -1,5 +1,36 @@
-<div class="details-view">
-  <%= scrivito_details_for 'Title' do %>
-    <%= scrivito_tag(:div, @obj, :title) %>
-  <% end %>
-</div>
+<%= scrivito_large_dialog do %>
+  <ul class="tab-list">
+    <li class="active" data-panel-target="#edit-general">General</li>
+    <li data-panel-target="#edit-meta-data">Meta Data</li>
+    <li data-panel-target="#edit-open-graph">Open Graph</li>
+    <li data-panel-target="#edit-twitter">Twitter Cards</li>
+    <li data-panel-target="#edit-system-data">System Data</li>
+  </ul>
+
+  <div class="tab-panels">
+    <div class="tab-panel" id="edit-general">
+      <%= scrivito_details_for 'Title' do %>
+        <%= scrivito_tag :div, @obj, :title %>
+      <% end %>
+
+      <%= render 'seo_page_extender/sitemap_details', obj: @obj %>
+    </div>
+
+    <div class="tab-panel" id="edit-meta-data">
+      <%= render 'seo_page_extender/meta_data_details', obj: @obj %>
+    </div>
+
+    <div class="tab-panel" id="edit-open-graph">
+      <%= render 'seo_page_extender/open_graph_details', obj: @obj %>
+    </div>
+
+    <div class="tab-panel" id="edit-twitter">
+      <%= render 'seo_page_extender/twitter_cards_details', obj: @obj %>
+    </div>
+
+    <div class="tab-panel" id="edit-system-data">
+      <%= render 'shared/object_data', obj: @obj %>
+      <%= render 'seo_page_extender/edit_permalink', obj: @obj %>
+    </div>
+  </div>
+<% end %>

@@ -1,4 +1,9 @@
 class Page < ::Obj
+  include MetaDataExtender
+  include OpenGraphExtender
+  include TwitterCardsExtender
+  include SitemapExtender
+
   attribute :body, :widgetlist
   attribute :child_order, :referencelist
   attribute :header_image, :reference

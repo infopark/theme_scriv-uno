@@ -1,4 +1,9 @@
 class Blog < ::Obj
+  include MetaDataExtender
+  include OpenGraphExtender
+  include TwitterCardsExtender
+  include SitemapExtender
+
   attribute :body, :widgetlist
   attribute :header_image, :reference
   attribute :other_content, :widgetlist
