@@ -22,7 +22,7 @@ group :development, :test do
 end
 
 # SETTING UP SCRIVITO:
-gem 'scrivito', "0.70.0.rc3"
+gem 'scrivito', "1.0.0"
 gem 'scrivito_advanced_editors'
 gem 'dotenv-rails'
 gem 'haml'

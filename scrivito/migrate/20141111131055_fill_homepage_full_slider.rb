@@ -11,25 +11,30 @@ class FillHomepageFullSlider < ::Scrivito::Migration
 
     # create panels:
     panels = [ElasticSliderPanelWidget.new(
-      headline: "Welcome to our first Scrivito Theme!",
-      content: "Explore this app to see what Scrivito can do!",
-      image: Image.find_by_path("/_resources/teaser_01"),
-      button: Scrivito::Link.new(obj: Obj.find_by_path("/scrivito"), title: "Learn more!")
+      panel_content: [
+        HeadlineWidget.new(headline: "Welcome to our first Scrivito Theme!", size: 'h1'),
+        HeadlineWidget.new(headline: "Explore this app to see what Scrivito can do!", size: 'h3'),
+      ],
+      image: Image.find_by_path("/_resources/teaser_01")
     ),
 
     panels = ElasticSliderPanelWidget.new(
-      headline: "Start here!",
-      content: "You can use this app to develop your own. Simply start by modifying the content according to your needs. And then modify the app itself.",
-      image: Image.find_by_path("/_resources/teaser_02"),
-      button: Scrivito::Link.new(obj: Obj.find_by_path("/scrivito/modify"), title: "Modifying the app")
+      panel_content: [
+        HeadlineWidget.new(headline: "Start here!", size: 'h1'),
+        HeadlineWidget.new(headline: "You can use this app to develop your own. Simply start by modifying the content according to your needs. And then modify the app itself.", size: 'h3')
+      ],
+      image: Image.find_by_path("/_resources/teaser_02")
     ),
 
     panels = ElasticSliderPanelWidget.new(
-      headline: "We already created some basics for you.",
-      content: "Check out the Blog, About us or Misc section in this app and add your own content there.",
-      image: Image.find_by_path("/_resources/teaser_03"),
-      button: Scrivito::Link.new(obj: Obj.find_by_path("/blog"), title: "Start with the Blog!")
+      panel_content: [
+        HeadlineWidget.new(headline: "We already created some basics for you.", size: 'h1'),
+        HeadlineWidget.new(headline: "Check out the Blog, About us or Misc section in this app and add your own content there.", size: 'h3')
+      ],
+      image: Image.find_by_path("/_resources/teaser_03")
     )]
+
+    Homepage.default.full_slider[0].update(panels: [])
 
     panels.each do |p|
       panel = Homepage.default.full_slider[0].panels << p

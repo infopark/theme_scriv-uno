@@ -1,1 +1,5 @@
-<%= scrivito_image_tag widget, :image, {class: "img-responsive #{widget.show_shadow? ? 'shadow' : ''}"}, transform: {width: 970} %>
+<% if widget.image.binary_content_type == 'image/gif' %>
+  <img data-gifffer="<%= widget.image.binary_url %>" class="img-responsive <%= widget.show_shadow? ? 'drop_shadow' : ''%>">
+<% else %>
+  <%= scrivito_image_tag widget, :image, {class: "img-responsive #{widget.show_shadow? ? 'shadow' : ''}"}, transform: {width: 970} %>
+<% end %>
