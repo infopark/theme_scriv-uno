@@ -71,7 +71,7 @@ i.bg_blue {
 }
 
 .bg_image1 {
-  background: asset-url('scriv-uno/bg_image1.jpg') no-repeat center center;
+  background: asset-url('scriv-uno/bg_image1.jpg') no-repeat center center !important;
   background-size: cover;
   color: #fff;
 }

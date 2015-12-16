@@ -191,6 +191,9 @@ GEM
     scrivito_google_maps_widget (0.1.5)
       bundler
       scrivito_sdk
+    scrivito_highlightjs_widget (1.0.5)
+      bundler
+      scrivito
     scrivito_icon_box_widget (1.2.0)
       bundler
       font-awesome-rails
@@ -286,6 +289,7 @@ DEPENDENCIES
   scrivito_advanced_editors
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
+  scrivito_highlightjs_widget
   scrivito_icon_box_widget
   scrivito_section_widgets
   scrivito_seo_headline_extender

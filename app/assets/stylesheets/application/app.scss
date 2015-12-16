@@ -320,12 +320,7 @@ img.shadow {
 .carousel-caption .h3,
 .carousel-caption .h4,
 .carousel-caption .h5,
-.carousel-caption .h6 { color:#fff; padding: 0; margin:0;
-  display:block; border: none !important;
-  }
-.carousel-caption .headline {
-  border: none;
-}
+.carousel-caption .h6 { color:#fff; padding: 0; margin:0; display:block; }
 
 .carousel-caption .content { padding: 20px 20px; }
 .carousel-caption .content p{ font-size:18px; line-height:24px; margin:0;}
@@ -476,16 +471,6 @@ img.shadow {
 .bg_image  { @include clearfix; padding: 20px 0;}
 
 .bg_image {background: #ddd image_url('scriv-uno/bg_image1.jpg') no-repeat 0 0 / cover ;}
-
-/* headline *
-================================================== */
-
-.headline { border-bottom: 2px solid #ddd; display: block; margin: 10px 0 15px;}
-.headline h2,
-.headline h3,
-.headline h4 { border-bottom: 4px solid #465b66; display: inline-block;
-  margin: 0 0 -2px; padding-bottom: 5px;
-  }
 
 /* box_ *
 ================================================== */

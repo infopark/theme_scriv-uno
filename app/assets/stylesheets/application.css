@@ -21,5 +21,6 @@
  *= require scrivito_seo_page_extender
  *= require scrivito_table_widget
  *= require scrivito_section_widgets
+ *= require scrivito_highlightjs_widget
  *= require_tree ./application
  */

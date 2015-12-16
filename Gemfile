@@ -44,6 +44,7 @@ gem 'scrivito_seo_headline_extender'
 gem 'scrivito_space_widget'
 gem 'scrivito_seo_page_extender'
 gem 'scrivito_section_widgets'
+gem 'scrivito_highlightjs_widget'
 #gem 'projekktor-rails'
 
 gem 'font-awesome-rails'

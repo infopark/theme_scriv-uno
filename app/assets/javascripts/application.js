@@ -18,4 +18,5 @@
 //= require scrivito_slick_slider_widget
 //= require scrivito_video_widget
 //= require scrivito_table_widget
+//= require scrivito_highlightjs_widget
 //= require_tree ./application
