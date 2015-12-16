@@ -1,0 +1,19 @@
+<%= scrivito_details_for 'Color' do %>
+  <%= scrivito_tag :div, widget, :color %>
+<% end %>
+
+<%= scrivito_details_for 'Size' do %>
+  <%= scrivito_tag :div, widget, :size, data: {toggle_button_caption: {lg: 'large', sm: 'small', xs: 'Extra small'}} %>
+<% end %>
+
+<%= scrivito_details_for 'Show as block' do %>
+  <%= scrivito_tag :div, widget, :as_block %>
+<% end %>
+
+<%= scrivito_details_for 'Is disables' do %>
+  <%= scrivito_tag :div, widget, :is_disabled %>
+<% end %>
+
+<%= scrivito_details_for 'Destination' do %>
+  <%= scrivito_tag :div, widget, :action %>
+<% end %>
