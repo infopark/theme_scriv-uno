@@ -1,2 +1,0 @@
-class BroadPageController < CmsController
-end

@@ -206,6 +206,9 @@ GEM
       nokogiri (~> 1.6)
       rails (~> 4.2.0)
       rake (>= 0.9.2.2)
+    scrivito_section_widgets (0.90.0)
+      bundler
+      scrivito
     scrivito_seo_headline_extender (1.2.0)
       bundler
       scrivito_sdk
@@ -284,6 +287,7 @@ DEPENDENCIES
   scrivito_elastic_slider_widget
   scrivito_google_maps_widget
   scrivito_icon_box_widget
+  scrivito_section_widgets
   scrivito_seo_headline_extender
   scrivito_seo_page_extender
   scrivito_slick_slider_widget

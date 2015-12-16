@@ -1,3 +1,0 @@
-class Root < Obj
-
-end

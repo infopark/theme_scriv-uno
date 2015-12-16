@@ -20,5 +20,6 @@
  *= require scrivito_space_widget
  *= require scrivito_seo_page_extender
  *= require scrivito_table_widget
+ *= require scrivito_section_widgets
  *= require_tree ./application
  */
