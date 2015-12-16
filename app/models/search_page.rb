@@ -4,14 +4,10 @@ class SearchPage < ::Obj
   include TwitterCardsExtender
   include SitemapExtender
 
-  attribute :content, :widgetlist
-  attribute :other_content, :widgetlist
+  attribute :body, :widgetlist
   attribute :title, :string
-  attribute :body, :html
-
 
   def show_in_navigation?
     false
   end
-
 end

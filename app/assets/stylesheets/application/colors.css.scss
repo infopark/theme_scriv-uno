@@ -69,3 +69,10 @@ i.bg_blue {
   background: transparent !important;
   color: #465b66 !important;
 }
+
+.bg_image1 {
+  background: asset-url('scriv-uno/bg_image1.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+.bg_image1 * { color: #fff; }

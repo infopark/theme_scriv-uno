@@ -9,10 +9,10 @@ class Widget < Scrivito::BasicWidget
   end
 
   def valid_widget_classes_for(field_name)
-    if field_name == "body"
+    if ['body'].include? field_name
       Obj.section_widgets
     else
-      Scrivito.models.widgets.map {|e| e} - Obj.section_widgets - Obj.hidden_widgets
+      Scrivito.models.widgets.map {|e| e} - Obj.section_widgets
     end
   end
 

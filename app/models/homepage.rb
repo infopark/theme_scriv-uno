@@ -6,10 +6,6 @@ class Homepage < Obj
 
   attribute :body, :widgetlist
   attribute :child_order, :referencelist
-  attribute :full_slider, :widgetlist
-  attribute :locale, :string
-  attribute :other_content, :widgetlist
-  attribute :teaser, :widgetlist
   attribute :title, :string
 
   def self.default
@@ -23,5 +19,4 @@ class Homepage < Obj
   def thumbnail_icon
     "foundicon-home"
   end
-
 end

@@ -39,7 +39,7 @@ class Obj < Scrivito::BasicObj
   end
 
   def self.selectable_color_classes(obj_name, field_name)
-    ["", "bg_blue", "bg_green", "bg_grey1", "bg_grey2", "bg_grey3", "bg_white"]
+    ["", "bg_blue", "bg_green", "bg_grey1", "bg_grey2", "bg_grey3", "bg_white", "bg_image1"]
   end
 
   def self.valid_page_classes_beneath(parent_path)
@@ -53,20 +53,15 @@ class Obj < Scrivito::BasicObj
   end
 
   def valid_widget_classes_for(field_name)
-    if ['other_content'].include? field_name
+    if ['body'].include? field_name
       Obj.section_widgets
     else
-      Scrivito.models.widgets.map {|e| e} - Obj.section_widgets - Obj.hidden_widgets
+      Scrivito.models.widgets.map {|e| e} - Obj.section_widgets
     end
   end
 
   private
   def self.section_widgets
-    [BackgroundWidget, GoogleMapsWidget, ElasticSliderWidget]
+    [SectionContentWidget, SectionVideoWidget, ElasticSliderWidget, GoogleMapsWidget]
   end
-
-  def self.hidden_widgets
-    [ElasticSliderPanelWidget, Scrivito::ContentWidget]
-  end
-
 end

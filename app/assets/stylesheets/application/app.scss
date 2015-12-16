@@ -141,10 +141,18 @@ body {
   background:transparent;
 }
 
+.text-widget.small {
+  font-size: 0.8em;
+}
+
+.text-widget.large {
+  font-size: 1.2em;
+}
+
 .container { position:relative;}
 
-a { color: #465b66; text-decoration: none; }
-a:hover, a:active, a:focus { color: #465b66; text-decoration: none; }
+a { color: #78c9a6; text-decoration: none; }
+a:hover, a:active, a:focus { color: #78c9a6; text-decoration: none; }
 
 ::selection { color:#465b66; background:#77c8a5; }
 ::-moz-selection { color:#465b66; background:#77c8a5; }
@@ -318,12 +326,28 @@ img.shadow {
 .carousel-caption .headline {
   border: none;
 }
-.carousel-caption .content { background:rgba(0,0,0,.4);
-  padding: 5px 20px 10px 20px; margin: 0 0 20px 0;
-  max-width:800px; rdisplay:block; float:left; text-align:left;
-  }
-.carousel-caption .content p{ font-size:18px; line-height:1.5em; margin:0;}
+
+.carousel-caption .content { padding: 20px 20px; }
+.carousel-caption .content p{ font-size:18px; line-height:24px; margin:0;}
 .carousel-caption .content .btn { clear:both;}
+
+.carousel-caption h1,
+.carousel-caption .h1 { font-size: 35px; line-height: 35px; margin-bottom: 30px; }
+
+.carousel-caption {
+  position: absolute;
+  left: 100px;
+  right: auto;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 400px;
+  background: rgba(0,0,0,0.5);
+}
 
 /* breadcrumb
 ================================================== */
@@ -444,36 +468,6 @@ img.shadow {
 .gm-style label {
   width: auto; display:inline;
   }
-
-/* redactor_editor fixes
-================================================== */
-
-.redactor-box {background:transparent!important;}
-.redactor-editor {background:transparent!important;}
-
-.redactor-editor h1,
-.redactor-editor h2,
-.redactor-editor h3,
-.redactor-editor h4,
-.redactor-editor h5,
-.redactor-editor h6 { color: inherit!important;}
-
-.redactor-editor div,
-.redactor-editor p,
-.redactor-editor ul,
-.redactor-editor ol,
-.redactor-editor table,
-.redactor-editor dl,
-.redactor-editor blockquote,
-.redactor-editor pre,
-.redactor-editor h1,
-.redactor-editor h2,
-.redactor-editor h3,
-.redactor-editor h4,
-.redactor-editor h5,
-.redactor-editor h6 {font-family: inherit!important; font-size:inherit!important;}
-
-
 
 /* bg_*
 ================================================== */
@@ -847,14 +841,10 @@ footer .copyright { padding: 20px 0 0 0;}
 .navbar-nav.navbar-right.navbar_language > li > a { padding: 20px!important;}
 
 .carousel-control i {font-size:22px!important;}
-.carousel-caption h1,
-.carousel-caption .h1 { font-size:26px; line-height:1.3em; padding: 5px 10px; margin:0;  }
-.carousel-caption .content {
-  padding: 5px 10px 10px 10px; margin: 0 0 10px 0;
-  max-width:100%; display:block; float:left; text-align:left;
-  }
-.carousel-caption .content p{ font-size:14px; line-height:1.3em; margin:0 0 10px 0;}
-
+.carousel-caption {
+  left: 0;
+  width: 100%;
+}
 }
 
 @media (max-width: 767px) {}

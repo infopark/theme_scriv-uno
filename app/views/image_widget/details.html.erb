@@ -7,30 +7,20 @@
     </div>
     <div class="col-sm-7">
       <%= scrivito_details_for 'Show shadow?' do %>
-        <%= scrivito_toggle_button_editor widget, :show_shadow %>
+        <%= scrivito_tag :div, widget, :show_shadow %>
       <% end %>
     </div>
   </div>
 
-  <hr>
   <%= scrivito_details_for 'Show Image in Gallery' do %>
-    <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "show_in_lightbox"} %>
+    <%= scrivito_tag :div, widget, :show_in_lightbox %>
   <% end %>
 
-  <div class="row">
-    <div class="col-sm-5">
-      <%= scrivito_details_for 'Large Version of Image' do %>
-        <div class="alert alert-info">If not set we use the image set above.</div>
-        <%= scrivito_edit_reference(widget, :lightbox_reference) %>
-      <% end %>
-    </div>
-    <div class="col-sm-7">
-      <%= scrivito_details_for 'Gallery Name' do %>
-        <div class="alert alert-info">
-          Only needed for more than one galleries per page. It must begin with a '#'
-        </div>
-        <%= scrivito_tag(:div, widget, :lightbox_gallery_name) %>
-      <% end %>
-    </div>
-  </div>
+  <%= scrivito_details_for 'Large Version of Image<small>Original image as fallback</small>'.html_safe do %>
+    <%= scrivito_tag :div, widget, :lightbox_reference %>
+  <% end %>
+
+  <%= scrivito_details_for 'Gallery Name<small>starts with a #</small>'.html_safe do %>
+    <%= scrivito_tag(:div, widget, :lightbox_gallery_name) %>
+  <% end %>
 </div>
