@@ -57,7 +57,7 @@ class AddHomepageObjMigration < Scrivito::Migration
         ElasticSliderPanelWidget.new(
           image: Image.find_by_permalink('teaser_image_03'),
           panel_content: [
-            HeadlineWidget.new(headline: 'Be quick with you costumers', type: 'h2', size: 'h1'),
+            HeadlineWidget.new(headline: 'Be quick at your costumers', type: 'h2', size: 'h1'),
             TextWidget.new(text: '<p>Using the power of cloud computing and CDN with Scrivito.</p><p>Advanced techniques like caching can be used to make your site faster.</p>'.html_safe, size: 'large'),
             SpaceWidget.new(size: 'large'),
             CallToActionWidget.new(

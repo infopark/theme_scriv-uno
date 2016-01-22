@@ -1,5 +1,5 @@
 class BoxWidget < Widget
-  attribute :colour, :string, default: 'white'
+  attribute :colour, :string, default: 'bg_white'
   attribute :content, :widgetlist
   attribute :show_shadow, :enum, values: ['Yes', 'No'], default: 'Yes'
 
