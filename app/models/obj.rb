@@ -62,6 +62,6 @@ class Obj < Scrivito::BasicObj
 
   private
   def self.section_widgets
-    [SectionContentWidget, SectionVideoWidget, ElasticSliderWidget, GoogleMapsWidget]
+    [SectionContentWidget, SectionParallaxWidget, SectionVideoWidget, ElasticSliderWidget, GoogleMapsWidget]
   end
 end

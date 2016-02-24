@@ -19,4 +19,5 @@
 //= require scrivito_video_widget
 //= require scrivito_table_widget
 //= require scrivito_highlightjs_widget
+//= require scrivito_section_widgets
 //= require_tree ./application
