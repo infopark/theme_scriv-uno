@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -24,8 +24,8 @@ group :development, :test do
 end
 
 # SETTING UP SCRIVITO:
-gem 'scrivito', "1.0.0"
-gem 'scrivito_advanced_editors'
+gem 'scrivito', "1.2.0.rc1"
+gem 'scrivito_advanced_editors', '1.0.0.rc1'
 gem 'dotenv-rails'
 gem 'haml'
 
@@ -42,7 +42,7 @@ gem 'scrivito_two_column_widget'
 gem 'scrivito_video_widget'
 gem 'scrivito_seo_headline_extender'
 gem 'scrivito_space_widget'
-gem 'scrivito_seo_page_extender'
+gem 'scrivito_seo_page_extender', '0.91.0.rc1'
 gem 'scrivito_section_widgets'
 gem 'scrivito_highlightjs_widget'
 #gem 'projekktor-rails'

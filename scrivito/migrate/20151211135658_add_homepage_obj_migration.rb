@@ -8,6 +8,7 @@ class AddHomepageObjMigration < Scrivito::Migration
         section1,
         section2,
         section3,
+        section5,
         section4
       ],
       child_order: child_order
@@ -195,6 +196,14 @@ class AddHomepageObjMigration < Scrivito::Migration
           ]
         )
       ]
+    )
+  end
+
+  def section5
+    SectionParallaxWidget.new(
+      background_image: Image.find_by_permalink('teaser_image_04'),
+      height: '70vh',
+      speed: 'fixed'
     )
   end
 
