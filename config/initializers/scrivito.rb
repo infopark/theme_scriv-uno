@@ -9,6 +9,7 @@ Scrivito.configure do |config|
   #
 
   Scrivito.configure do |config|
+    config.inject_preset_routes = false
 
     config.editing_auth do |env|
       request = ActionDispatch::Request.new(env)
