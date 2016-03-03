@@ -3,6 +3,6 @@
     <%= scrivito_edit_reference(widget, :person) %>
   <% end %>
   <%= scrivito_details_for 'Show Picture?' do %>
-    <%= render partial: 'shared/toggle_buttons', locals: {obj: widget, attribute: "show_picture"} %>
+    <%= scrivito_tag :div, @obj, :is_company %>
   <% end %>
 </div>

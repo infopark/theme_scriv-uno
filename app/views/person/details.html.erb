@@ -4,7 +4,7 @@
   <% end %>
 
   <%= scrivito_details_for 'Is A Company?' do %>
-    <%= render partial: 'shared/toggle_buttons', locals: {obj: @obj, attribute: "is_company"} %>
+    <%= scrivito_tag :div, @obj, :is_company %>
   <% end %>
 
   <%= scrivito_details_for 'Function' do %>
