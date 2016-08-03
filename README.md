@@ -12,7 +12,7 @@ Explore your new Scrivito app.
 
 ## Local Installation
 
-Download/clone onto your machine and install used gems.
+Download/clone onto your machine and install the gems.
 
 ```batchfile
 git clone git@github.com:Scrivito/theme_scriv-uno.git
@@ -29,7 +29,7 @@ SCRIVITO_TENANT = some_long_letters_n_numbers
 SCRIVITO_API_KEY = get_them_for_a_trial_cms_on_scrivito
 ```
 
-Than run
+Then run
 
 ```batchfile
 bundle exec rake scrivito:migrate
@@ -43,11 +43,11 @@ Open `http://localhost:3000` in your browser.
 
 After installing your app, you can activate the scrivito edit view.
 
-- Go to `http://localhost:3000/login` to log in or yuse the `My Flap` on right border
+- Go to `http://localhost:3000/login` to log in or use the `My Flap` on right border
 - Use `login` as username and `password` as password
 - Create a working copy and select `edit`
 
 Now you can edit your content.
 
-To change the system to log in, look in the `session_controller.rb` and change the method `valid_credentials?(login, password)`. Here you can insert a log in against crm, oauth or ticketing systems.
+To change the system login, look in the `session_controller.rb` and change the method `valid_credentials?(login, password)`. Here you can insert a login for the crm, oauth or ticketing systems.
 
